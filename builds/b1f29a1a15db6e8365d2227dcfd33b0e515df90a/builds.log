@@ -1,0 +1,1042 @@
+Project has no build specifications: Measurement Utility Reference.lvproj
+=== ExecuteBuildSpec 'Config Library Source Dist' [{E661DAE2-7517-431F-AC41-30807A3BDA38}] target 'My Computer' in components\Extensible-Config-Dialog\Configuration Dialog Actor.lvproj ===
+LabVIEWCLI started logging in file:  C:\Users\ContainerAdministrator\AppData\Local\Temp\lvtemporary_567347.log
+Using LabVIEW: "C:\Program Files\National Instruments\LabVIEW 2026\LabVIEW.exe"
+LabVIEW launched successfully.
+Connection established with LabVIEW at port number 3363.
+
+LabVIEWCLI.exe : Operation output: 
+At C:\workspace\.github\labview\build-binaries.ps1:252 char:12
++     $out = & $CliExe @cliArgs 2>&1 | Out-String
++            ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Operation output: :String) [], Re 
+   moteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Error Code : 1
+Error Message : LabVIEW cannot find a file that is a dependency of a Startup, 
+Exported, or Always Included VI.
+
+File Not Found: 
+C:\workspace\recovery\packages\oglib_appcontrol-4.1.0.7-34BB338B21\File Group 
+0\user.lib\_OpenG.lib\appcontrol\appcontrol.llb\Current VIs Parents 
+Ref__ogtk.vi
+
+The missing file might be referenced by one of the libraries included in the 
+build or by the file - Configuration.lvlib. To fix this issue:
+
+- Open all Startup, Exported, or Always Included VIs, recompile them 
+(CTRL+SHIFT Click the Run arrow) and save them to update their dependencies.
+- Open all libraries included in the build and verify the existence and 
+locations of referenced files. Also, try building with the additional 
+exclusion option, "Remove unused members of project libraries", checked.
+
+
+
+
+
+
+
+
+
+Click the link below to visit the Application Builder support page. Use the 
+following information as a reference:
+
+
+
+Error 7 occurred at AB_Engine_HandleLinkErrors.vi -> 
+AB_Engine_Update_Source_from_Linker.vi
+
+
+Possible reason(s):
+
+
+LabVIEW: (Hex 0x7) File not found. The file might be in a different location 
+or deleted. Use the command prompt or the file explorer to verify that the 
+path is correct.
+An error occurred while running the ExecuteBuildSpec operation.
+
+ExecuteBuildSpec operation failed.
+
+
+=== ExecuteBuildSpec 'Extensible Config Dialog' [Source Distribution] target 'My Computer' in components\Extensible-Config-Dialog\Configuration Dialog Actor.lvproj ===
+LabVIEWCLI started logging in file:  C:\Users\ContainerAdministrator\AppData\Local\Temp\lvtemporary_470824.log
+Using LabVIEW: "C:\Program Files\National Instruments\LabVIEW 2026\LabVIEW.exe"
+Connection established with LabVIEW at port number 3363.
+
+LabVIEWCLI.exe : Operation output: 
+At C:\workspace\.github\labview\build-binaries.ps1:252 char:12
++     $out = & $CliExe @cliArgs 2>&1 | Out-String
++            ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Operation output: :String) [], Re 
+   moteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Error Code : 1
+Error Message : LabVIEW cannot find a file that is a dependency of a Startup, 
+Exported, or Always Included VI.
+
+File Not Found: 
+C:\workspace\recovery\packages\oglib_appcontrol-4.1.0.7-34BB338B21\File Group 
+0\user.lib\_OpenG.lib\appcontrol\appcontrol.llb\Current VIs Parents 
+Ref__ogtk.vi
+
+The missing file might be referenced by one of the libraries included in the 
+build or by the file - Configuration.lvlib. To fix this issue:
+
+- Open all Startup, Exported, or Always Included VIs, recompile them 
+(CTRL+SHIFT Click the Run arrow) and save them to update their dependencies.
+- Open all libraries included in the build and verify the existence and 
+locations of referenced files. Also, try building with the additional 
+exclusion option, "Remove unused members of project libraries", checked.
+
+
+
+
+
+
+
+
+
+Click the link below to visit the Application Builder support page. Use the 
+following information as a reference:
+
+
+
+Error 7 occurred at AB_Engine_HandleLinkErrors.vi -> 
+AB_Engine_Update_Source_from_Linker.vi
+
+
+Possible reason(s):
+
+
+LabVIEW: (Hex 0x7) File not found. The file might be in a different location 
+or deleted. Use the command prompt or the file explorer to verify that the 
+path is correct.
+An error occurred while running the ExecuteBuildSpec operation.
+
+ExecuteBuildSpec operation failed.
+
+
+=== ExecuteBuildSpec 'Config Dialog' [EXE] target 'My Computer' in components\Extensible-Config-Dialog\Basic Configuration Dialog\Config Dialog Example.lvproj ===
+LabVIEWCLI started logging in file:  C:\Users\ContainerAdministrator\AppData\Local\Temp\lvtemporary_51024.log
+Using LabVIEW: "C:\Program Files\National Instruments\LabVIEW 2026\LabVIEW.exe"
+Connection established with LabVIEW at port number 3363.
+
+LabVIEWCLI.exe : Operation output: 
+At C:\workspace\.github\labview\build-binaries.ps1:252 char:12
++     $out = & $CliExe @cliArgs 2>&1 | Out-String
++            ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Operation output: :String) [], Re 
+   moteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Error Code : 1
+Error Message : The build is missing one or more source files or items the 
+source files reference on disk.
+
+To locate the files before you build, right-click the project root in the 
+Project Explorer window and select Find Missing Items from the shortcut menu 
+to display the Find Missing Items dialog box.
+
+
+
+
+
+
+
+
+
+
+Click the link below to visit the Application Builder support page. Use the 
+following information as a reference:
+
+
+
+Error 1 occurred at AB_Engine_Build.vi -> AB_Build_Invoke.vi
+
+
+Possible reason(s):
+
+
+LabVIEW: (Hex 0x1) An input parameter is invalid. For example if the input is 
+a path, the path might contain a character not allowed by the OS such as ? or 
+@.
+An error occurred while running the ExecuteBuildSpec operation.
+
+ExecuteBuildSpec operation failed.
+
+
+=== ExecuteBuildSpec 'Client EXE' [EXE] target 'My Computer' in components\HAL-MAL-Application\Source\Framework\Networked Measurement System.lvproj ===
+LabVIEWCLI started logging in file:  C:\Users\ContainerAdministrator\AppData\Local\Temp\lvtemporary_813741.log
+Using LabVIEW: "C:\Program Files\National Instruments\LabVIEW 2026\LabVIEW.exe"
+Connection established with LabVIEW at port number 3363.
+
+LabVIEWCLI.exe : Operation output: 
+At C:\workspace\.github\labview\build-binaries.ps1:252 char:12
++     $out = & $CliExe @cliArgs 2>&1 | Out-String
++            ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Operation output: :String) [], Re 
+   moteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Error Code : 1
+Error Message : The build is missing one or more source files or items the 
+source files reference on disk.
+
+To locate the files before you build, right-click the project root in the 
+Project Explorer window and select Find Missing Items from the shortcut menu 
+to display the Find Missing Items dialog box.
+
+
+
+
+
+
+
+
+
+
+Click the link below to visit the Application Builder support page. Use the 
+following information as a reference:
+
+
+
+Error 1 occurred at AB_Engine_Build.vi -> AB_Build_Invoke.vi
+
+
+Possible reason(s):
+
+
+LabVIEW: (Hex 0x1) An input parameter is invalid. For example if the input is 
+a path, the path might contain a character not allowed by the OS such as ? or 
+@.
+An error occurred while running the ExecuteBuildSpec operation.
+
+ExecuteBuildSpec operation failed.
+
+
+=== ExecuteBuildSpec 'Controller EXE' [EXE] target 'My Computer' in components\HAL-MAL-Application\Source\Framework\Networked Measurement System.lvproj ===
+LabVIEWCLI started logging in file:  C:\Users\ContainerAdministrator\AppData\Local\Temp\lvtemporary_22398.log
+Using LabVIEW: "C:\Program Files\National Instruments\LabVIEW 2026\LabVIEW.exe"
+Connection established with LabVIEW at port number 3363.
+
+LabVIEWCLI.exe : Operation output: 
+At C:\workspace\.github\labview\build-binaries.ps1:252 char:12
++     $out = & $CliExe @cliArgs 2>&1 | Out-String
++            ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Operation output: :String) [], Re 
+   moteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Error Code : 1
+Error Message : The build is missing one or more source files or items the 
+source files reference on disk.
+
+To locate the files before you build, right-click the project root in the 
+Project Explorer window and select Find Missing Items from the shortcut menu 
+to display the Find Missing Items dialog box.
+
+
+
+
+
+
+
+
+
+
+Click the link below to visit the Application Builder support page. Use the 
+following information as a reference:
+
+
+
+Error 1 occurred at AB_Engine_Build.vi -> AB_Build_Invoke.vi
+
+
+Possible reason(s):
+
+
+LabVIEW: (Hex 0x1) An input parameter is invalid. For example if the input is 
+a path, the path might contain a character not allowed by the OS such as ? or 
+@.
+An error occurred while running the ExecuteBuildSpec operation.
+
+ExecuteBuildSpec operation failed.
+
+
+=== ExecuteBuildSpec 'Client EXE FOR TESTING ONLY' [EXE] target 'My Computer' in components\HAL-MAL-Application\Source\Framework\Networked Measurement System.lvproj ===
+LabVIEWCLI started logging in file:  C:\Users\ContainerAdministrator\AppData\Local\Temp\lvtemporary_436783.log
+Using LabVIEW: "C:\Program Files\National Instruments\LabVIEW 2026\LabVIEW.exe"
+Connection established with LabVIEW at port number 3363.
+
+LabVIEWCLI.exe : Operation output: 
+At C:\workspace\.github\labview\build-binaries.ps1:252 char:12
++     $out = & $CliExe @cliArgs 2>&1 | Out-String
++            ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Operation output: :String) [], Re 
+   moteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Error Code : 1
+Error Message : The build is missing one or more source files or items the 
+source files reference on disk.
+
+To locate the files before you build, right-click the project root in the 
+Project Explorer window and select Find Missing Items from the shortcut menu 
+to display the Find Missing Items dialog box.
+
+
+
+
+
+
+
+
+
+
+Click the link below to visit the Application Builder support page. Use the 
+following information as a reference:
+
+
+
+Error 1 occurred at AB_Engine_Build.vi -> AB_Build_Invoke.vi
+
+
+Possible reason(s):
+
+
+LabVIEW: (Hex 0x1) An input parameter is invalid. For example if the input is 
+a path, the path might contain a character not allowed by the OS such as ? or 
+@.
+An error occurred while running the ExecuteBuildSpec operation.
+
+ExecuteBuildSpec operation failed.
+
+
+=== ExecuteBuildSpec 'Server Installer' [Installer] target 'My Computer' in components\HAL-MAL-Application\Source\Framework\Networked Measurement System.lvproj ===
+LabVIEWCLI started logging in file:  C:\Users\ContainerAdministrator\AppData\Local\Temp\lvtemporary_829758.log
+Using LabVIEW: "C:\Program Files\National Instruments\LabVIEW 2026\LabVIEW.exe"
+Connection established with LabVIEW at port number 3363.
+
+LabVIEWCLI.exe : Operation output: 
+At C:\workspace\.github\labview\build-binaries.ps1:252 char:12
++     $out = & $CliExe @cliArgs 2>&1 | Out-String
++            ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Operation output: :String) [], Re 
+   moteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Error Code : 1
+Error Message : An error has occurred. Expand the Details section for more 
+information.
+
+
+
+
+
+Click the link below to visit the Application Builder support page. Use the 
+following information as a reference:
+
+
+
+
+
+Create Folder in Create Directory Recursive.vi->IB_MSI.lvclass:Engine_Initializ
+eDistribution.vi->IB_MSI.lvclass:Build.vi->CDK_Engine_Main.vi->CDK_Build_Invoke
+.vi->CDK_Build_Invoke.vi.ProxyCaller<APPEND>
+\\psf\Home\Documents
+
+
+
+
+An error occurred while running the ExecuteBuildSpec operation.
+
+ExecuteBuildSpec operation failed.
+
+
+=== ExecuteBuildSpec 'Client Installer' [Installer] target 'My Computer' in components\HAL-MAL-Application\Source\Framework\Networked Measurement System.lvproj ===
+LabVIEWCLI started logging in file:  C:\Users\ContainerAdministrator\AppData\Local\Temp\lvtemporary_602265.log
+Using LabVIEW: "C:\Program Files\National Instruments\LabVIEW 2026\LabVIEW.exe"
+Connection established with LabVIEW at port number 3363.
+
+LabVIEWCLI.exe : Operation output: 
+At C:\workspace\.github\labview\build-binaries.ps1:252 char:12
++     $out = & $CliExe @cliArgs 2>&1 | Out-String
++            ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Operation output: :String) [], Re 
+   moteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Error Code : 1
+Error Message : An error has occurred. Expand the Details section for more 
+information.
+
+
+
+
+
+Click the link below to visit the Application Builder support page. Use the 
+following information as a reference:
+
+
+
+
+
+Create Folder in Create Directory Recursive.vi->IB_MSI.lvclass:Engine_Initializ
+eDistribution.vi->IB_MSI.lvclass:Build.vi->CDK_Engine_Main.vi->CDK_Build_Invoke
+.vi->CDK_Build_Invoke.vi.ProxyCaller<APPEND>
+\\psf\Home\Documents
+
+
+
+
+An error occurred while running the ExecuteBuildSpec operation.
+
+ExecuteBuildSpec operation failed.
+
+
+=== ExecuteBuildSpec 'Server EXE' [EXE] target 'My Computer' in components\HAL-MAL-Application\Source\Framework\Server\Build Tools\Networked Measurement System.lvproj ===
+LabVIEWCLI started logging in file:  C:\Users\ContainerAdministrator\AppData\Local\Temp\lvtemporary_81792.log
+Using LabVIEW: "C:\Program Files\National Instruments\LabVIEW 2026\LabVIEW.exe"
+Connection established with LabVIEW at port number 3363.
+
+LabVIEWCLI.exe : Operation output: 
+At C:\workspace\.github\labview\build-binaries.ps1:252 char:12
++     $out = & $CliExe @cliArgs 2>&1 | Out-String
++            ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Operation output: :String) [], Re 
+   moteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Error Code : 1
+Error Message : The build is missing one or more source files or items the 
+source files reference on disk.
+
+To locate the files before you build, right-click the project root in the 
+Project Explorer window and select Find Missing Items from the shortcut menu 
+to display the Find Missing Items dialog box.
+
+
+
+
+
+
+
+
+
+
+Click the link below to visit the Application Builder support page. Use the 
+following information as a reference:
+
+
+
+Error 1 occurred at AB_Engine_Build.vi -> AB_Build_Invoke.vi
+
+
+Possible reason(s):
+
+
+LabVIEW: (Hex 0x1) An input parameter is invalid. For example if the input is 
+a path, the path might contain a character not allowed by the OS such as ? or 
+@.
+An error occurred while running the ExecuteBuildSpec operation.
+
+ExecuteBuildSpec operation failed.
+
+
+=== ExecuteBuildSpec 'Client EXE' [EXE] target 'My Computer' in components\HAL-MAL-Application\Source\Framework\Server\Build Tools\Networked Measurement System.lvproj ===
+LabVIEWCLI started logging in file:  C:\Users\ContainerAdministrator\AppData\Local\Temp\lvtemporary_771445.log
+Using LabVIEW: "C:\Program Files\National Instruments\LabVIEW 2026\LabVIEW.exe"
+Connection established with LabVIEW at port number 3363.
+
+LabVIEWCLI.exe : Operation output: 
+At C:\workspace\.github\labview\build-binaries.ps1:252 char:12
++     $out = & $CliExe @cliArgs 2>&1 | Out-String
++            ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Operation output: :String) [], Re 
+   moteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Error Code : 1
+Error Message : The build is missing one or more source files or items the 
+source files reference on disk.
+
+To locate the files before you build, right-click the project root in the 
+Project Explorer window and select Find Missing Items from the shortcut menu 
+to display the Find Missing Items dialog box.
+
+
+
+
+
+
+
+
+
+
+Click the link below to visit the Application Builder support page. Use the 
+following information as a reference:
+
+
+
+Error 1 occurred at AB_Engine_Build.vi -> AB_Build_Invoke.vi
+
+
+Possible reason(s):
+
+
+LabVIEW: (Hex 0x1) An input parameter is invalid. For example if the input is 
+a path, the path might contain a character not allowed by the OS such as ? or 
+@.
+An error occurred while running the ExecuteBuildSpec operation.
+
+ExecuteBuildSpec operation failed.
+
+
+=== ExecuteBuildSpec 'Measurement Controller Installer' [Installer] target 'My Computer' in components\HAL-MAL-Application\Source\Framework\Server\Build Tools\Networked Measurement System.lvproj ===
+LabVIEWCLI started logging in file:  C:\Users\ContainerAdministrator\AppData\Local\Temp\lvtemporary_172313.log
+Using LabVIEW: "C:\Program Files\National Instruments\LabVIEW 2026\LabVIEW.exe"
+Connection established with LabVIEW at port number 3363.
+
+LabVIEWCLI.exe : Operation output: 
+At C:\workspace\.github\labview\build-binaries.ps1:252 char:12
++     $out = & $CliExe @cliArgs 2>&1 | Out-String
++            ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Operation output: :String) [], Re 
+   moteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Error Code : 1
+Error Message : An error has occurred. Expand the Details section for more 
+information.
+
+
+
+
+
+Click the link below to visit the Application Builder support page. Use the 
+following information as a reference:
+
+
+
+
+
+Create Folder in Create Directory Recursive.vi->IB_MSI.lvclass:Engine_Initializ
+eDistribution.vi->IB_MSI.lvclass:Build.vi->CDK_Engine_Main.vi->CDK_Build_Invoke
+.vi->CDK_Build_Invoke.vi.ProxyCaller<APPEND>
+Z:\Documents
+
+
+
+
+An error occurred while running the ExecuteBuildSpec operation.
+
+ExecuteBuildSpec operation failed.
+
+
+=== ExecuteBuildSpec 'Agilent 34401a Device' [Source Distribution] target 'My Computer' in components\Hardware\Sample Hardware.lvproj ===
+LabVIEWCLI started logging in file:  C:\Users\ContainerAdministrator\AppData\Local\Temp\lvtemporary_306873.log
+Using LabVIEW: "C:\Program Files\National Instruments\LabVIEW 2026\LabVIEW.exe"
+Connection established with LabVIEW at port number 3363.
+
+LabVIEWCLI.exe : Operation output: 
+At C:\workspace\.github\labview\build-binaries.ps1:252 char:12
++     $out = & $CliExe @cliArgs 2>&1 | Out-String
++            ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Operation output: :String) [], Re 
+   moteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Error Code : 1
+Error Message : The build is missing one or more source files or items the 
+source files reference on disk.
+
+To locate the files before you build, right-click the project root in the 
+Project Explorer window and select Find Missing Items from the shortcut menu 
+to display the Find Missing Items dialog box.
+
+
+
+
+
+
+
+
+
+
+Click the link below to visit the Application Builder support page. Use the 
+following information as a reference:
+
+
+
+Error 1 occurred at AB_Engine_Build.vi -> AB_Build_Invoke.vi
+
+
+Possible reason(s):
+
+
+LabVIEW: (Hex 0x1) An input parameter is invalid. For example if the input is 
+a path, the path might contain a character not allowed by the OS such as ? or 
+@.
+An error occurred while running the ExecuteBuildSpec operation.
+
+ExecuteBuildSpec operation failed.
+
+
+=== ExecuteBuildSpec 'PXI 4070 Device' [Source Distribution] target 'My Computer' in components\Hardware\Sample Hardware.lvproj ===
+LabVIEWCLI started logging in file:  C:\Users\ContainerAdministrator\AppData\Local\Temp\lvtemporary_249076.log
+Using LabVIEW: "C:\Program Files\National Instruments\LabVIEW 2026\LabVIEW.exe"
+Connection established with LabVIEW at port number 3363.
+
+LabVIEWCLI.exe : Operation output: 
+At C:\workspace\.github\labview\build-binaries.ps1:252 char:12
++     $out = & $CliExe @cliArgs 2>&1 | Out-String
++            ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Operation output: :String) [], Re 
+   moteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Error Code : 1
+Error Message : The build is missing one or more source files or items the 
+source files reference on disk.
+
+To locate the files before you build, right-click the project root in the 
+Project Explorer window and select Find Missing Items from the shortcut menu 
+to display the Find Missing Items dialog box.
+
+
+
+
+
+
+
+
+
+
+Click the link below to visit the Application Builder support page. Use the 
+following information as a reference:
+
+
+
+Error 1 occurred at AB_Engine_Build.vi -> AB_Build_Invoke.vi
+
+
+Possible reason(s):
+
+
+LabVIEW: (Hex 0x1) An input parameter is invalid. For example if the input is 
+a path, the path might contain a character not allowed by the OS such as ? or 
+@.
+An error occurred while running the ExecuteBuildSpec operation.
+
+ExecuteBuildSpec operation failed.
+
+
+=== ExecuteBuildSpec 'PXI 4110 Device' [Source Distribution] target 'My Computer' in components\Hardware\Sample Hardware.lvproj ===
+LabVIEWCLI started logging in file:  C:\Users\ContainerAdministrator\AppData\Local\Temp\lvtemporary_383584.log
+Using LabVIEW: "C:\Program Files\National Instruments\LabVIEW 2026\LabVIEW.exe"
+Connection established with LabVIEW at port number 3363.
+
+LabVIEWCLI.exe : Operation output: 
+At C:\workspace\.github\labview\build-binaries.ps1:252 char:12
++     $out = & $CliExe @cliArgs 2>&1 | Out-String
++            ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Operation output: :String) [], Re 
+   moteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Error Code : 1
+Error Message : The build is missing one or more source files or items the 
+source files reference on disk.
+
+To locate the files before you build, right-click the project root in the 
+Project Explorer window and select Find Missing Items from the shortcut menu 
+to display the Find Missing Items dialog box.
+
+
+
+
+
+
+
+
+
+
+Click the link below to visit the Application Builder support page. Use the 
+following information as a reference:
+
+
+
+Error 1 occurred at AB_Engine_Build.vi -> AB_Build_Invoke.vi
+
+
+Possible reason(s):
+
+
+LabVIEW: (Hex 0x1) An input parameter is invalid. For example if the input is 
+a path, the path might contain a character not allowed by the OS such as ? or 
+@.
+An error occurred while running the ExecuteBuildSpec operation.
+
+ExecuteBuildSpec operation failed.
+
+
+=== ExecuteBuildSpec 'PXIe 5185 Device' [Source Distribution] target 'My Computer' in components\Hardware\Sample Hardware.lvproj ===
+LabVIEWCLI started logging in file:  C:\Users\ContainerAdministrator\AppData\Local\Temp\lvtemporary_109433.log
+Using LabVIEW: "C:\Program Files\National Instruments\LabVIEW 2026\LabVIEW.exe"
+Connection established with LabVIEW at port number 3363.
+
+LabVIEWCLI.exe : Operation output: 
+At C:\workspace\.github\labview\build-binaries.ps1:252 char:12
++     $out = & $CliExe @cliArgs 2>&1 | Out-String
++            ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Operation output: :String) [], Re 
+   moteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Error Code : 1
+Error Message : The build is missing one or more source files or items the 
+source files reference on disk.
+
+To locate the files before you build, right-click the project root in the 
+Project Explorer window and select Find Missing Items from the shortcut menu 
+to display the Find Missing Items dialog box.
+
+
+
+
+
+
+
+
+
+
+Click the link below to visit the Application Builder support page. Use the 
+following information as a reference:
+
+
+
+Error 1 occurred at AB_Engine_Build.vi -> AB_Build_Invoke.vi
+
+
+Possible reason(s):
+
+
+LabVIEW: (Hex 0x1) An input parameter is invalid. For example if the input is 
+a path, the path might contain a character not allowed by the OS such as ? or 
+@.
+An error occurred while running the ExecuteBuildSpec operation.
+
+ExecuteBuildSpec operation failed.
+
+
+=== ExecuteBuildSpec 'Simulated DMM Device' [Source Distribution] target 'My Computer' in components\Hardware\Sample Hardware.lvproj ===
+LabVIEWCLI started logging in file:  C:\Users\ContainerAdministrator\AppData\Local\Temp\lvtemporary_42147.log
+Using LabVIEW: "C:\Program Files\National Instruments\LabVIEW 2026\LabVIEW.exe"
+Connection established with LabVIEW at port number 3363.
+
+LabVIEWCLI.exe : Operation output: 
+At C:\workspace\.github\labview\build-binaries.ps1:252 char:12
++     $out = & $CliExe @cliArgs 2>&1 | Out-String
++            ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Operation output: :String) [], Re 
+   moteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Error Code : 1
+Error Message : The build is missing one or more source files or items the 
+source files reference on disk.
+
+To locate the files before you build, right-click the project root in the 
+Project Explorer window and select Find Missing Items from the shortcut menu 
+to display the Find Missing Items dialog box.
+
+
+
+
+
+
+
+
+
+
+Click the link below to visit the Application Builder support page. Use the 
+following information as a reference:
+
+
+
+Error 1 occurred at AB_Engine_Build.vi -> AB_Build_Invoke.vi
+
+
+Possible reason(s):
+
+
+LabVIEW: (Hex 0x1) An input parameter is invalid. For example if the input is 
+a path, the path might contain a character not allowed by the OS such as ? or 
+@.
+An error occurred while running the ExecuteBuildSpec operation.
+
+ExecuteBuildSpec operation failed.
+
+
+=== ExecuteBuildSpec 'Simulated FGEN Device' [Source Distribution] target 'My Computer' in components\Hardware\Sample Hardware.lvproj ===
+LabVIEWCLI started logging in file:  C:\Users\ContainerAdministrator\AppData\Local\Temp\lvtemporary_22495.log
+Using LabVIEW: "C:\Program Files\National Instruments\LabVIEW 2026\LabVIEW.exe"
+Connection established with LabVIEW at port number 3363.
+
+LabVIEWCLI.exe : Operation output: 
+At C:\workspace\.github\labview\build-binaries.ps1:252 char:12
++     $out = & $CliExe @cliArgs 2>&1 | Out-String
++            ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Operation output: :String) [], Re 
+   moteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Error Code : 1
+Error Message : The build is missing one or more source files or items the 
+source files reference on disk.
+
+To locate the files before you build, right-click the project root in the 
+Project Explorer window and select Find Missing Items from the shortcut menu 
+to display the Find Missing Items dialog box.
+
+
+
+
+
+
+
+
+
+
+Click the link below to visit the Application Builder support page. Use the 
+following information as a reference:
+
+
+
+Error 1 occurred at AB_Engine_Build.vi -> AB_Build_Invoke.vi
+
+
+Possible reason(s):
+
+
+LabVIEW: (Hex 0x1) An input parameter is invalid. For example if the input is 
+a path, the path might contain a character not allowed by the OS such as ? or 
+@.
+An error occurred while running the ExecuteBuildSpec operation.
+
+ExecuteBuildSpec operation failed.
+
+
+=== ExecuteBuildSpec 'Simulated Scope Device' [Source Distribution] target 'My Computer' in components\Hardware\Sample Hardware.lvproj ===
+LabVIEWCLI started logging in file:  C:\Users\ContainerAdministrator\AppData\Local\Temp\lvtemporary_327040.log
+Using LabVIEW: "C:\Program Files\National Instruments\LabVIEW 2026\LabVIEW.exe"
+Connection established with LabVIEW at port number 3363.
+
+LabVIEWCLI.exe : Operation output: 
+At C:\workspace\.github\labview\build-binaries.ps1:252 char:12
++     $out = & $CliExe @cliArgs 2>&1 | Out-String
++            ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Operation output: :String) [], Re 
+   moteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Error Code : 1
+Error Message : The build is missing one or more source files or items the 
+source files reference on disk.
+
+To locate the files before you build, right-click the project root in the 
+Project Explorer window and select Find Missing Items from the shortcut menu 
+to display the Find Missing Items dialog box.
+
+
+
+
+
+
+
+
+
+
+Click the link below to visit the Application Builder support page. Use the 
+following information as a reference:
+
+
+
+Error 1 occurred at AB_Engine_Build.vi -> AB_Build_Invoke.vi
+
+
+Possible reason(s):
+
+
+LabVIEW: (Hex 0x1) An input parameter is invalid. For example if the input is 
+a path, the path might contain a character not allowed by the OS such as ? or 
+@.
+An error occurred while running the ExecuteBuildSpec operation.
+
+ExecuteBuildSpec operation failed.
+
+
+=== ExecuteBuildSpec 'Sample Hardware Installer' [Installer] target 'My Computer' in components\Hardware\Sample Hardware.lvproj ===
+LabVIEWCLI started logging in file:  C:\Users\ContainerAdministrator\AppData\Local\Temp\lvtemporary_560432.log
+Using LabVIEW: "C:\Program Files\National Instruments\LabVIEW 2026\LabVIEW.exe"
+Connection established with LabVIEW at port number 3363.
+
+LabVIEWCLI.exe : Operation output: 
+At C:\workspace\.github\labview\build-binaries.ps1:252 char:12
++     $out = & $CliExe @cliArgs 2>&1 | Out-String
++            ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Operation output: :String) [], Re 
+   moteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Error Code : 1
+Error Message : Error generating preview for Simulated DMM Device.
+
+
+
+
+
+
+
+
+
+Click the link below to visit the Application Builder support page. Use the 
+following information as a reference:
+
+
+
+Error -1 occurred at CDK_Utility_GenerateErrorCluster.vi -> 
+IB_Source_Container.lvclass:Report_Preview_Error.vi
+
+
+This error code is undefined. Undefined errors might occur for a number of 
+reasons. For example, no one has provided a description for the code, or you 
+might have wired a number that is not an error code to the error code input. 
+
+Additionally, undefined error codes might occur because the error relates to a 
+third-party object, such as the operating system or ActiveX. For these 
+third-party errors, you might be able to obtain a description of the error by 
+searching the Web for the error code (-1) or for its hexadecimal 
+representation (0xFFFFFFFF).
+
+
+
+
+An error occurred while running the ExecuteBuildSpec operation.
+
+ExecuteBuildSpec operation failed.
+
+
+=== ExecuteBuildSpec 'New Measurement' [Source Distribution] target 'My Computer' in components\MAL-Framework\Template\Source\Measurement\Measurement Prototype.lvproj ===
+LabVIEWCLI started logging in file:  C:\Users\ContainerAdministrator\AppData\Local\Temp\lvtemporary_196339.log
+Using LabVIEW: "C:\Program Files\National Instruments\LabVIEW 2026\LabVIEW.exe"
+Connection established with LabVIEW at port number 3363.
+
+LabVIEWCLI.exe : Operation output: 
+At C:\workspace\.github\labview\build-binaries.ps1:252 char:12
++     $out = & $CliExe @cliArgs 2>&1 | Out-String
++            ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Operation output: :String) [], Re 
+   moteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Error Code : 1
+Error Message : LabVIEW cannot find a file that is a dependency of a Startup, 
+Exported, or Always Included VI.
+
+File Not Found: 
+C:\workspace\recovery\packages\oglib_appcontrol-4.1.0.7-34BB338B21\File Group 
+0\user.lib\_OpenG.lib\appcontrol\appcontrol.llb\Current VIs Parents 
+Ref__ogtk.vi
+
+The missing file might be referenced by one of the libraries included in the 
+build or by the file - Prototype Measurement.lvclass. To fix this issue:
+
+- Open all Startup, Exported, or Always Included VIs, recompile them 
+(CTRL+SHIFT Click the Run arrow) and save them to update their dependencies.
+
+
+
+
+
+
+
+
+
+Click the link below to visit the Application Builder support page. Use the 
+following information as a reference:
+
+
+
+Error 7 occurred at AB_Engine_HandleLinkErrors.vi -> 
+AB_Engine_Update_Source_from_Linker.vi
+
+
+Possible reason(s):
+
+
+LabVIEW: (Hex 0x7) File not found. The file might be in a different location 
+or deleted. Use the command prompt or the file explorer to verify that the 
+path is correct.
+An error occurred while running the ExecuteBuildSpec operation.
+
+ExecuteBuildSpec operation failed.
+
+
+=== ExecuteBuildSpec 'Install Measurement' [Installer] target 'My Computer' in components\MAL-Framework\Template\Source\Measurement\Measurement Prototype.lvproj ===
+LabVIEWCLI started logging in file:  C:\Users\ContainerAdministrator\AppData\Local\Temp\lvtemporary_983468.log
+Using LabVIEW: "C:\Program Files\National Instruments\LabVIEW 2026\LabVIEW.exe"
+Connection established with LabVIEW at port number 3363.
+
+LabVIEWCLI.exe : Operation output: 
+At C:\workspace\.github\labview\build-binaries.ps1:252 char:12
++     $out = & $CliExe @cliArgs 2>&1 | Out-String
++            ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Operation output: :String) [], Re 
+   moteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Error Code : 1
+Error Message : Error generating preview for New Measurement.
+
+
+
+
+
+
+
+
+
+Click the link below to visit the Application Builder support page. Use the 
+following information as a reference:
+
+
+
+Error -1 occurred at CDK_Utility_GenerateErrorCluster.vi -> 
+IB_Source_Container.lvclass:Report_Preview_Error.vi
+
+
+This error code is undefined. Undefined errors might occur for a number of 
+reasons. For example, no one has provided a description for the code, or you 
+might have wired a number that is not an error code to the error code input. 
+
+Additionally, undefined error codes might occur because the error relates to a 
+third-party object, such as the operating system or ActiveX. For these 
+third-party errors, you might be able to obtain a description of the error by 
+searching the Web for the error code (-1) or for its hexadecimal 
+representation (0xFFFFFFFF).
+
+
+
+
+An error occurred while running the ExecuteBuildSpec operation.
+
+ExecuteBuildSpec operation failed.
+
+
+Project has no build specifications: components\MAL-Framework\Template\Source\Measurement\scripting\MsmtMetaDataObj.lvproj
+Project has no build specifications: components\MAL-Framework\user.lib\Common Components\Msmt Common Components Project.lvproj
+Project has no build specifications: components\MAL-Framework-API\Measurement Controller API.lvproj
+Project has no build specifications: components\TestStand-MAL-API\TestStand Custom Step Types for MAL Framework.lvproj
