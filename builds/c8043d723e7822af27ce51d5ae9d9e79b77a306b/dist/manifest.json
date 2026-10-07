@@ -1,0 +1,263 @@
+{
+    "repo":  "elijah286/labview-mal-reference",
+    "sha":  "c8043d723e7822af27ce51d5ae9d9e79b77a306b",
+    "ref":  "refs/heads/main",
+    "platform":  "windows",
+    "arch":  "AMD64",
+    "labview_version":  "LabVIEW 2026",
+    "built_at":  "2026-10-07T16:14:19Z",
+    "specs":  [
+                  {
+                      "project":  "components\\Extensible-Config-Dialog\\Configuration Dialog Actor.lvproj",
+                      "name":  "Config Library Source Dist",
+                      "type":  "{E661DAE2-7517-431F-AC41-30807A3BDA38}",
+                      "target":  "My Computer",
+                      "status":  "failed",
+                      "outputs":  [
+
+                                  ],
+                      "message":  "ExecuteBuildSpec exited 2",
+                      "duration":  65.6
+                  },
+                  {
+                      "project":  "components\\Extensible-Config-Dialog\\Configuration Dialog Actor.lvproj",
+                      "name":  "Extensible Config Dialog",
+                      "type":  "Source Distribution",
+                      "target":  "My Computer",
+                      "status":  "failed",
+                      "outputs":  [
+
+                                  ],
+                      "message":  "ExecuteBuildSpec exited 2",
+                      "duration":  8.1
+                  },
+                  {
+                      "project":  "components\\Extensible-Config-Dialog\\Basic Configuration Dialog\\Config Dialog Example.lvproj",
+                      "name":  "Config Dialog",
+                      "type":  "EXE",
+                      "target":  "My Computer",
+                      "status":  "failed",
+                      "outputs":  [
+
+                                  ],
+                      "message":  "ExecuteBuildSpec exited 2",
+                      "duration":  5.2
+                  },
+                  {
+                      "project":  "components\\HAL-MAL-Application\\Source\\Framework\\Networked Measurement System.lvproj",
+                      "name":  "Client EXE",
+                      "type":  "EXE",
+                      "target":  "My Computer",
+                      "status":  "failed",
+                      "outputs":  [
+
+                                  ],
+                      "message":  "ExecuteBuildSpec exited 2",
+                      "duration":  27.7
+                  },
+                  {
+                      "project":  "components\\HAL-MAL-Application\\Source\\Framework\\Networked Measurement System.lvproj",
+                      "name":  "Controller EXE",
+                      "type":  "EXE",
+                      "target":  "My Computer",
+                      "status":  "failed",
+                      "outputs":  [
+
+                                  ],
+                      "message":  "ExecuteBuildSpec exited 2",
+                      "duration":  18.8
+                  },
+                  {
+                      "project":  "components\\HAL-MAL-Application\\Source\\Framework\\Networked Measurement System.lvproj",
+                      "name":  "Client EXE FOR TESTING ONLY",
+                      "type":  "EXE",
+                      "target":  "My Computer",
+                      "status":  "failed",
+                      "outputs":  [
+
+                                  ],
+                      "message":  "ExecuteBuildSpec exited 2",
+                      "duration":  17.6
+                  },
+                  {
+                      "project":  "components\\HAL-MAL-Application\\Source\\Framework\\Networked Measurement System.lvproj",
+                      "name":  "Server Installer",
+                      "type":  "Installer",
+                      "target":  "My Computer",
+                      "status":  "failed",
+                      "outputs":  [
+
+                                  ],
+                      "message":  "ExecuteBuildSpec exited 2",
+                      "duration":  26.7
+                  },
+                  {
+                      "project":  "components\\HAL-MAL-Application\\Source\\Framework\\Networked Measurement System.lvproj",
+                      "name":  "Client Installer",
+                      "type":  "Installer",
+                      "target":  "My Computer",
+                      "status":  "failed",
+                      "outputs":  [
+
+                                  ],
+                      "message":  "ExecuteBuildSpec exited 2",
+                      "duration":  17.8
+                  },
+                  {
+                      "project":  "components\\HAL-MAL-Application\\Source\\Framework\\Server\\Build Tools\\Networked Measurement System.lvproj",
+                      "name":  "Server EXE",
+                      "type":  "EXE",
+                      "target":  "My Computer",
+                      "status":  "failed",
+                      "outputs":  [
+
+                                  ],
+                      "message":  "ExecuteBuildSpec exited 2",
+                      "duration":  4.8
+                  },
+                  {
+                      "project":  "components\\HAL-MAL-Application\\Source\\Framework\\Server\\Build Tools\\Networked Measurement System.lvproj",
+                      "name":  "Client EXE",
+                      "type":  "EXE",
+                      "target":  "My Computer",
+                      "status":  "failed",
+                      "outputs":  [
+
+                                  ],
+                      "message":  "ExecuteBuildSpec exited 2",
+                      "duration":  4.7
+                  },
+                  {
+                      "project":  "components\\HAL-MAL-Application\\Source\\Framework\\Server\\Build Tools\\Networked Measurement System.lvproj",
+                      "name":  "Measurement Controller Installer",
+                      "type":  "Installer",
+                      "target":  "My Computer",
+                      "status":  "failed",
+                      "outputs":  [
+
+                                  ],
+                      "message":  "ExecuteBuildSpec exited 2",
+                      "duration":  4.7
+                  },
+                  {
+                      "project":  "components\\Hardware\\Sample Hardware.lvproj",
+                      "name":  "Agilent 34401a Device",
+                      "type":  "Source Distribution",
+                      "target":  "My Computer",
+                      "status":  "failed",
+                      "outputs":  [
+
+                                  ],
+                      "message":  "ExecuteBuildSpec exited 2",
+                      "duration":  6.5
+                  },
+                  {
+                      "project":  "components\\Hardware\\Sample Hardware.lvproj",
+                      "name":  "PXI 4070 Device",
+                      "type":  "Source Distribution",
+                      "target":  "My Computer",
+                      "status":  "failed",
+                      "outputs":  [
+
+                                  ],
+                      "message":  "ExecuteBuildSpec exited 2",
+                      "duration":  6
+                  },
+                  {
+                      "project":  "components\\Hardware\\Sample Hardware.lvproj",
+                      "name":  "PXI 4110 Device",
+                      "type":  "Source Distribution",
+                      "target":  "My Computer",
+                      "status":  "failed",
+                      "outputs":  [
+
+                                  ],
+                      "message":  "ExecuteBuildSpec exited 2",
+                      "duration":  6.1
+                  },
+                  {
+                      "project":  "components\\Hardware\\Sample Hardware.lvproj",
+                      "name":  "PXIe 5185 Device",
+                      "type":  "Source Distribution",
+                      "target":  "My Computer",
+                      "status":  "failed",
+                      "outputs":  [
+
+                                  ],
+                      "message":  "ExecuteBuildSpec exited 2",
+                      "duration":  6
+                  },
+                  {
+                      "project":  "components\\Hardware\\Sample Hardware.lvproj",
+                      "name":  "Simulated DMM Device",
+                      "type":  "Source Distribution",
+                      "target":  "My Computer",
+                      "status":  "failed",
+                      "outputs":  [
+
+                                  ],
+                      "message":  "ExecuteBuildSpec exited 2",
+                      "duration":  6
+                  },
+                  {
+                      "project":  "components\\Hardware\\Sample Hardware.lvproj",
+                      "name":  "Simulated FGEN Device",
+                      "type":  "Source Distribution",
+                      "target":  "My Computer",
+                      "status":  "failed",
+                      "outputs":  [
+
+                                  ],
+                      "message":  "ExecuteBuildSpec exited 2",
+                      "duration":  6.2
+                  },
+                  {
+                      "project":  "components\\Hardware\\Sample Hardware.lvproj",
+                      "name":  "Simulated Scope Device",
+                      "type":  "Source Distribution",
+                      "target":  "My Computer",
+                      "status":  "failed",
+                      "outputs":  [
+
+                                  ],
+                      "message":  "ExecuteBuildSpec exited 2",
+                      "duration":  6.8
+                  },
+                  {
+                      "project":  "components\\Hardware\\Sample Hardware.lvproj",
+                      "name":  "Sample Hardware Installer",
+                      "type":  "Installer",
+                      "target":  "My Computer",
+                      "status":  "failed",
+                      "outputs":  [
+
+                                  ],
+                      "message":  "ExecuteBuildSpec exited 2",
+                      "duration":  8
+                  },
+                  {
+                      "project":  "components\\MAL-Framework\\Template\\Source\\Measurement\\Measurement Prototype.lvproj",
+                      "name":  "New Measurement",
+                      "type":  "Source Distribution",
+                      "target":  "My Computer",
+                      "status":  "failed",
+                      "outputs":  [
+
+                                  ],
+                      "message":  "ExecuteBuildSpec exited 2",
+                      "duration":  14.7
+                  },
+                  {
+                      "project":  "components\\MAL-Framework\\Template\\Source\\Measurement\\Measurement Prototype.lvproj",
+                      "name":  "Install Measurement",
+                      "type":  "Installer",
+                      "target":  "My Computer",
+                      "status":  "failed",
+                      "outputs":  [
+
+                                  ],
+                      "message":  "ExecuteBuildSpec exited 2",
+                      "duration":  13
+                  }
+              ]
+}
