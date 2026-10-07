@@ -40,6 +40,13 @@ Do not call the initial snapshot a byte-identical checkout of those seven commit
 
 ## Saved Native Repairs
 
+The subsequent Standard Measurement recovery adapts a legacy 5.3 measurement
+plugin to this reference's current parent contract. It adds bounded buffered-data
+reads and preserves runtime class before the mandatory acquisition parent call.
+Native compiler, factory, synthetic-data, fault/timeout, saved-diagram and live
+Step-menu checks passed. See [Measurement Plugin Repair](docs/MEASUREMENT-PLUGIN-REPAIR.md)
+for exact changes and the remaining hardware, logging and lifecycle limits.
+
 Paths in this table are relative to the repository root. Native backups were kept
 locally before edits. Compilation checks were performed in the named reference
 project, not inferred from an add-on application instance.

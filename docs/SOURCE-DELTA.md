@@ -4,7 +4,7 @@ Generated disk comparison against the recorded local-source and pinned-archive s
 Native VI hashes show differences, not their meaning; use CHANGES.md and native review for attribution.
 Personal IDE state and package archives are excluded. Unsaved IDE edits are not represented.
 
-Added: 2; changed: 496; missing: 0; unchanged: 534.
+Added: 11; changed: 497; missing: 0; unchanged: 533.
 Full before/current SHA256 records: [source-delta.json](source-delta.json).
 
 | Change | Component-Relative Path |
@@ -101,6 +101,7 @@ Full before/current SHA256 records: [source-delta.json](source-delta.json).
 | changed | components/HAL-MAL-Application/Source/Framework/Client/UI/Disable UI.vi |
 | changed | components/HAL-MAL-Application/Source/Framework/Client/UI/Start UI.vi |
 | changed | components/HAL-MAL-Application/Source/Framework/Client/UI/Stop Core.vi |
+| changed | components/HAL-MAL-Application/Source/Framework/Measurements.ini |
 | changed | components/HAL-MAL-Application/Source/Framework/Networked Measurement System.lvproj |
 | changed | components/HAL-MAL-Application/Source/Framework/Server/Build Tools/Define Default Paths.vi |
 | changed | components/HAL-MAL-Application/Source/Framework/Server/Build Tools/Generate config File.vi |
@@ -499,6 +500,15 @@ Full before/current SHA256 records: [source-delta.json](source-delta.json).
 | changed | components/MAL-Framework-API/Measurement Controller API.lvproj |
 | changed | components/MAL-Framework-API/Messages/Launch Measurement Msg/Drop Message Core.vi |
 | changed | components/MAL-Framework-API/Messages/Launch Measurement Msg/Launch Measurement and Wait for Result.lvclass |
+| added | components/Measurements/Standard Measurement Plugin/RECOVERY-STATUS.md |
+| added | components/Measurements/Standard Measurement Plugin/Standard Measurement Plugin.lvlib |
+| added | components/Measurements/Standard Measurement Plugin/Standard Measurement.lvclass |
+| added | components/Measurements/Standard Measurement Plugin/Standard Measurement/Acquire.vi |
+| added | components/Measurements/Standard Measurement Plugin/Standard Measurement/Close.vi |
+| added | components/Measurements/Standard Measurement Plugin/Standard Measurement/Configure.vi |
+| added | components/Measurements/Standard Measurement Plugin/Standard Measurement/Measure.vi |
+| added | components/Measurements/Standard Measurement Plugin/Standard Measurement/Read Buffered Data.vi |
+| added | components/Measurements/Standard Measurement Plugin/Standard Measurement/Read Compatible Hardware Types.vi |
 | changed | components/TestStand-MAL-API/Measurement Setup/Measurement Data/Measurement Data.lvclass |
 | changed | components/TestStand-MAL-API/Measurement Setup/Measurement Setup Controller.lvlib |
 | changed | components/TestStand-MAL-API/Measurement Setup/Measurement Setup Messages/Store Measuement Config Msg/Store Measuement Config Msg.lvclass |

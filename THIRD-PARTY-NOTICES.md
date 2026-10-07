@@ -18,6 +18,11 @@ before describing the assembled reference as generally reusable open-source code
 
 ## Recovered Packages
 
+Standard Measurement Plugin (System) 1.0.0.3 was packaged by Elijah Kerry and
+records NI copyright with blank license metadata. It is included under the
+existing authorization for the author's original example source, not under a
+newly invented MIT/BSD grant. See [Measurement Plugin Repair](docs/MEASUREMENT-PLUGIN-REPAIR.md).
+
 | Family | Version | Local Notice | Publication Assessment |
 | --- | --- | --- | --- |
 | OpenG appcontrol | 4.1.0.7 | vendor/package-notices/oglib_appcontrol/license | BSD-family terms; preserve the actual notice and conditions |

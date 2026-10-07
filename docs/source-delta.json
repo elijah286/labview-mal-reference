@@ -1,14 +1,14 @@
 ﻿{
     "schemaVersion":  1,
-    "recordedAtUtc":  "2026-10-07T15:40:15.8608574Z",
+    "recordedAtUtc":  "2026-10-07T20:17:53.0639841Z",
     "scope":  "components source files, excluding personal IDE state and package archives",
     "baselineOrigin":  "initial-local-and-pinned-archive-snapshots",
     "caveat":  "Disk snapshot only; unsaved IDE edits and causal attribution are not established by hashes.",
     "summary":  {
-                    "added":  2,
-                    "changed":  496,
+                    "added":  11,
+                    "changed":  497,
                     "missing":  0,
-                    "unchanged":  534
+                    "unchanged":  533
                 },
     "files":  [
                   {
@@ -871,9 +871,9 @@
                   },
                   {
                       "path":  "components/HAL-MAL-Application/Source/Framework/Measurements.ini",
-                      "change":  "unchanged",
+                      "change":  "changed",
                       "beforeSha256":  "B55628F8035614F2B6A91A063B4852FC11A60A3E78EE30D2AC5AEAE1AAE2DA9B",
-                      "currentSha256":  "B55628F8035614F2B6A91A063B4852FC11A60A3E78EE30D2AC5AEAE1AAE2DA9B"
+                      "currentSha256":  "F89C064890AED899092F467CC007B47E3248BC875F9A6F739722E8EB0F899C51"
                   },
                   {
                       "path":  "components/HAL-MAL-Application/Source/Framework/Networked Measurement System.lvproj",
@@ -5926,6 +5926,60 @@
                       "change":  "unchanged",
                       "beforeSha256":  "8E1FD8291EB11185DB7DD7735F6BA335C7994CAF8FC6ED28593190DB916A3365",
                       "currentSha256":  "8E1FD8291EB11185DB7DD7735F6BA335C7994CAF8FC6ED28593190DB916A3365"
+                  },
+                  {
+                      "path":  "components/Measurements/Standard Measurement Plugin/RECOVERY-STATUS.md",
+                      "change":  "added",
+                      "beforeSha256":  null,
+                      "currentSha256":  "3665329D260FCB0BAB3B67F241ABFA7649FD5CC112EF4DB13AA850FF72A4BED7"
+                  },
+                  {
+                      "path":  "components/Measurements/Standard Measurement Plugin/Standard Measurement Plugin.lvlib",
+                      "change":  "added",
+                      "beforeSha256":  null,
+                      "currentSha256":  "5E8E227505796FBA880ED424481F6A15187794CFC0DCD57149766252146583D3"
+                  },
+                  {
+                      "path":  "components/Measurements/Standard Measurement Plugin/Standard Measurement.lvclass",
+                      "change":  "added",
+                      "beforeSha256":  null,
+                      "currentSha256":  "50E5A8DA54568D046872D00F0BAEF60A76BA32C22C67D3B6A2160C82BCDF815E"
+                  },
+                  {
+                      "path":  "components/Measurements/Standard Measurement Plugin/Standard Measurement/Acquire.vi",
+                      "change":  "added",
+                      "beforeSha256":  null,
+                      "currentSha256":  "5F36C39CA2EEC0C6F7B43133AD732C44E2CFE4D45B5A29D9F396D90454CF2B4D"
+                  },
+                  {
+                      "path":  "components/Measurements/Standard Measurement Plugin/Standard Measurement/Close.vi",
+                      "change":  "added",
+                      "beforeSha256":  null,
+                      "currentSha256":  "53CA66B3DCACF5DC0668C86E4EBAA72C236B2FE968503CAC3F17D09845CCCAE9"
+                  },
+                  {
+                      "path":  "components/Measurements/Standard Measurement Plugin/Standard Measurement/Configure.vi",
+                      "change":  "added",
+                      "beforeSha256":  null,
+                      "currentSha256":  "6BB2C6BEFACD73502B30041F8CBEA3D898835356B0ADE4D36C101DD555B94E46"
+                  },
+                  {
+                      "path":  "components/Measurements/Standard Measurement Plugin/Standard Measurement/Measure.vi",
+                      "change":  "added",
+                      "beforeSha256":  null,
+                      "currentSha256":  "22A6193F78DB0A27157B98C302911D6E0D874D4136C632FEF76BF8EC562D4140"
+                  },
+                  {
+                      "path":  "components/Measurements/Standard Measurement Plugin/Standard Measurement/Read Buffered Data.vi",
+                      "change":  "added",
+                      "beforeSha256":  null,
+                      "currentSha256":  "8F65AA687525AE411F35F99037210E9DEE9F965DA436BC9C1C00EBBB7A403DEA"
+                  },
+                  {
+                      "path":  "components/Measurements/Standard Measurement Plugin/Standard Measurement/Read Compatible Hardware Types.vi",
+                      "change":  "added",
+                      "beforeSha256":  null,
+                      "currentSha256":  "A74379FDF73304E735AC720E379DE1546391C58BEF3DF8CF6F3FA0B6C0C6C805"
                   },
                   {
                       "path":  "components/TestStand-MAL-API/Example Sequence.seq",

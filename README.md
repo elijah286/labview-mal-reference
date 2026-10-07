@@ -129,6 +129,7 @@ is supporting evidence, not a replacement for the current status below.
 | Local application operation | User-confirmed working on October 7, 2026 |
 | Corrected local initialization | Native runtime trace: status false, code 0, empty source while NI Network Discovery remained stopped |
 | Native compilation | Selected subject checks passed in the reference project's application instance; not every plugin was certified |
+| Standard Measurement plugin | Six methods compile; native factory loading, buffered-data simulation, timeout/fault checks, diagram sizing, and live Step-menu discovery passed |
 | Automated normal-close regression | Not passed; its last attempt had no UI handle before a close request and reported reserved/running actor states |
 | Fault termination / repeat start-stop | Not fully verified |
 | Acquisition, TDMS round-trip, connected hardware | Not established by the startup checks |
@@ -164,8 +165,11 @@ Recovered NI sources are excluded from Git. Use
 [Prepare-ExternalDependencies.ps1](tooling/Prepare-ExternalDependencies.ps1) to
 populate them from authorized copies; it runs no installers and refuses to replace
 different files. Native binary links may still need resolution in LabVIEW. The
-bundled Measurements.ini contains historical Mac paths and example device names,
-not working defaults for a new machine.
+bundled Measurements.ini contains historical hardware/logging paths and example
+device names, not working defaults for a new machine. Its measurement search
+path now points to this checkout's components/Measurements folder. See
+[Measurement Plugin Repair](docs/MEASUREMENT-PLUGIN-REPAIR.md) for verified scope
+and the three required hardware roles.
 
 For an authorized development copy:
 
