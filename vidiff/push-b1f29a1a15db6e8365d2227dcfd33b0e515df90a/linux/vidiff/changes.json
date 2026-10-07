@@ -1,0 +1,35 @@
+{
+  "platform": "linux",
+  "files": [
+    {
+      "file": "components/Measurements/Standard Measurement Plugin/Standard Measurement/Acquire.vi",
+      "type": "added",
+      "report": "components-Measurements-Standard_Measurement_Plugin-Standard_Measurement-Acquire.vi/index.html"
+    },
+    {
+      "file": "components/Measurements/Standard Measurement Plugin/Standard Measurement/Close.vi",
+      "type": "added",
+      "report": "components-Measurements-Standard_Measurement_Plugin-Standard_Measurement-Close.vi/index.html"
+    },
+    {
+      "file": "components/Measurements/Standard Measurement Plugin/Standard Measurement/Configure.vi",
+      "type": "added",
+      "report": "components-Measurements-Standard_Measurement_Plugin-Standard_Measurement-Configure.vi/index.html"
+    },
+    {
+      "file": "components/Measurements/Standard Measurement Plugin/Standard Measurement/Measure.vi",
+      "type": "added",
+      "report": "components-Measurements-Standard_Measurement_Plugin-Standard_Measurement-Measure.vi/index.html"
+    },
+    {
+      "file": "components/Measurements/Standard Measurement Plugin/Standard Measurement/Read Buffered Data.vi",
+      "type": "added",
+      "report": "components-Measurements-Standard_Measurement_Plugin-Standard_Measurement-Read_Buffered_Data.vi/index.html"
+    },
+    {
+      "file": "components/Measurements/Standard Measurement Plugin/Standard Measurement/Read Compatible Hardware Types.vi",
+      "type": "added",
+      "report": "components-Measurements-Standard_Measurement_Plugin-Standard_Measurement-Read_Compatible_Hardware_Types.vi/index.html"
+    }
+  ]
+}
