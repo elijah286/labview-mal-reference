@@ -1,0 +1,497 @@
+{
+  "meta": {
+    "sha": "c8043d723e7822af27ce51d5ae9d9e79b77a306b",
+    "short": "c8043d7",
+    "platform": "windows",
+    "repo": "elijah286/labview-mal-reference",
+    "pages_url": "https://elijah286.github.io/labview-mal-reference",
+    "pages_base": "../..",
+    "commit": {
+      "message": "Publish updated LabVIEW MAL reference development snapshot",
+      "author": "Elijah Kerry",
+      "date": "2026-10-07T10:35:25-05:00"
+    },
+    "generated_utc": "2026-10-07 17:25 UTC",
+    "analysis_date": "Wednesday, October 7, 2026 5:25:23 PM",
+    "duration": "01:09:24.38"
+  },
+  "summary": {
+    "vis_analyzed": 1464,
+    "tests_run": 152171,
+    "passed": 142879,
+    "failed": 9292,
+    "skipped": 0,
+    "findings": 12155,
+    "vis_with_findings": 1446
+  },
+  "errors": {
+    "vi_not_loadable": 0,
+    "test_not_loadable": 0,
+    "test_not_runnable": 0,
+    "test_error_out": 85
+  },
+  "rule_counts": [
+    {
+      "test": "Spell Check",
+      "severity": "documentation",
+      "count": 1421,
+      "vi_count": 668
+    },
+    {
+      "test": "Panel Size and Position",
+      "severity": "style",
+      "count": 1037,
+      "vi_count": 833
+    },
+    {
+      "test": "Enabled Debugging",
+      "severity": "performance",
+      "count": 930,
+      "vi_count": 930
+    },
+    {
+      "test": "Comment Usage",
+      "severity": "documentation",
+      "count": 903,
+      "vi_count": 903
+    },
+    {
+      "test": "Font Usage",
+      "severity": "style",
+      "count": 797,
+      "vi_count": 301
+    },
+    {
+      "test": "Separate Compiled Code Setting",
+      "severity": "style",
+      "count": 769,
+      "vi_count": 769
+    },
+    {
+      "test": "Wires Under Objects",
+      "severity": "style",
+      "count": 736,
+      "vi_count": 426
+    },
+    {
+      "test": "VI Documentation",
+      "severity": "documentation",
+      "count": 731,
+      "vi_count": 731
+    },
+    {
+      "test": "Error Cluster Wired",
+      "severity": "correctness",
+      "count": 593,
+      "vi_count": 304
+    },
+    {
+      "test": "Wire Bends",
+      "severity": "style",
+      "count": 517,
+      "vi_count": 274
+    },
+    {
+      "test": "Control Alignment",
+      "severity": "style",
+      "count": 399,
+      "vi_count": 399
+    },
+    {
+      "test": "Backwards Wires",
+      "severity": "style",
+      "count": 343,
+      "vi_count": 262
+    },
+    {
+      "test": "Tunnel Position",
+      "severity": "style",
+      "count": 259,
+      "vi_count": 156
+    },
+    {
+      "test": "Icon Size and Border",
+      "severity": "style",
+      "count": 248,
+      "vi_count": 248
+    },
+    {
+      "test": "Parallelizable Loops",
+      "severity": "performance",
+      "count": 219,
+      "vi_count": 184
+    },
+    {
+      "test": "Reentrant VI Issues",
+      "severity": "correctness",
+      "count": 218,
+      "vi_count": 120
+    },
+    {
+      "test": "Control Terminal Wiring",
+      "severity": "style",
+      "count": 194,
+      "vi_count": 128
+    },
+    {
+      "test": "Connector Pane Pattern",
+      "severity": "style",
+      "count": 170,
+      "vi_count": 170
+    },
+    {
+      "test": "Diagram Size",
+      "severity": "style",
+      "count": 154,
+      "vi_count": 154
+    },
+    {
+      "test": "Inlinable VIs",
+      "severity": "performance",
+      "count": 153,
+      "vi_count": 153
+    },
+    {
+      "test": "Broken VI",
+      "severity": "correctness",
+      "count": 151,
+      "vi_count": 151
+    },
+    {
+      "test": "Clipped Text",
+      "severity": "style",
+      "count": 121,
+      "vi_count": 57
+    },
+    {
+      "test": "Case Structure Default Frame",
+      "severity": "style",
+      "count": 93,
+      "vi_count": 50
+    },
+    {
+      "test": "Overlapping Controls",
+      "severity": "correctness",
+      "count": 93,
+      "vi_count": 78
+    },
+    {
+      "test": "Hidden Objects in Structures",
+      "severity": "correctness",
+      "count": 73,
+      "vi_count": 58
+    },
+    {
+      "test": "Unused Code",
+      "severity": "performance",
+      "count": 69,
+      "vi_count": 62
+    },
+    {
+      "test": "Full Connector Pane",
+      "severity": "style",
+      "count": 66,
+      "vi_count": 66
+    },
+    {
+      "test": "Transparent Labels",
+      "severity": "style",
+      "count": 63,
+      "vi_count": 45
+    },
+    {
+      "test": "Code Simplification",
+      "severity": "performance",
+      "count": 56,
+      "vi_count": 54
+    },
+    {
+      "test": "Revision History",
+      "severity": "style",
+      "count": 54,
+      "vi_count": 54
+    },
+    {
+      "test": "String Constant Style",
+      "severity": "style",
+      "count": 50,
+      "vi_count": 30
+    },
+    {
+      "test": "Dialog Controls",
+      "severity": "style",
+      "count": 47,
+      "vi_count": 15
+    },
+    {
+      "test": "Arrays and Strings in Loops",
+      "severity": "performance",
+      "count": 40,
+      "vi_count": 35
+    },
+    {
+      "test": "Array Constant Style",
+      "severity": "style",
+      "count": 39,
+      "vi_count": 30
+    },
+    {
+      "test": "Approved Bookmark Tags",
+      "severity": "style",
+      "count": 36,
+      "vi_count": 21
+    },
+    {
+      "test": "Wired Terminals in Subdiagrams",
+      "severity": "correctness",
+      "count": 35,
+      "vi_count": 23
+    },
+    {
+      "test": "Auto Error Handling Enabled",
+      "severity": "correctness",
+      "count": 32,
+      "vi_count": 32
+    },
+    {
+      "test": "Value Property Usage",
+      "severity": "performance",
+      "count": 23,
+      "vi_count": 10
+    },
+    {
+      "test": "Wire Crossings",
+      "severity": "style",
+      "count": 20,
+      "vi_count": 9
+    },
+    {
+      "test": "Default Icon",
+      "severity": "style",
+      "count": 18,
+      "vi_count": 18
+    },
+    {
+      "test": "Indexer Datatype",
+      "severity": "correctness",
+      "count": 17,
+      "vi_count": 10
+    },
+    {
+      "test": "Fan Out",
+      "severity": "style",
+      "count": 16,
+      "vi_count": 16
+    },
+    {
+      "test": "Built Application Compatibility",
+      "severity": "correctness",
+      "count": 15,
+      "vi_count": 7
+    },
+    {
+      "test": "In Place Element Structure Usage",
+      "severity": "performance",
+      "count": 11,
+      "vi_count": 10
+    },
+    {
+      "test": "Control VI Type",
+      "severity": "style",
+      "count": 10,
+      "vi_count": 10
+    },
+    {
+      "test": "Diagram Disable Structures",
+      "severity": "style",
+      "count": 9,
+      "vi_count": 7
+    },
+    {
+      "test": "For Loop Reference Handling",
+      "severity": "correctness",
+      "count": 9,
+      "vi_count": 9
+    },
+    {
+      "test": "Connector Inputs and Outputs",
+      "severity": "correctness",
+      "count": 8,
+      "vi_count": 8
+    },
+    {
+      "test": "Cluster Sized to Fit",
+      "severity": "style",
+      "count": 7,
+      "vi_count": 7
+    },
+    {
+      "test": "Mixed Terminal Styles",
+      "severity": "style",
+      "count": 7,
+      "vi_count": 7
+    },
+    {
+      "test": "Modularity Index",
+      "severity": "style",
+      "count": 7,
+      "vi_count": 7
+    },
+    {
+      "test": "Error Style",
+      "severity": "style",
+      "count": 6,
+      "vi_count": 3
+    },
+    {
+      "test": "Find Deprecated Items",
+      "severity": "style",
+      "count": 6,
+      "vi_count": 6
+    },
+    {
+      "test": "Control Terminal Label Visible",
+      "severity": "style",
+      "count": 5,
+      "vi_count": 3
+    },
+    {
+      "test": "Prepend Scalar With Build Array",
+      "severity": "style",
+      "count": 5,
+      "vi_count": 5
+    },
+    {
+      "test": "Empty List Items",
+      "severity": "correctness",
+      "count": 4,
+      "vi_count": 4
+    },
+    {
+      "test": "Globals and Locals",
+      "severity": "style",
+      "count": 4,
+      "vi_count": 4
+    },
+    {
+      "test": "Property Reads and Writes",
+      "severity": "style",
+      "count": 4,
+      "vi_count": 4
+    },
+    {
+      "test": "Depth of Nesting of Structures",
+      "severity": "style",
+      "count": 3,
+      "vi_count": 2
+    },
+    {
+      "test": "For Loop Error Handling",
+      "severity": "correctness",
+      "count": 3,
+      "vi_count": 3
+    },
+    {
+      "test": "Hidden Tunnels",
+      "severity": "correctness",
+      "count": 3,
+      "vi_count": 2
+    },
+    {
+      "test": "Node Count",
+      "severity": "style",
+      "count": 3,
+      "vi_count": 3
+    },
+    {
+      "test": "Platform Portability",
+      "severity": "style",
+      "count": 3,
+      "vi_count": 1
+    },
+    {
+      "test": "Cyclomatic Complexity",
+      "severity": "style",
+      "count": 2,
+      "vi_count": 2
+    },
+    {
+      "test": "Duplicate Control Labels",
+      "severity": "correctness",
+      "count": 2,
+      "vi_count": 2
+    },
+    {
+      "test": "Label Call Library Nodes",
+      "severity": "style",
+      "count": 2,
+      "vi_count": 1
+    },
+    {
+      "test": "Redundant Boolean Operations",
+      "severity": "style",
+      "count": 2,
+      "vi_count": 1
+    },
+    {
+      "test": "Sequence Structure Usage",
+      "severity": "style",
+      "count": 2,
+      "vi_count": 2
+    },
+    {
+      "test": "Wire Sources",
+      "severity": "style",
+      "count": 2,
+      "vi_count": 2
+    },
+    {
+      "test": "Coercion Dots",
+      "severity": "performance",
+      "count": 1,
+      "vi_count": 1
+    },
+    {
+      "test": "Connector Pane Alignment",
+      "severity": "style",
+      "count": 1,
+      "vi_count": 1
+    },
+    {
+      "test": "Diagram Count",
+      "severity": "style",
+      "count": 1,
+      "vi_count": 1
+    },
+    {
+      "test": "Structure Count",
+      "severity": "style",
+      "count": 1,
+      "vi_count": 1
+    },
+    {
+      "test": "Type Casting References",
+      "severity": "style",
+      "count": 1,
+      "vi_count": 1
+    },
+    {
+      "test": "VI Extension",
+      "severity": "style",
+      "count": 1,
+      "vi_count": 1
+    },
+    {
+      "test": "VI Lock State",
+      "severity": "style",
+      "count": 1,
+      "vi_count": 1
+    },
+    {
+      "test": "Wait in While Loop",
+      "severity": "correctness",
+      "count": 1,
+      "vi_count": 1
+    }
+  ]
+}
