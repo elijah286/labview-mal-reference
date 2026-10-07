@@ -1,8 +1,26 @@
 {
   "schema": 1,
   "repo": "elijah286/labview-mal-reference",
-  "sha": "a273b8e6bde4e70707673f62844fc8d904151605",
+  "sha": "b1f29a1a15db6e8365d2227dcfd33b0e515df90a",
   "revisions": [
+    {
+      "sha": "b1f29a1a15db6e8365d2227dcfd33b0e515df90a",
+      "short": "b1f29a1",
+      "message": "Merge remote-tracking branch 'origin/main'",
+      "author": "Elijah Kerry",
+      "date": "2026-10-07T20:19:14Z",
+      "project": false,
+      "dep_only": false
+    },
+    {
+      "sha": "2ea8bca25ab786bbc251259d1b9f0545430c9514",
+      "short": "2ea8bca",
+      "message": "Recover Standard Measurement plugin and repair runtime dispatch",
+      "author": "Elijah Kerry",
+      "date": "2026-10-07T20:17:55Z",
+      "project": true,
+      "dep_only": false
+    },
     {
       "sha": "a273b8e6bde4e70707673f62844fc8d904151605",
       "short": "a273b8e",

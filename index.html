@@ -1304,7 +1304,7 @@
     // activities to queue. Reuses dispatchCells (oldest-first, snapshots as one
     // backfill) + the same token and optimistic-queued bridge as every other
     // dispatch on the dashboard.
-    var HIST = [{"sha": "c8043d723e7822af27ce51d5ae9d9e79b77a306b", "short": "c8043d7", "msg": "Publish updated LabVIEW MAL reference development snapshot", "dep_only": false, "snapshots2": {"windows": {"have": 0, "total": 1421}, "linux": {"have": 0, "total": 1421}}}];                        // [{sha, short, msg}] newest-first (project revisions)
+    var HIST = [{"sha": "2ea8bca25ab786bbc251259d1b9f0545430c9514", "short": "2ea8bca", "msg": "Recover Standard Measurement plugin and repair runtime dispatch", "dep_only": false, "snapshots2": {"windows": {"have": 0, "total": 1427}, "linux": {"have": 0, "total": 1427}}}, {"sha": "c8043d723e7822af27ce51d5ae9d9e79b77a306b", "short": "c8043d7", "msg": "Publish updated LabVIEW MAL reference development snapshot", "dep_only": false, "snapshots2": {"windows": {"have": 0, "total": 1421}, "linux": {"have": 0, "total": 1421}}}];                        // [{sha, short, msg}] newest-first (project revisions)
     var RAN = {"builds": 1, "masscompile": 1, "sbom-generation": 1, "snapshots": 1, "unit-tests": 1, "vi-analyzer": 1};                     // {cap:1} caps with a result/active run somewhere in history
     var CAP_META = {                            // label + sub for each known capability
       'snapshots':   ['VI Snapshots', 'Renders every changed VI (classic HTML snapshots)'],
@@ -1912,7 +1912,7 @@
   <script>
   (function(){
     var RT = {"masscompile": {"label": "Mass Compile", "platforms": {"windows": {"wf": "masscompile-windows-container.yml", "inputs": {"commit_sha": "{sha}"}}, "linux": {"wf": "masscompile-linux-container.yml", "inputs": {"commit_sha": "{sha}"}}}}, "vi-analyzer": {"label": "VI Analyzer", "platforms": {"windows": {"wf": "run-vi-analyzer-windows-container.yml", "inputs": {"commit_sha": "{sha}"}}, "linux": {"wf": "run-vi-analyzer-linux-container.yml", "inputs": {"commit_sha": "{sha}"}}}}, "vidiff": {"label": "VIDiff", "platforms": {"windows": {"wf": "vidiff-windows-container.yml", "inputs": {"head_sha": "{sha}", "base_sha": "{parent}"}}, "linux": {"wf": "vidiff-linux-container.yml", "inputs": {"head_sha": "{sha}", "base_sha": "{parent}"}}}}, "snapshots": {"label": "VI Snapshots", "platforms": {"all": {"wf": "vi-snapshots.yml", "inputs": {"mode": "backfill"}}}}, "snapshots2": {"label": "VI Browser 2.0 Snapshots", "platforms": {"windows": {"wf": "vi-snapshots-json-windows.yml", "inputs": {"target_sha": "{sha}"}}, "linux": {"wf": "vi-snapshots-json.yml", "inputs": {"mode": "head", "target_sha": "{sha}"}}}}, "unit-tests": {"label": "Unit Tests", "platforms": {"windows": {"wf": "unit-tests-windows-container.yml", "inputs": {"commit_sha": "{sha}"}}}}, "builds": {"label": "Builds", "platforms": {"windows": {"wf": "build-binaries-windows-container.yml", "inputs": {"commit_sha": "{sha}"}}, "linux": {"wf": "build-binaries-linux-container.yml", "inputs": {"commit_sha": "{sha}"}}}}, "sbom-generation": {"label": "SBOM Generation", "platforms": {"windows": {"wf": "generate-sbom-windows-container.yml", "inputs": {"commit_sha": "{sha}"}}}}};
-    var HIST = [{"sha": "c8043d723e7822af27ce51d5ae9d9e79b77a306b", "short": "c8043d7", "msg": "Publish updated LabVIEW MAL reference development snapshot", "dep_only": false, "snapshots2": {"windows": {"have": 0, "total": 1421}, "linux": {"have": 0, "total": 1421}}}];
+    var HIST = [{"sha": "2ea8bca25ab786bbc251259d1b9f0545430c9514", "short": "2ea8bca", "msg": "Recover Standard Measurement plugin and repair runtime dispatch", "dep_only": false, "snapshots2": {"windows": {"have": 0, "total": 1427}, "linux": {"have": 0, "total": 1427}}}, {"sha": "c8043d723e7822af27ce51d5ae9d9e79b77a306b", "short": "c8043d7", "msg": "Publish updated LabVIEW MAL reference development snapshot", "dep_only": false, "snapshots2": {"windows": {"have": 0, "total": 1421}, "linux": {"have": 0, "total": 1421}}}];
     var REPO = "elijah286/labview-mal-reference";
     var BRANCH = "main";
     var TOK_KEY = "lvci_dispatch_token";
@@ -2092,7 +2092,7 @@
   </script>
   <main class="lvci-main">
   <h1>CI Dashboard — labview-mal-reference</h1>
-  <div class="sub">Last updated: 2026-10-07 19:17 UTC &nbsp;|&nbsp; Live — refreshing every 60 s while CI runs</div>
+  <div class="sub">Last updated: 2026-10-07 20:21 UTC &nbsp;|&nbsp; Live — refreshing every 60 s while CI runs</div>
   <div class="nav">
     <a href="https://github.com/elijah286/labview-mal-reference">GitHub</a>
     <a href="https://github.com/elijah286/labview-mal-reference/actions">Actions</a>
@@ -2138,6 +2138,46 @@
       </tr>
     </thead>
     <tbody>
+    <tr data-project="false" data-deponly="false">
+      <td class="cidash-rev">
+        <div class="cidash-rev-wrap">
+          <span class="cidash-avatar" style="background:hsl(66,42%,45%)" title="Elijah Kerry" aria-hidden="true">E</span>
+          <div class="cidash-rev-body">
+            <div class="cidash-rev-line1"><a href="https://elijah286.github.io/labview-mal-reference/vi-snapshots/index.html?sha=b1f29a1a15db6e8365d2227dcfd33b0e515df90a" class="cidash-rev-msg" title="Merge remote-tracking branch &#x27;origin/main&#x27;">Merge remote-tracking branch &#x27;origin/main&#x27;</a></div>
+            <div class="cidash-rev-meta"><a href="https://elijah286.github.io/labview-mal-reference/vi-snapshots/index.html?sha=b1f29a1a15db6e8365d2227dcfd33b0e515df90a" class="cidash-rev-sha" title="Browse this revision's VIs in the VI Browser">b1f29a1</a><span class="cidash-rev-dot">&middot;</span>Elijah Kerry<span class="cidash-rev-dot">&middot;</span>2026-10-07</div>
+          </div>
+        </div>
+      </td>
+      <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
+      <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
+      <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
+      <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
+      <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
+      <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
+      <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
+      <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
+    </tr>
+
+    <tr data-project="true" data-deponly="false">
+      <td class="cidash-rev">
+        <div class="cidash-rev-wrap">
+          <span class="cidash-avatar" style="background:hsl(66,42%,45%)" title="Elijah Kerry" aria-hidden="true">E</span>
+          <div class="cidash-rev-body">
+            <div class="cidash-rev-line1"><a href="https://elijah286.github.io/labview-mal-reference/vi-snapshots/index.html?sha=2ea8bca25ab786bbc251259d1b9f0545430c9514" class="cidash-rev-msg" title="Recover Standard Measurement plugin and repair runtime dispatch">Recover Standard Measurement plugin and repair runtime dispatch</a><a href="https://elijah286.github.io/labview-mal-reference/vi-snapshots/index.html?sha=2ea8bca25ab786bbc251259d1b9f0545430c9514" class="snap-glyph" title="Snapshots exist for this revision (1443 of 1449 VIs)" aria-label="Snapshots exist for this revision (1443 of 1449 VIs)"><svg viewBox="0 0 16 16" width="12" height="12" fill="currentColor" aria-hidden="true" style="vertical-align:text-bottom;flex:0 0 auto"><path d="M1.75 2.5a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h.94l8.5-8.5a.25.25 0 0 1 .354 0l1.756 1.757V2.75a.25.25 0 0 0-.25-.25H1.75ZM14.5 9.232 11.06 5.79 3.852 13h9.898a.25.25 0 0 0 .25-.25V9.232ZM1.75 1h12.5c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25V2.75C0 1.784.784 1 1.75 1ZM5.5 6a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z"/></svg></a></div>
+            <div class="cidash-rev-meta"><a href="https://elijah286.github.io/labview-mal-reference/vi-snapshots/index.html?sha=2ea8bca25ab786bbc251259d1b9f0545430c9514" class="cidash-rev-sha" title="Browse this revision's VIs in the VI Browser">2ea8bca</a><span class="cidash-rev-dot">&middot;</span>Elijah Kerry<span class="cidash-rev-dot">&middot;</span>2026-10-07</div>
+          </div>
+        </div>
+      </td>
+      <td style="text-align:center"><a href="#" class="cidash-run" data-cap="masscompile" data-sha="2ea8bca25ab786bbc251259d1b9f0545430c9514" data-parent="443943f2e5472cb4da8dde947807ed77f7b8cfd3" data-short="2ea8bca" title="Run Mass Compile for commit 2ea8bca">&#9655;</a></td>
+      <td style="text-align:center"><a href="#" class="cidash-run" data-cap="vi-analyzer" data-sha="2ea8bca25ab786bbc251259d1b9f0545430c9514" data-parent="443943f2e5472cb4da8dde947807ed77f7b8cfd3" data-short="2ea8bca" title="Run VI Analyzer for commit 2ea8bca">&#9655;</a></td>
+      <td style="text-align:center"><a href="#" class="cidash-run" data-cap="vidiff" data-sha="2ea8bca25ab786bbc251259d1b9f0545430c9514" data-parent="443943f2e5472cb4da8dde947807ed77f7b8cfd3" data-short="2ea8bca" title="Run VIDiff for commit 2ea8bca">&#9655;</a></td>
+      <td style="text-align:center" class="cidash-cap-cell" data-cap="snapshots" data-sha="2ea8bca25ab786bbc251259d1b9f0545430c9514" data-parent="443943f2e5472cb4da8dde947807ed77f7b8cfd3" data-short="2ea8bca" data-ts="" data-done="false"><span class="cidash-chip cc-warn" title="1443 of 1449 VIs have snapshots; 6 missing - run this revision or use Populate history to backfill"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M6.46 1.05c.66-1.23 2.43-1.23 3.08 0l6.08 11.38A1.75 1.75 0 0 1 14.08 15H1.92a1.75 1.75 0 0 1-1.54-2.57ZM8.75 5.75a.75.75 0 0 0-1.5 0v3a.75.75 0 0 0 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"/></svg><a href="https://elijah286.github.io/labview-mal-reference/vi-snapshots/index.html?sha=2ea8bca25ab786bbc251259d1b9f0545430c9514" style="color:inherit">1443/1449</a></span></td>
+      <td style="text-align:center"><a href="#" class="cidash-run" data-cap="unit-tests" data-sha="2ea8bca25ab786bbc251259d1b9f0545430c9514" data-parent="443943f2e5472cb4da8dde947807ed77f7b8cfd3" data-short="2ea8bca" title="Run Unit Tests for commit 2ea8bca">&#9655;</a></td>
+      <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
+      <td style="text-align:center"><a href="#" class="cidash-run" data-cap="builds" data-sha="2ea8bca25ab786bbc251259d1b9f0545430c9514" data-parent="443943f2e5472cb4da8dde947807ed77f7b8cfd3" data-short="2ea8bca" title="Run Builds for commit 2ea8bca">&#9655;</a></td>
+      <td style="text-align:center"><a href="#" class="cidash-run" data-cap="sbom-generation" data-sha="2ea8bca25ab786bbc251259d1b9f0545430c9514" data-parent="443943f2e5472cb4da8dde947807ed77f7b8cfd3" data-short="2ea8bca" title="Run SBOM Generation for commit 2ea8bca">&#9655;</a></td>
+    </tr>
+
     <tr data-project="false" data-deponly="false">
       <td class="cidash-rev">
         <div class="cidash-rev-wrap">
