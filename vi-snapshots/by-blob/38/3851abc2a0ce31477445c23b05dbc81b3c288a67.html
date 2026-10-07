@@ -1,0 +1,59 @@
+<HTML>
+<HEAD>
+<TITLE>UnMangle VI Name__ogtk.vi</TITLE>
+<META NAME="Author" CONTENT="">
+<META NAME="GENERATOR" CONTENT="G Development Environment">
+</HEAD>
+<BODY BGCOLOR="#FFFFFF">
+<A NAME="UnMangle VI Name__ogtk.vi"></A><H2>UnMangle VI Name__ogtk.vi</H2>
+<P>Unmangles a VI's name by removing a &lt;b&gt;namespace string suffix&lt;/b&gt;.</P>
+<P>&lt;b&gt;Name&lt;/b&gt; may be a path or a string.</P>
+<P>For example:</P>
+<P></P>
+<P>Mangled Name =&gt; &quot;Widget__OpenG.vi&quot;</P>
+<P>Unmangled Name =&gt; &quot;Widget.vi&quot;</P>
+<P>Namespace =&gt; &quot;OpenG&quot;</P>
+<P></P>
+<P>Mangled Name =&gt; &quot;Widget__OpenG&quot;</P>
+<P>Unmangled Name =&gt; &quot;Widget&quot;</P>
+<P>Namespace =&gt; &quot;OpenG&quot;</P>
+<P></P>
+<P>Mangled Name =&gt; &quot;Widget.vi&quot;</P>
+<P>Unmangled Name =&gt; &quot;Widget.vi&quot;</P>
+<P>Namespace =&gt; &quot;&quot; (Note: blank string means do not mangle)</P>
+<HR>
+<H3>Connector Pane</H3>
+<P><IMG src="data:image/png;base64, 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" ALT="UnMangle VI Name__ogtk.vi"></P>
+<HR>
+<H3>List of SubVIs and Express VIs with Configuration Information</H3>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAADAFBMVEX//////8z//5n//2b//zP//wD/zP//zMz/zJn/zGb/zDP/zAD/mf//mcz/mZn/mWb/mTP/mQD/Zv//Zsz/Zpn/Zmb/ZjP/ZgD/M///M8z/M5n/M2b/MzP/MwD/AP//AMz/AJn/AGb/ADP/AADM///M/8zM/5nM/2bM/zPM/wDMzP/MzMzMzJnMzGbMzDPMzADMmf/MmczMmZnMmWbMmTPMmQDMZv/MZszMZpnMZmbMZjPMZgDMM//MM8zMM5nMM2bMMzPMMwDMAP/MAMzMAJnMAGbMADPMAACZ//+Z/8yZ/5mZ/2aZ/zOZ/wCZzP+ZzMyZzJmZzGaZzDOZzACZmf+ZmcyZmZmZmWaZmTOZmQCZZv+ZZsyZZpmZZmaZZjOZZgCZM/+ZM8yZM5mZM2aZMzOZMwCZAP+ZAMyZAJmZAGaZADOZAABm//9m/8xm/5lm/2Zm/zNm/wBmzP9mzMxmzJlmzGZmzDNmzABmmf9mmcxmmZlmmWZmmTNmmQBmZv9mZsxmZplmZmZmZjNmZgBmM/9mM8xmM5lmM2ZmMzNmMwBmAP9mAMxmAJlmAGZmADNmAAAz//8z/8wz/5kz/2Yz/zMz/wAzzP8zzMwzzJkzzGYzzDMzzAAzmf8zmcwzmZkzmWYzmTMzmQAzZv8zZswzZpkzZmYzZjMzZgAzM/8zM8wzM5kzM2YzMzMzMwAzAP8zAMwzAJkzAGYzADMzAAAA//8A/8wA/5kA/2YA/zMA/wAAzP8AzMwAzJkAzGYAzDMAzAAAmf8AmcwAmZkAmWYAmTMAmQAAZv8AZswAZpkAZmYAZjMAZgAAM/8AM8wAM5kAM2YAMzMAMwAAAP8AAMwAAJkAAGYAADPuAADdAAC7AACqAACIAAB3AABVAABEAAAiAAARAAAA7gAA3QAAuwAAqgAAiAAAdwAAVQAARAAAIgAAEQAAAO4AAN0AALsAAKoAAIgAAHcAAFUAAEQAACIAABHu7u7d3d27u7uqqqqIiIh3d3dVVVVEREQiIiIREREAAAD7CIKZAAAAjklEQVQ4T52QAQ7AIAgD9xn+/0S2qUCrRNyamCg5CvbSQpfKVl+BZroF2sESAjoAMgFAJRygy4HWt90h/44D2Et3B2Ay3cNBwEF+ORQ7sLIc+lMtjgSwyXZWhzFZKTMaoVP3AvD+KbDqBdQU1ag0QDg8+pADEH+8jh3qHeYAwLM7+EQEevXQodhhqwcodAM9PamsP4jIeQAAAABJRU5ErkJggg==" ALT="UnMangle VI Name (String)__ogtk.vi"></P>
+</TD>
+<TD>
+<B><P>UnMangle VI Name (String)__ogtk.vi</P>
+</B><P>C:\wt\c8043d723e7822af27ce51d5ae9d9e79b77a306b\vendor\labview\user.lib\_OpenG.lib\appcontrol\appcontrol.llb\UnMangle VI Name (String)__ogtk.vi</P>
+</TD>
+</TR>
+<TR valign=TOP>
+<TD>
+<P><IMG src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAADAFBMVEX//////8z//5n//2b//zP//wD/zP//zMz/zJn/zGb/zDP/zAD/mf//mcz/mZn/mWb/mTP/mQD/Zv//Zsz/Zpn/Zmb/ZjP/ZgD/M///M8z/M5n/M2b/MzP/MwD/AP//AMz/AJn/AGb/ADP/AADM///M/8zM/5nM/2bM/zPM/wDMzP/MzMzMzJnMzGbMzDPMzADMmf/MmczMmZnMmWbMmTPMmQDMZv/MZszMZpnMZmbMZjPMZgDMM//MM8zMM5nMM2bMMzPMMwDMAP/MAMzMAJnMAGbMADPMAACZ//+Z/8yZ/5mZ/2aZ/zOZ/wCZzP+ZzMyZzJmZzGaZzDOZzACZmf+ZmcyZmZmZmWaZmTOZmQCZZv+ZZsyZZpmZZmaZZjOZZgCZM/+ZM8yZM5mZM2aZMzOZMwCZAP+ZAMyZAJmZAGaZADOZAABm//9m/8xm/5lm/2Zm/zNm/wBmzP9mzMxmzJlmzGZmzDNmzABmmf9mmcxmmZlmmWZmmTNmmQBmZv9mZsxmZplmZmZmZjNmZgBmM/9mM8xmM5lmM2ZmMzNmMwBmAP9mAMxmAJlmAGZmADNmAAAz//8z/8wz/5kz/2Yz/zMz/wAzzP8zzMwzzJkzzGYzzDMzzAAzmf8zmcwzmZkzmWYzmTMzmQAzZv8zZswzZpkzZmYzZjMzZgAzM/8zM8wzM5kzM2YzMzMzMwAzAP8zAMwzAJkzAGYzADMzAAAA//8A/8wA/5kA/2YA/zMA/wAAzP8AzMwAzJkAzGYAzDMAzAAAmf8AmcwAmZkAmWYAmTMAmQAAZv8AZswAZpkAZmYAZjMAZgAAM/8AM8wAM5kAM2YAMzMAMwAAAP8AAMwAAJkAAGYAADPuAADdAAC7AACqAACIAAB3AABVAABEAAAiAAARAAAA7gAA3QAAuwAAqgAAiAAAdwAAVQAARAAAIgAAEQAAAO4AAN0AALsAAKoAAIgAAHcAAFUAAEQAACIAABHu7u7d3d27u7uqqqqIiIh3d3dVVVVEREQiIiIREREAAAD7CIKZAAAAjklEQVQ4T52QAQ7AIAgD9xn+/0S2qUCrRNyamCg5CvbSQpfKVl+BZroF2sESAjoAMgFAJRygy4HWt90h/44D2Et3B2Ay3cNBwEF+ORQ7sLIc+lMtjgSwyXZWhzFZKTMaoVP3AvD+KbDqBdQU1ag0QDg8+pADEH+8jh3qHeYAwLM7+EQEevXQodhhqwcodAM9PamsP4jIeQAAAABJRU5ErkJggg==" ALT="UnMangle VI Name (Path)__ogtk.vi"></P>
+</TD>
+<TD>
+<B><P>UnMangle VI Name (Path)__ogtk.vi</P>
+</B><P>C:\wt\c8043d723e7822af27ce51d5ae9d9e79b77a306b\vendor\labview\user.lib\_OpenG.lib\appcontrol\appcontrol.llb\UnMangle VI Name (Path)__ogtk.vi</P>
+</TD>
+</TR>
+</Table>
+<HR>
+<H3>VI Revision History</H3>
+<P>&quot;UnMangle VI Name__ogtk.vi History&quot;</P>
+<P>Current Revision:   8</P>
+<HR>
+<H3>Position in Hierarchy</H3>
+<P><IMG src="data:image/png;base64, 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" ALT="UnMangle VI Name__ogtk.vi"></P>
+<HR>
+<H3>Iconified Cluster Constants</H3>
+</BODY>
+</HTML>

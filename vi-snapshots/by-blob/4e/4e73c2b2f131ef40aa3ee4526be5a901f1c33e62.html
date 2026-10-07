@@ -1,0 +1,52 @@
+<HTML>
+<HEAD>
+<TITLE>Trim Whitespace__ogtk.vi</TITLE>
+<META NAME="Author" CONTENT="">
+<META NAME="GENERATOR" CONTENT="G Development Environment">
+</HEAD>
+<BODY BGCOLOR="#FFFFFF">
+<A NAME="Trim Whitespace__ogtk.vi"></A><H2>Trim Whitespace__ogtk.vi</H2>
+<P>Removes leading and/or trailing whitespace from a string.</P>
+<P>Whitespace is defined as any of the following characters (where values are in the format: dec, hex, string):</P>
+<P>  &lt;b&gt;tab&lt;/b&gt; = 9, 0x09, \t</P>
+<P>  &lt;b&gt;newline&lt;/b&gt; = 10,  0x0A, \n</P>
+<P>  &lt;b&gt;vertical tab&lt;/b&gt; = 11, 0x0B, \0B</P>
+<P>  &lt;b&gt;form feed&lt;/b&gt; = 12, 0x0C, \f</P>
+<P>  &lt;b&gt;carriage return&lt;/b&gt; = 13, 0x0D, \r </P>
+<P>  &lt;b&gt;space&lt;/b&gt; = 32, 0x20, \s</P>
+<HR>
+<H3>Connector Pane</H3>
+<P><IMG src="data:image/png;base64, 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" ALT="Trim Whitespace__ogtk.vi"></P>
+<HR>
+<H3>List of SubVIs and Express VIs with Configuration Information</H3>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAADAFBMVEX//////8z//5n//2b//zP//wD/zP//zMz/zJn/zGb/zDP/zAD/mf//mcz/mZn/mWb/mTP/mQD/Zv//Zsz/Zpn/Zmb/ZjP/ZgD/M///M8z/M5n/M2b/MzP/MwD/AP//AMz/AJn/AGb/ADP/AADM///M/8zM/5nM/2bM/zPM/wDMzP/MzMzMzJnMzGbMzDPMzADMmf/MmczMmZnMmWbMmTPMmQDMZv/MZszMZpnMZmbMZjPMZgDMM//MM8zMM5nMM2bMMzPMMwDMAP/MAMzMAJnMAGbMADPMAACZ//+Z/8yZ/5mZ/2aZ/zOZ/wCZzP+ZzMyZzJmZzGaZzDOZzACZmf+ZmcyZmZmZmWaZmTOZmQCZZv+ZZsyZZpmZZmaZZjOZZgCZM/+ZM8yZM5mZM2aZMzOZMwCZAP+ZAMyZAJmZAGaZADOZAABm//9m/8xm/5lm/2Zm/zNm/wBmzP9mzMxmzJlmzGZmzDNmzABmmf9mmcxmmZlmmWZmmTNmmQBmZv9mZsxmZplmZmZmZjNmZgBmM/9mM8xmM5lmM2ZmMzNmMwBmAP9mAMxmAJlmAGZmADNmAAAz//8z/8wz/5kz/2Yz/zMz/wAzzP8zzMwzzJkzzGYzzDMzzAAzmf8zmcwzmZkzmWYzmTMzmQAzZv8zZswzZpkzZmYzZjMzZgAzM/8zM8wzM5kzM2YzMzMzMwAzAP8zAMwzAJkzAGYzADMzAAAA//8A/8wA/5kA/2YA/zMA/wAAzP8AzMwAzJkAzGYAzDMAzAAAmf8AmcwAmZkAmWYAmTMAmQAAZv8AZswAZpkAZmYAZjMAZgAAM/8AM8wAM5kAM2YAMzMAMwAAAP8AAMwAAJkAAGYAADPuAADdAAC7AACqAACIAAB3AABVAABEAAAiAAARAAAA7gAA3QAAuwAAqgAAiAAAdwAAVQAARAAAIgAAEQAAAO4AAN0AALsAAKoAAIgAAHcAAFUAAEQAACIAABHu7u7d3d27u7uqqqqIiIh3d3dVVVVEREQiIiIREREAAAD7CIKZAAAAY0lEQVQ4T92QQQ7AIAgE+Qz/f+I2ilALFOPBixNjYhx2jURXgAUELmlCMuaE1sQq9tpEgBp/wuGEyFco8UI/zVFRgGyFIIsnAWMOlu4STJGMmKC3GCXxDW+Dhhj7/5AJC+gKHgCFRTiLKZWYAAAAAElFTkSuQmCC" ALT="Trim Whitespace (String)__ogtk.vi"></P>
+</TD>
+<TD>
+<B><P>Trim Whitespace (String)__ogtk.vi</P>
+</B><P>C:\wt\c8043d723e7822af27ce51d5ae9d9e79b77a306b\vendor\labview\user.lib\_OpenG.lib\string\string.llb\Trim Whitespace (String)__ogtk.vi</P>
+</TD>
+</TR>
+<TR valign=TOP>
+<TD>
+<P><IMG src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAADAFBMVEX//////8z//5n//2b//zP//wD/zP//zMz/zJn/zGb/zDP/zAD/mf//mcz/mZn/mWb/mTP/mQD/Zv//Zsz/Zpn/Zmb/ZjP/ZgD/M///M8z/M5n/M2b/MzP/MwD/AP//AMz/AJn/AGb/ADP/AADM///M/8zM/5nM/2bM/zPM/wDMzP/MzMzMzJnMzGbMzDPMzADMmf/MmczMmZnMmWbMmTPMmQDMZv/MZszMZpnMZmbMZjPMZgDMM//MM8zMM5nMM2bMMzPMMwDMAP/MAMzMAJnMAGbMADPMAACZ//+Z/8yZ/5mZ/2aZ/zOZ/wCZzP+ZzMyZzJmZzGaZzDOZzACZmf+ZmcyZmZmZmWaZmTOZmQCZZv+ZZsyZZpmZZmaZZjOZZgCZM/+ZM8yZM5mZM2aZMzOZMwCZAP+ZAMyZAJmZAGaZADOZAABm//9m/8xm/5lm/2Zm/zNm/wBmzP9mzMxmzJlmzGZmzDNmzABmmf9mmcxmmZlmmWZmmTNmmQBmZv9mZsxmZplmZmZmZjNmZgBmM/9mM8xmM5lmM2ZmMzNmMwBmAP9mAMxmAJlmAGZmADNmAAAz//8z/8wz/5kz/2Yz/zMz/wAzzP8zzMwzzJkzzGYzzDMzzAAzmf8zmcwzmZkzmWYzmTMzmQAzZv8zZswzZpkzZmYzZjMzZgAzM/8zM8wzM5kzM2YzMzMzMwAzAP8zAMwzAJkzAGYzADMzAAAA//8A/8wA/5kA/2YA/zMA/wAAzP8AzMwAzJkAzGYAzDMAzAAAmf8AmcwAmZkAmWYAmTMAmQAAZv8AZswAZpkAZmYAZjMAZgAAM/8AM8wAM5kAM2YAMzMAMwAAAP8AAMwAAJkAAGYAADPuAADdAAC7AACqAACIAAB3AABVAABEAAAiAAARAAAA7gAA3QAAuwAAqgAAiAAAdwAAVQAARAAAIgAAEQAAAO4AAN0AALsAAKoAAIgAAHcAAFUAAEQAACIAABHu7u7d3d27u7uqqqqIiIh3d3dVVVVEREQiIiIREREAAAD7CIKZAAAAY0lEQVQ4T92QQQ7AIAgE+Qz/f+I2ilALFOPBixNjYhx2jURXgAUELmlCMuaE1sQq9tpEgBp/wuGEyFco8UI/zVFRgGyFIIsnAWMOlu4STJGMmKC3GCXxDW+Dhhj7/5AJC+gKHgCFRTiLKZWYAAAAAElFTkSuQmCC" ALT="Trim Whitespace (String Array)__ogtk.vi"></P>
+</TD>
+<TD>
+<B><P>Trim Whitespace (String Array)__ogtk.vi</P>
+</B><P>C:\wt\c8043d723e7822af27ce51d5ae9d9e79b77a306b\vendor\labview\user.lib\_OpenG.lib\string\string.llb\Trim Whitespace (String Array)__ogtk.vi</P>
+</TD>
+</TR>
+</Table>
+<HR>
+<H3>VI Revision History</H3>
+<P>&quot;Trim Whitespace__ogtk.vi History&quot;</P>
+<P>Current Revision:   4</P>
+<HR>
+<H3>Position in Hierarchy</H3>
+<P><IMG src="data:image/png;base64, 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" ALT="Trim Whitespace__ogtk.vi"></P>
+<HR>
+<H3>Iconified Cluster Constants</H3>
+</BODY>
+</HTML>

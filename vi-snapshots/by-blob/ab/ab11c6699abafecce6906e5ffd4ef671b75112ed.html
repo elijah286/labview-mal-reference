@@ -1,0 +1,59 @@
+<HTML>
+<HEAD>
+<TITLE>Mangle VI Name__ogtk.vi</TITLE>
+<META NAME="Author" CONTENT="">
+<META NAME="GENERATOR" CONTENT="G Development Environment">
+</HEAD>
+<BODY BGCOLOR="#FFFFFF">
+<A NAME="Mangle VI Name__ogtk.vi"></A><H2>Mangle VI Name__ogtk.vi</H2>
+<P>Mangles a VI's name by applying a &lt;b&gt;namespace string suffix&lt;/b&gt;.</P>
+<P>&lt;b&gt;Name&lt;/b&gt; may be a path or a string.</P>
+<P>For example:</P>
+<P></P>
+<P>Name =&gt; &quot;Widget.vi&quot;</P>
+<P>Namespace =&gt; &quot;OpenG&quot;</P>
+<P>Mangled Name =&gt; &quot;Widget__OpenG.vi&quot;</P>
+<P></P>
+<P>Name =&gt; &quot;Widget&quot;</P>
+<P>Namespace =&gt; &quot;OpenG&quot;</P>
+<P>Mangled Name =&gt; &quot;Widget__OpenG&quot;</P>
+<P></P>
+<P>Name =&gt; &quot;Widget.vi&quot;</P>
+<P>Namespace =&gt; &quot;&quot; (Note: blank string means do not mangle)</P>
+<P>Mangled Name =&gt; &quot;Widget.vi&quot;</P>
+<HR>
+<H3>Connector Pane</H3>
+<P><IMG src="data:image/png;base64, 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" ALT="Mangle VI Name__ogtk.vi"></P>
+<HR>
+<H3>List of SubVIs and Express VIs with Configuration Information</H3>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAADAFBMVEX//////8z//5n//2b//zP//wD/zP//zMz/zJn/zGb/zDP/zAD/mf//mcz/mZn/mWb/mTP/mQD/Zv//Zsz/Zpn/Zmb/ZjP/ZgD/M///M8z/M5n/M2b/MzP/MwD/AP//AMz/AJn/AGb/ADP/AADM///M/8zM/5nM/2bM/zPM/wDMzP/MzMzMzJnMzGbMzDPMzADMmf/MmczMmZnMmWbMmTPMmQDMZv/MZszMZpnMZmbMZjPMZgDMM//MM8zMM5nMM2bMMzPMMwDMAP/MAMzMAJnMAGbMADPMAACZ//+Z/8yZ/5mZ/2aZ/zOZ/wCZzP+ZzMyZzJmZzGaZzDOZzACZmf+ZmcyZmZmZmWaZmTOZmQCZZv+ZZsyZZpmZZmaZZjOZZgCZM/+ZM8yZM5mZM2aZMzOZMwCZAP+ZAMyZAJmZAGaZADOZAABm//9m/8xm/5lm/2Zm/zNm/wBmzP9mzMxmzJlmzGZmzDNmzABmmf9mmcxmmZlmmWZmmTNmmQBmZv9mZsxmZplmZmZmZjNmZgBmM/9mM8xmM5lmM2ZmMzNmMwBmAP9mAMxmAJlmAGZmADNmAAAz//8z/8wz/5kz/2Yz/zMz/wAzzP8zzMwzzJkzzGYzzDMzzAAzmf8zmcwzmZkzmWYzmTMzmQAzZv8zZswzZpkzZmYzZjMzZgAzM/8zM8wzM5kzM2YzMzMzMwAzAP8zAMwzAJkzAGYzADMzAAAA//8A/8wA/5kA/2YA/zMA/wAAzP8AzMwAzJkAzGYAzDMAzAAAmf8AmcwAmZkAmWYAmTMAmQAAZv8AZswAZpkAZmYAZjMAZgAAM/8AM8wAM5kAM2YAMzMAMwAAAP8AAMwAAJkAAGYAADPuAADdAAC7AACqAACIAAB3AABVAABEAAAiAAARAAAA7gAA3QAAuwAAqgAAiAAAdwAAVQAARAAAIgAAEQAAAO4AAN0AALsAAKoAAIgAAHcAAFUAAEQAACIAABHu7u7d3d27u7uqqqqIiIh3d3dVVVVEREQiIiIREREAAAD7CIKZAAAAjElEQVQ4T62SUQ7AIAhDvczuf0Q2FaGgiCbrfowpbxUolKjQs9WtoUFjA/EXGXp5JWCRGggIULXMAEGCVywImN+cxQB15vyjIctgugNSw2hAPIv+Zz8PM4tK8BDf6mmed/uwUjPQkNzqRTf4LdAHDULbI2fg5TokpBmUwgRBqoFzMEFCHRKyDDt9hkQvEBuprG6pJosAAAAASUVORK5CYII=" ALT="Mangle VI Name (String)__ogtk.vi"></P>
+</TD>
+<TD>
+<B><P>Mangle VI Name (String)__ogtk.vi</P>
+</B><P>C:\wt\c8043d723e7822af27ce51d5ae9d9e79b77a306b\vendor\labview\user.lib\_OpenG.lib\appcontrol\appcontrol.llb\Mangle VI Name (String)__ogtk.vi</P>
+</TD>
+</TR>
+<TR valign=TOP>
+<TD>
+<P><IMG src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAADAFBMVEX//////8z//5n//2b//zP//wD/zP//zMz/zJn/zGb/zDP/zAD/mf//mcz/mZn/mWb/mTP/mQD/Zv//Zsz/Zpn/Zmb/ZjP/ZgD/M///M8z/M5n/M2b/MzP/MwD/AP//AMz/AJn/AGb/ADP/AADM///M/8zM/5nM/2bM/zPM/wDMzP/MzMzMzJnMzGbMzDPMzADMmf/MmczMmZnMmWbMmTPMmQDMZv/MZszMZpnMZmbMZjPMZgDMM//MM8zMM5nMM2bMMzPMMwDMAP/MAMzMAJnMAGbMADPMAACZ//+Z/8yZ/5mZ/2aZ/zOZ/wCZzP+ZzMyZzJmZzGaZzDOZzACZmf+ZmcyZmZmZmWaZmTOZmQCZZv+ZZsyZZpmZZmaZZjOZZgCZM/+ZM8yZM5mZM2aZMzOZMwCZAP+ZAMyZAJmZAGaZADOZAABm//9m/8xm/5lm/2Zm/zNm/wBmzP9mzMxmzJlmzGZmzDNmzABmmf9mmcxmmZlmmWZmmTNmmQBmZv9mZsxmZplmZmZmZjNmZgBmM/9mM8xmM5lmM2ZmMzNmMwBmAP9mAMxmAJlmAGZmADNmAAAz//8z/8wz/5kz/2Yz/zMz/wAzzP8zzMwzzJkzzGYzzDMzzAAzmf8zmcwzmZkzmWYzmTMzmQAzZv8zZswzZpkzZmYzZjMzZgAzM/8zM8wzM5kzM2YzMzMzMwAzAP8zAMwzAJkzAGYzADMzAAAA//8A/8wA/5kA/2YA/zMA/wAAzP8AzMwAzJkAzGYAzDMAzAAAmf8AmcwAmZkAmWYAmTMAmQAAZv8AZswAZpkAZmYAZjMAZgAAM/8AM8wAM5kAM2YAMzMAMwAAAP8AAMwAAJkAAGYAADPuAADdAAC7AACqAACIAAB3AABVAABEAAAiAAARAAAA7gAA3QAAuwAAqgAAiAAAdwAAVQAARAAAIgAAEQAAAO4AAN0AALsAAKoAAIgAAHcAAFUAAEQAACIAABHu7u7d3d27u7uqqqqIiIh3d3dVVVVEREQiIiIREREAAAD7CIKZAAAAjElEQVQ4T62SUQ7AIAhDvczuf0Q2FaGgiCbrfowpbxUolKjQs9WtoUFjA/EXGXp5JWCRGggIULXMAEGCVywImN+cxQB15vyjIctgugNSw2hAPIv+Zz8PM4tK8BDf6mmed/uwUjPQkNzqRTf4LdAHDULbI2fg5TokpBmUwgRBqoFzMEFCHRKyDDt9hkQvEBuprG6pJosAAAAASUVORK5CYII=" ALT="Mangle VI Name (Path)__ogtk.vi"></P>
+</TD>
+<TD>
+<B><P>Mangle VI Name (Path)__ogtk.vi</P>
+</B><P>C:\wt\c8043d723e7822af27ce51d5ae9d9e79b77a306b\vendor\labview\user.lib\_OpenG.lib\appcontrol\appcontrol.llb\Mangle VI Name (Path)__ogtk.vi</P>
+</TD>
+</TR>
+</Table>
+<HR>
+<H3>VI Revision History</H3>
+<P>&quot;Mangle VI Name__ogtk.vi History&quot;</P>
+<P>Current Revision:   9</P>
+<HR>
+<H3>Position in Hierarchy</H3>
+<P><IMG src="data:image/png;base64, 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" ALT="Mangle VI Name__ogtk.vi"></P>
+<HR>
+<H3>Iconified Cluster Constants</H3>
+</BODY>
+</HTML>
