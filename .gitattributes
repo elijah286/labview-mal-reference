@@ -1,0 +1,10 @@
+* -text
+*.vi binary
+*.ctl binary
+*.lvlibp binary
+*.llb binary
+*.png binary
+*.ico binary
+*.pdf binary
+*.docx binary
+*.pptx binary

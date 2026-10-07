@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='windows-1252' standalone='yes'?>
+<MetaData>
+
+<ProjectTemplate>
+  <Title>New Measurement Template</Title>
+  <MetaDataClass>scripting/MsmtMetaDataObj/MeasurementMetaData.lvclass</MetaDataClass>
+  <Description>Creates a new measurement plugin from template</Description>
+  <Filters>Demonstrations:Measurement System</Filters>
+  <LocationPath>Measurement</LocationPath>
+  <ProjectPath>Measurement Prototype.lvproj</ProjectPath>>
+  <ListboxImagePath>images/blankproj.png</ListboxImagePath>
+  <CustomVIMode>AfterPage2NoUI</CustomVIMode>
+  <CustomVIPath>scripting/MsmtMetaDataObj/PostCopyScripting.vi</CustomVIPath> 
+  <SortPriority>700</SortPriority>
+</ProjectTemplate>
+
+</MetaData>

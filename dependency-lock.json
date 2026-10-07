@@ -1,0 +1,155 @@
+﻿{
+    "policy":  "Author-authorized components and OpenG source published. Recovered NI vi.lib payloads/examples/project wizards excluded; readers supply authorized external copies. No clone/setup installer hooks, shared-library writes or submodules.",
+    "labView":  "2026, Windows 64-bit",
+    "nativeRepairLedger": "NATIVE-REPAIRS.md",
+    "restoredNativeMembers": [
+        {
+            "path": "components/MAL-Framework/user.lib/Common Components/Hardware/HW Config/HW Configuration.vi",
+            "package": "national_instruments_lib_msmt_framework_common_components",
+            "version": "4.0.4.62",
+            "sha256AtRecovery": "C5EB77F3C6B3E697667D4D383F9FEB0B8CF6F99E6861D6CB0B698CC8E60E8144",
+            "provenance": "Verified staged package source copy; no installation or existing-file overwrite. Native export confirms DAQ Configuration class member."
+        }
+    ],
+    "sourceRepositories":  [
+                               {
+                                   "repository":  "elijah286/GUID-API",
+                                   "revision":  "940ea14380ceff960bf6171224dc3cc64a84babf",
+                                   "archiveSha256":  "22DE649AF775939DBE5AF9263A0E29E2659A617C8DFBCBE58820F8A05C9DECAF"
+                               },
+                               {
+                                   "repository":  "elijah286/Hardware",
+                                   "revision":  "689f19916900d3d9fc665a8599f69486e889983e",
+                                   "archiveSha256":  "3DE8635F26CB7D4A8814273C14B1AE1E0A1A51284014D8EDA1A92E9FBF367AB6"
+                               },
+                               {
+                                   "repository":  "elijah286/TestStand-MAL-API",
+                                   "revision":  "c01550b9549dc266cd64b0c4efe39f2eec4efd39",
+                                   "archiveSha256":  "877F9986F37E25821A9DB58462DFC1CF4C6C96DA3992D6CA8C66189C80D92FFB"
+                               }
+                           ],
+    "originalComponents":  [
+                               {
+                                   "repository":  "elijah286/HAL-MAL-Application",
+                                   "revisionAtVerification":  "eb3159c9df4435ce516614e132b18cc6d7fb8489",
+                                   "worktreeStatus":  [
+
+                                                      ]
+                               },
+                               {
+                                   "repository":  "elijah286/MAL-Framework",
+                                   "revisionAtVerification":  "540237f1f43ecaf66b270921ba14ad5fa93db729",
+                                   "worktreeStatus":  [
+                                                          " M \"user.lib/Common Components/Msmt Common Components Project.aliases\""
+                                                      ]
+                               },
+                               {
+                                   "repository":  "elijah286/MAL-Framework-API",
+                                   "revisionAtVerification":  "b4a05236f84b2c21ce65274b90fe99859cdc42cb",
+                                   "worktreeStatus":  [
+
+                                                      ]
+                               },
+                               {
+                                   "repository":  "elijah286/Extensible-Config-Dialog",
+                                   "revisionAtVerification":  "fa8d5e6042bc43c61b1745967a508a82e50207c9",
+                                   "worktreeStatus":  [
+
+                                                      ]
+                               }
+                           ],
+    "dependencies":  [
+                         {
+                             "name":  "oglib_appcontrol",
+                             "version":  "4.1.0.7",
+                             "license":  "BSD",
+                             "archiveSha256":  "34BB338B213CD4FAF814AAF935E4F157E0B57C7303F8EA2E7AC41D8A8E471368",
+                             "provenance":  "Pinned recovered package payload; source files vendored, package not installed."
+                         },
+                         {
+                             "name":  "oglib_array",
+                             "version":  "4.1.1.14",
+                             "license":  "BSD",
+                             "archiveSha256":  "420EDB9EB1DEA27A3914FECC82BF9415020DE0E761AE390C08369A150BB3220E",
+                             "provenance":  "Pinned recovered package payload; source files vendored, package not installed."
+                         },
+                         {
+                             "name":  "oglib_error",
+                             "version":  "4.2.0.23",
+                             "license":  "BSD-3-Clause",
+                             "archiveSha256":  "323D29123EEFD5B8E0E6C318336657EC109C367DB5BC5C4F6A7E6BCCDEF46C1E",
+                             "provenance":  "Pinned recovered package payload; source files vendored, package not installed."
+                         },
+                         {
+                             "name":  "oglib_file",
+                             "version":  "4.0.1.22",
+                             "license":  "BSD",
+                             "archiveSha256":  "8A89CE420AB8B97D6B91DF1FD625519D6CA16F794BC1801831AFF2A48AC4C97C",
+                             "provenance":  "Pinned recovered package payload; source files vendored, package not installed."
+                         },
+                         {
+                             "name":  "oglib_lvdata",
+                             "version":  "4.2.0.21",
+                             "license":  "BSD",
+                             "archiveSha256":  "796AFB2D402BD6CC2A9C8A97C81B673C13A865A74873A95F20B1EC7ECD36EC75",
+                             "provenance":  "Pinned recovered package payload; source files vendored, package not installed."
+                         },
+                         {
+                             "name":  "oglib_string",
+                             "version":  "4.1.0.12",
+                             "license":  "BSD-3-Clause",
+                             "archiveSha256":  "2A33E07635E739977D743D17EC949C67AB2887D505BF75CE51CE0272995B7121",
+                             "provenance":  "Pinned recovered package payload; source files vendored, package not installed."
+                         },
+                         {
+                             "name":  "oglib_variantconfig",
+                             "version":  "4.0.0.5",
+                             "license":  "BSD",
+                             "archiveSha256":  "4BF94F471CCD2E275D902006747A2D17FBDF37CD196E9F444B7287F3D26DCEE4",
+                             "provenance":  "Pinned recovered package payload; source files vendored, package not installed."
+                         },
+                         {
+                             "name":  "national_instruments_lib_guid_generator",
+                             "version":  "1.0.2.2",
+                             "license":  "",
+                             "archiveSha256":  "89F9362251706146ED8CF2FD7489CA4D2C1F74A02B65F84F984863C9D15B4D57",
+                             "provenance":  "Pinned recovered package payload; source files vendored, package not installed."
+                         },
+                         {
+                             "name":  "national_instruments_lib_tcp___ip_functions",
+                             "version":  "1.0.0.3",
+                             "license":  "",
+                             "archiveSha256":  "F569A28364642CBF37DE1C378948BF42502178690EBCA98D5BC95F652DE15056",
+                             "provenance":  "Pinned recovered package payload; source files vendored, package not installed."
+                         },
+                         {
+                             "name":  "ni_lib_cvt",
+                             "version":  "3.3.0.13",
+                             "license":  "NI Sample Code License",
+                             "archiveSha256":  "26D4309B9E5A940121284C09ACE9BC4AFB309F1E6A5EA2F93CB2C123405057BB",
+                             "provenance":  "Pinned recovered package payload; source files vendored, package not installed."
+                         },
+                         {
+                             "name":  "ni_lib_linked_network_actor",
+                             "version":  "1.2.0.19",
+                             "license":  "\tNI Sample Code License (NI SCL)",
+                             "archiveSha256":  "9492AF5A82938ED98CF8716BF7FF4612132E8CB4A5F62C9DDDEE9F9F74C0FD7B",
+                             "provenance":  "Pinned recovered package payload; source files vendored, package not installed."
+                         }
+                     ],
+    "runtimeSourceFolders":  [
+                                 "components",
+                                 "vendor/labview"
+                             ],
+    "externalPrerequisites":  [
+                                  "LabVIEW built-ins and Actor Framework",
+                                  "NI-DAQmx driver and native runtime",
+                                  "NI System Configuration x64 API/runtime; local Initialize Session startup verified, driver version capture pending; Skyline disabled in reference actor logger"
+                              ],
+    "unresolved":  [
+                       "OpenG ZIP installed separately by user; x64 DLL and native Path callee checked, archive runtime untested",
+                       "Clean-checkout binary VI dependency resolution and encoded class inheritance verification",
+                       "Measurement plugin closure and simulated configuration",
+                       "Full fault/Stop/repeat-run, acquisition/log-readback and executable-build acceptance; user-confirmed local operation is not these gates"
+                   ]
+}
