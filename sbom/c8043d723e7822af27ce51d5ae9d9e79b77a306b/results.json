@@ -1,0 +1,42 @@
+{
+ "meta": {
+  "sha": "c8043d723e7822af27ce51d5ae9d9e79b77a306b",
+  "short": "c8043d7",
+  "platform": "windows",
+  "repo": "elijah286/labview-mal-reference",
+  "pages_url": "https://elijah286.github.io/labview-mal-reference",
+  "dash_url": "https://elijah286.github.io/labview-mal-reference/",
+  "labview_version": "2026",
+  "commit": {
+   "message": "Publish updated LabVIEW MAL reference development snapshot",
+   "author": "Elijah Kerry",
+   "date": "2026-10-07T10:35:25-05:00"
+  },
+  "generated_utc": "2026-10-07 16:03 UTC",
+  "spdx_version": "CycloneDX 1.5",
+  "created": ""
+ },
+ "summary": {
+  "total_packages": 1
+ },
+ "platforms": [
+  {
+   "id": "windows",
+   "url": null
+  },
+  {
+   "id": "linux",
+   "url": null
+  }
+ ],
+ "packages": [
+  {
+   "name": "ni-labview-2026-vilib",
+   "version": "26.3.0.49792-0+f640",
+   "vendor": "National Instruments"
+  }
+ ],
+ "tooling": {
+  "missing": []
+ }
+}
