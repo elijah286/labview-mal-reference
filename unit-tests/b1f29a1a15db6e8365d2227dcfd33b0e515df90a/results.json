@@ -1,0 +1,71 @@
+{
+ "meta": {
+  "sha": "b1f29a1a15db6e8365d2227dcfd33b0e515df90a",
+  "short": "b1f29a1",
+  "platform": "windows",
+  "repo": "elijah286/labview-mal-reference",
+  "pages_url": "https://elijah286.github.io/labview-mal-reference",
+  "snap_base": "https://elijah286.github.io/labview-mal-reference/vi-snapshots/",
+  "dash_url": "https://elijah286.github.io/labview-mal-reference/",
+  "labview_version": "2026",
+  "tools": [],
+  "commit": {
+   "message": "Merge remote-tracking branch 'origin/main'",
+   "author": "Elijah Kerry",
+   "date": "2026-10-07T15:19:14-05:00"
+  },
+  "generated_utc": "2026-10-07 20:33 UTC"
+ },
+ "summary": {
+  "tests": 0,
+  "passed": 0,
+  "failed": 0,
+  "errored": 0,
+  "skipped": 0,
+  "percent": 0,
+  "status": "empty",
+  "duration": 0.0
+ },
+ "status_order": [
+  "failed",
+  "error",
+  "skipped",
+  "passed"
+ ],
+ "status_meta": {
+  "failed": {
+   "label": "Failed",
+   "color": "#da3633",
+   "blurb": "An assertion failed."
+  },
+  "error": {
+   "label": "Errored",
+   "color": "#bb8009",
+   "blurb": "The test raised an unexpected error."
+  },
+  "skipped": {
+   "label": "Skipped",
+   "color": "#6e7681",
+   "blurb": "The test was skipped."
+  },
+  "passed": {
+   "label": "Passed",
+   "color": "#2ea043",
+   "blurb": "The test passed."
+  }
+ },
+ "platforms": [
+  {
+   "id": "windows",
+   "url": null
+  },
+  {
+   "id": "linux",
+   "url": "linux/results.json"
+  }
+ ],
+ "suites": [],
+ "tooling": {
+  "missing": []
+ }
+}
