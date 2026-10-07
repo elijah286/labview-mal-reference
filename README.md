@@ -147,6 +147,16 @@ the built-in Actor Framework, NI-DAQmx, NI System Configuration, and OpenG ZIP
 for the recovered package versions and external prerequisites. Do not install a
 second older Actor Framework over the version supplied with LabVIEW.
 
+The inherited class/message folder names are long. On Windows, enable Git long-path
+handling for this checkout and choose a short destination:
+
+```powershell
+git clone --config core.longpaths=true https://github.com/elijah286/labview-mal-reference.git C:/src/mal-reference
+```
+
+This setting applies to the new repository, not your global Git configuration.
+A successful checkout still needs the dependency and native-runtime checks below.
+
 There is not yet a verified clean-clone installer. Temporary tooling and unrelated
 workspace entries have been removed from the root project. CVT/LNA project entries
 now use the documented external dependency locations, not local recovery folders.

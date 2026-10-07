@@ -19,6 +19,12 @@ original author's authorization, not a stable executable or certified lifecycle 
 3. Clean-checkout testing is still pending. This initial source snapshot is not a
   zero-setup installer or a reproducible-runtime acceptance claim.
 
+A fresh remote Git checkout was verified with repository-local `core.longpaths=true`.
+Committed files matched the local snapshot hashes, exclusions were retained, and
+the documentation/source audit ran successfully. This is a structural checkout
+check, not a clean-machine native LabVIEW run. Windows users should use the short
+clone destination and long-path command shown in the README.
+
 ## Cleanup And Remaining Work
 
 - Stop the reference application through its normal path and verify termination.

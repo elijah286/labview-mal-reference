@@ -1,6 +1,6 @@
 ﻿{
     "schemaVersion":  1,
-    "recordedAtUtc":  "2026-10-07T15:33:14.5966496Z",
+    "recordedAtUtc":  "2026-10-07T15:40:15.8608574Z",
     "scope":  "components source files, excluding personal IDE state and package archives",
     "baselineOrigin":  "initial-local-and-pinned-archive-snapshots",
     "caveat":  "Disk snapshot only; unsaved IDE edits and causal attribution are not established by hashes.",
@@ -8,7 +8,7 @@
                     "added":  2,
                     "changed":  496,
                     "missing":  0,
-                    "unchanged":  538
+                    "unchanged":  534
                 },
     "files":  [
                   {
@@ -136,24 +136,6 @@
                       "change":  "unchanged",
                       "beforeSha256":  "9BE283ECB6A7F4593172A2D626617AE9F8CFFECA63C1DA801EA2A83AF487186E",
                       "currentSha256":  "9BE283ECB6A7F4593172A2D626617AE9F8CFFECA63C1DA801EA2A83AF487186E"
-                  },
-                  {
-                      "path":  "components/Extensible-Config-Dialog/builds/Config Dialog Example/Config Dialog/Config Dialog.exe",
-                      "change":  "unchanged",
-                      "beforeSha256":  "5DEA36BE73E2409A74C55B4422AA35357A6B48C52AC3F5CF61B39F5E32117386",
-                      "currentSha256":  "5DEA36BE73E2409A74C55B4422AA35357A6B48C52AC3F5CF61B39F5E32117386"
-                  },
-                  {
-                      "path":  "components/Extensible-Config-Dialog/builds/Config Dialog Example/Config Dialog/Config Dialog.ini",
-                      "change":  "unchanged",
-                      "beforeSha256":  "DE88609974B37BF9745BD2F9D06E1CBF77F1B8437A80AF9806589E55C85CE6E8",
-                      "currentSha256":  "DE88609974B37BF9745BD2F9D06E1CBF77F1B8437A80AF9806589E55C85CE6E8"
-                  },
-                  {
-                      "path":  "components/Extensible-Config-Dialog/builds/Config Dialog Example/Config Dialog/ConfigFile.ini",
-                      "change":  "unchanged",
-                      "beforeSha256":  "CF60DDE9E9E46099CF80C9F7890FF2A870F0F6ABC8D99F7173697CC2CAA8CBF4",
-                      "currentSha256":  "CF60DDE9E9E46099CF80C9F7890FF2A870F0F6ABC8D99F7173697CC2CAA8CBF4"
                   },
                   {
                       "path":  "components/Extensible-Config-Dialog/Configuration Dialog Actor.lvproj",
@@ -2266,12 +2248,6 @@
                       "change":  "unchanged",
                       "beforeSha256":  "F377D3818303E7E376054D3E181DB7A3F00E62164C7ED6CE243CFA933CB7C7BC",
                       "currentSha256":  "F377D3818303E7E376054D3E181DB7A3F00E62164C7ED6CE243CFA933CB7C7BC"
-                  },
-                  {
-                      "path":  "components/MAL-Framework/user.lib/Common Components.zip",
-                      "change":  "unchanged",
-                      "beforeSha256":  "3538DE583417C386C4441B0E93CA2F0F45D55B14434C90DE030979BC78B2C177",
-                      "currentSha256":  "3538DE583417C386C4441B0E93CA2F0F45D55B14434C90DE030979BC78B2C177"
                   },
                   {
                       "path":  "components/MAL-Framework/user.lib/Common Components/Buffer/Buffer.lvclass",

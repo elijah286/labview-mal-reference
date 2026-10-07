@@ -27,7 +27,7 @@ function Get-RelativeSourcePath([string]$Path) {
 }
 
 function Test-LocalArtifact([string]$Path) {
-    return $Path -match '(?i)(\.UserState/|\.(aliases|lvlps|lvuser|lvps|vipc|vip)$|(^|/)(Thumbs\.db|Desktop\.ini|\.DS_Store)$)'
+    return $Path -match '(?i)(\.UserState/|(^|/)(builds|logs)/|\.(aliases|lvlps|lvuser|lvps|vipc|vip|exe|zip|tdms|tdms_index)$|(^|/)(Thumbs\.db|Desktop\.ini|\.DS_Store)$)'
 }
 
 $baseline = @{}
@@ -48,7 +48,7 @@ if ((Test-Path -LiteralPath $snapshotPath) -and (Test-Path -LiteralPath $githubS
 } elseif (Test-Path -LiteralPath $deltaPath) {
     $previousDelta = Get-Content -LiteralPath $deltaPath -Raw | ConvertFrom-Json
     foreach ($record in $previousDelta.files) {
-        if ($record.beforeSha256) { $baseline[$record.path] = $record.beforeSha256 }
+        if ($record.beforeSha256 -and -not (Test-LocalArtifact $record.path)) { $baseline[$record.path] = $record.beforeSha256 }
     }
     $snapshotOrigin = 'retained-relative-baseline-from-source-delta'
 } else { throw 'No recorded baseline available; refusing to invent a source comparison.' }

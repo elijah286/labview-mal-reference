@@ -4,7 +4,7 @@ Generated disk comparison against the recorded local-source and pinned-archive s
 Native VI hashes show differences, not their meaning; use CHANGES.md and native review for attribution.
 Personal IDE state and package archives are excluded. Unsaved IDE edits are not represented.
 
-Added: 2; changed: 496; missing: 0; unchanged: 538.
+Added: 2; changed: 496; missing: 0; unchanged: 534.
 Full before/current SHA256 records: [source-delta.json](source-delta.json).
 
 | Change | Component-Relative Path |
