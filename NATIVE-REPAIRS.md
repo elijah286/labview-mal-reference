@@ -2,6 +2,15 @@
 
 ## Current Development Snapshot: October 7, 2026
 
+The user also confirmed that the reorganized source version works after the
+subsequent project/path repairs and reopening LabVIEW/Nigel. Runtime source now
+lives under source/, with templates and upstream metadata separated. See
+[Structure Change Report](docs/STRUCTURE-CHANGES.md) for the full move map,
+measured native path convention, unsuccessful diagnostics, and the distinction
+between that user confirmation and automated acceptance. Latest read-only checks
+showed launcher/controller/UI cores executable, but no final full actor lifecycle
+or clean-checkout run was performed. Earlier compiler failures below are history.
+
 This ledger's later sections record historical recovery checkpoints. The current
 user-observed local example works after replacing unused network Find Systems
 with Initialize Session for the explicit local target. A native trace captured
@@ -47,7 +56,7 @@ test was run. Backup: evidence/Zip builder before pane repair.vi.
 
 ## DAQ Configuration Ownership
 
-Native MCP lvai_add_to_library added components/Hardware/DAQ/config/DAQ
+Native MCP lvai_add_to_library added source/plugins/hardware/DAQ/config/DAQ
 Configuration.lvclass to the Hardware folder in the declared Hardware.lvlib.
 Saved membership was verified and the compiler ownership-disagreement error
 disappeared. Original class/library copies remain in timestamped evidence
@@ -55,7 +64,7 @@ backups. The root project's standalone class listing was not edited while open.
 
 ## Missing Native Configuration Member
 
-Recovered the absent components/MAL-Framework/user.lib/Common Components/Hardware/
+Recovered the absent source/framework/Hardware/
 HW Config/HW Configuration.vi from staged Common Components 4.0.4.62. No package
 installation or existing-file overwrite. Length: 20092 bytes. SHA256:
 C5EB77F3C6B3E697667D4D383F9FEB0B8CF6F99E6861D6CB0B698CC8E60E8144.

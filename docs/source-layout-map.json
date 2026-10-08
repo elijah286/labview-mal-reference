@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "moves": [
+    {"from": "components/HAL-MAL-Application/Source/Framework", "to": "source/application"},
+    {"from": "components/MAL-Framework/user.lib/Common Components", "to": "source/framework"},
+    {"from": "components/MAL-Framework/Template", "to": "templates/measurement"},
+    {"from": "components/MAL-Framework-API", "to": "source/api/controller"},
+    {"from": "components/Extensible-Config-Dialog", "to": "source/configuration"},
+    {"from": "components/Hardware", "to": "source/plugins/hardware"},
+    {"from": "components/Measurements", "to": "source/plugins/measurements"},
+    {"from": "components/GUID-API", "to": "source/support/guid"},
+    {"from": "components/TestStand-MAL-API", "to": "source/integrations/teststand"},
+    {"from": "components/HAL-MAL-Application", "to": "provenance/upstream/application"},
+    {"from": "components/MAL-Framework", "to": "provenance/upstream/framework"}
+  ]
+}

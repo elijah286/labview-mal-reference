@@ -1,10 +1,10 @@
-﻿{
+{
     "policy":  "Author-authorized components and OpenG source published. Recovered NI vi.lib payloads/examples/project wizards excluded; readers supply authorized external copies. No clone/setup installer hooks, shared-library writes or submodules.",
     "labView":  "2026, Windows 64-bit",
     "nativeRepairLedger": "NATIVE-REPAIRS.md",
     "restoredNativeMembers": [
         {
-            "path": "components/MAL-Framework/user.lib/Common Components/Hardware/HW Config/HW Configuration.vi",
+            "path": "source/framework/Hardware/HW Config/HW Configuration.vi",
             "package": "national_instruments_lib_msmt_framework_common_components",
             "version": "4.0.4.62",
             "sha256AtRecovery": "C5EB77F3C6B3E697667D4D383F9FEB0B8CF6F99E6861D6CB0B698CC8E60E8144",

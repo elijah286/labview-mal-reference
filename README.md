@@ -12,9 +12,11 @@ measurement applications with hardware abstraction, measurement abstraction,
 configuration objects, and asynchronous actors.
 
 **Under active development.** Local operation was confirmed by the user on
-October 7, 2026, after correcting initialization for local hardware discovery.
+October 7, 2026, after correcting local initialization and again after the
+responsibility-based source reorganization. See [Source Layout](docs/SOURCE-LAYOUT.md)
+and [Structure Change Report](docs/STRUCTURE-CHANGES.md).
 This is a development reference, not a production-qualified test system or a
-certified shutdown/safety implementation. This is the initial author-authorized
+certified shutdown/safety implementation. This is an author-authorized
 development snapshot for [elijah286/labview-mal-reference](https://github.com/elijah286/labview-mal-reference).
 Recovered NI dependency source is obtained separately, not republished. Clean-checkout
 and lifecycle verification remain in progress; see [Publication Status](docs/PUBLICATION.md).
@@ -115,7 +117,7 @@ more message/class files, and careful version management.
 | Area | Original / Recovered Baseline | This Update |
 | --- | --- | --- |
 | Environment | Older source/package baselines; the original article documents LabVIEW 2017 SP1 and a 2018 5.3 distribution | Targeted and inspected in LabVIEW 2026, Windows 64-bit; no older-version compatibility claim |
-| Source organization | Application, framework, API, configuration, and plugin repositories were separate | Consolidated reference project plus pinned source/dependency provenance |
+| Source organization | Application, framework, API, configuration, and plugin repositories were separate | Responsibility-based source tree, consolidated project, templates and upstream provenance separated |
 | Local startup | Called Find Systems to discover network systems even though its system list was unused | Uses Initialize Session for the same explicit local target; avoids the unnecessary network-discovery dependency |
 | DAQ source links | Missing legacy configuration readers/writers and inconsistent library ownership | Corrected native ownership; relinked existing configuration accessors; recovered a missing native configuration member |
 | DAQ configuration | Legacy UI/serializers referenced an absent IO Channels field | Restored the string field and rebound existing in-place element selections |
@@ -133,10 +135,11 @@ is supporting evidence, not a replacement for the current status below.
 
 | Check | Result |
 | --- | --- |
-| Local application operation | User-confirmed working on October 7, 2026 |
+| Local application operation | User-confirmed working on October 7, 2026, including the reorganized source version |
 | Corrected local initialization | Native runtime trace: status false, code 0, empty source while NI Network Discovery remained stopped |
 | Native compilation | Selected subject checks passed in the reference project's application instance; not every plugin was certified |
 | Standard Measurement plugin | Six methods compile; native factory loading, buffered-data simulation, timeout/fault checks, diagram sizing, and live Step-menu discovery passed |
+| Relocated source paths | Six plugin methods compiled at their exact new paths; latest launcher/controller/UI inspection passed. Earlier original-source cross-links remain a clean-checkout risk, not an exhaustive closure result |
 | Automated normal-close regression | Not passed; its last attempt had no UI handle before a close request and reported reserved/running actor states |
 | Fault termination / repeat start-stop | Not fully verified |
 | Acquisition, TDMS round-trip, connected hardware | Not established by the startup checks |
@@ -174,7 +177,7 @@ populate them from authorized copies; it runs no installers and refuses to repla
 different files. Native binary links may still need resolution in LabVIEW. The
 bundled Measurements.ini contains historical hardware/logging paths and example
 device names, not working defaults for a new machine. Its measurement search
-path now points to this checkout's components/Measurements folder. See
+path now points to this checkout's source/plugins/measurements folder. See
 [Measurement Plugin Repair](docs/MEASUREMENT-PLUGIN-REPAIR.md) for verified scope
 and the three required hardware roles.
 
@@ -186,14 +189,14 @@ For an authorized development copy:
 2. Open [Measurement Utility Reference.lvproj](Measurement%20Utility%20Reference.lvproj).
    Resolve dependencies deliberately. Do not accept an unrelated same-name VI as
    a substitute for a missing class method.
-3. Review [Measurements.ini](components/HAL-MAL-Application/Source/Framework/Measurements.ini)
+3. Review [Measurements.ini](source/application/Measurements.ini)
    through the application's configuration interfaces. Choose local plugin folders,
    explicit device/channel mappings, and a writable log location. Do not edit
    flattened logger-class values by guessing their encoding.
 4. For hardware-free development, explicitly configure an NI-DAQmx simulated
    device in MAX or an appropriate provided simulated instrument class. An empty
    hardware list is not a successful simulation.
-5. Open the server controller's [main.vi](components/HAL-MAL-Application/Source/Framework/Server/Controller/main.vi)
+5. Open the server controller's [main.vi](source/application/Server/Controller/main.vi)
    front panel and run it deliberately. Automatic run-on-open is disabled.
 6. Start only a configured measurement, verify its data and log, and verify normal
    Stop before starting another run. If the UI disappears and project items stay
@@ -227,13 +230,16 @@ Fault-safe event creation is one correction here, not a complete bounded supervi
 
 | Location | Contents |
 | --- | --- |
-| components/HAL-MAL-Application | Server/client application examples and startup |
-| components/MAL-Framework | Controller, measurement, hardware, logging, UI, and result abstractions |
-| components/MAL-Framework-API | Controller-facing integration API |
-| components/Extensible-Config-Dialog | Configuration classes and dialog implementation |
-| components/Hardware | Concrete DAQ and simulated instrument source |
-| components/GUID-API | GUID source |
-| components/TestStand-MAL-API | Optional historical TestStand integration source |
+| source/application | Server/client controllers, UIs, listeners and startup |
+| source/framework | Reusable controller, measurement, HAL, logging, UI and result abstractions |
+| source/api/controller | Controller-facing integration API |
+| source/configuration | Configuration classes and dialog implementation |
+| source/plugins/hardware | Concrete DAQ and simulated instrument source |
+| source/plugins/measurements | Standard Measurement plugin and its bounded buffered-data operation |
+| source/support/guid | GUID source |
+| source/integrations/teststand | Optional historical TestStand integration source |
+| templates/measurement | Measurement templates, separate from deployed plugins |
+| provenance/upstream | Original component READMEs and package metadata, not runtime source |
 | vendor | OpenG source and package notices; recovered NI payload source is excluded |
 | tooling | Portable source audit and external-dependency preparation, not runtime logic |
 | dependency-lock.json | Recorded revisions, package versions, and recovery hashes |

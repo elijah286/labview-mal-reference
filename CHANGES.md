@@ -25,14 +25,23 @@ Do not call the initial snapshot a byte-identical checkout of those seven commit
 
 ## Organization And Links
 
-- Added one consolidated source-navigation project; retained the component layout
-  rather than merging or renaming same-name classes with different qualified owners.
+- Added one consolidated source-navigation project. The latest update replaces
+  upstream repository/package nesting with source/application, framework,
+  configuration, API, plugins, support and integrations; templates and upstream
+  metadata are separate. Qualified class/library identities are retained.
+- Rebuilt moved manifest paths using LabVIEW's measured file-relative native
+  convention and explicit committed identities, including unchanged member URLs.
+  The user confirmed local operation after this reorganization. See
+  [Structure And Link Change Report](docs/STRUCTURE-CHANGES.md) for every move,
+  diagnostic attempt, verification distinction and portability caveat.
 - Repaired copied manifest member and containing-library paths in 135 manifests
   during recovery. The initial path-repair verification excluded only the intended
   fields when comparing XML. Later native saves are separate changes.
 - Mapped 1058 installed-library manifest references to local source targets during
   the initial vendoring pass. This is historical scope, not a current portability
-  guarantee: the present root project again lists temporary tools and recovery paths.
+  guarantee: native binary links and original-source cross-links still require
+  clean-checkout validation. The published root project excludes temporary tools
+  and recovery-only dependency paths.
 - Disabled the copied server launcher's Run When Opened setting. Opening source
   must not launch actors implicitly.
 - Targeted LabVIEW 2026 x64. No change of original package version numbers is used
@@ -53,9 +62,9 @@ project, not inferred from an add-on application instance.
 
 | Subject | Exact Change | Verification / Limit |
 | --- | --- | --- |
-| components/Hardware/DAQ/config/DAQ Configuration.lvclass and components/Hardware/DAQ/DAQ .lvclass | Added the classes to the Hardware.lvlib membership they already declared | Native ownership/compiler disagreement cleared |
-| components/MAL-Framework/user.lib/Common Components/Hardware/HW Config/HW Configuration.vi | Recovered the missing native member from Common Components 4.0.4.62; no guessed stub or installed-library overwrite | Recovery SHA256 C5EB77F3C6B3E697667D4D383F9FEB0B8CF6F99E6861D6CB0B698CC8E60E8144; recovered length 20092 bytes |
-| components/Hardware/DAQ/config/DAQ Configuration.lvclass | Appended string field IO Channels; retained existing fields/members | Configuration UI and read/store methods compiled; routing and persistence round-trip not established |
+| source/plugins/hardware/DAQ/config/DAQ Configuration.lvclass and source/plugins/hardware/DAQ/DAQ .lvclass | Added the classes to the Hardware.lvlib membership they already declared | Native ownership/compiler disagreement cleared |
+| source/framework/Hardware/HW Config/HW Configuration.vi | Recovered the missing native member from Common Components 4.0.4.62; no guessed stub or installed-library overwrite | Recovery SHA256 C5EB77F3C6B3E697667D4D383F9FEB0B8CF6F99E6861D6CB0B698CC8E60E8144; recovered length 20092 bytes |
+| source/plugins/hardware/DAQ/config/DAQ Configuration.lvclass | Appended string field IO Channels; retained existing fields/members | Configuration UI and read/store methods compiled; routing and persistence round-trip not established |
 | HW Configuration.vi and DAQ configuration read/store methods | Temporarily rebound stale IPE selections and restored their intended IO Channels selection | Native connectors/event controls and surrounding wires retained |
 | DAQ configure.vi | Replaced the missing legacy Read Configuration call with existing Read HW Config Class.vi after an exact unresolved-call guard | Native executable-state check passed |
 | DAQ construct.vi | Replaced the missing legacy Write Configuration call with existing Write HW Config Class.vi; retained parent constructor chain | Constructor and DAQ class saved; selected 17-subject compiler check passed at that checkpoint |

@@ -4,6 +4,17 @@ Repository: [elijah286/labview-mal-reference](https://github.com/elijah286/labvi
 Prepared October 7, 2026 as an active-development source reference under the
 original author's authorization, not a stable executable or certified lifecycle release.
 
+## Reorganized Source Update
+
+The user confirmed operation of the reorganized version on October 7, 2026 and
+authorized its publication. Runtime source is grouped by responsibility; templates
+and upstream package metadata are separate. Read the
+[Structure Change Report](STRUCTURE-CHANGES.md) and [Source Layout](SOURCE-LAYOUT.md).
+The root project was saved and closed through MCP before publication-only path
+cleanup. Restricted NI dependency source remains ignored and supplied separately.
+This local working confirmation is not a fresh automated full-app run or evidence
+that original-source cross-links are absent in a clean checkout.
+
 ## Distribution Decisions
 
 1. The author created the new repository as `elijah286/labview-mal-reference`.

@@ -16,6 +16,7 @@ logs/
 **/*.lvuser
 **/*.lvps
 publication-audit.local.json
+Measurement Utility Rebuild.lvproj
 vendor/labview/vi.lib/
 vendor/labview/project/
 vendor/labview/examples/

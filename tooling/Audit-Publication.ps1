@@ -9,6 +9,17 @@ $RepositoryRoot = [IO.Path]::GetFullPath($RepositoryRoot).TrimEnd('\')
 $snapshotPath = Join-Path $RepositoryRoot 'evidence\source-copy.json'
 $githubSnapshotPath = Join-Path $RepositoryRoot 'evidence\github-sources.json'
 $deltaPath = Join-Path $RepositoryRoot 'docs\source-delta.json'
+$layoutPath = Join-Path $RepositoryRoot 'docs\source-layout-map.json'
+$layoutMoves = if (Test-Path -LiteralPath $layoutPath) { (Get-Content -LiteralPath $layoutPath -Raw | ConvertFrom-Json).moves } else { @() }
+
+function Get-CurrentLayoutPath([string]$Path) {
+    foreach ($move in $layoutMoves) {
+        if ($Path -eq $move.from -or $Path.StartsWith($move.from + '/', [StringComparison]::OrdinalIgnoreCase)) {
+            return $move.to + $Path.Substring($move.from.Length)
+        }
+    }
+    return $Path
+}
 
 function Get-FileDigest([string]$Path) {
     $nativePath = if ($Path.StartsWith('\\?\')) { $Path } else { '\\?\' + $Path }
@@ -35,28 +46,34 @@ $snapshotOrigin = 'initial-local-and-pinned-archive-snapshots'
 if ((Test-Path -LiteralPath $snapshotPath) -and (Test-Path -LiteralPath $githubSnapshotPath)) {
     $snapshot = Get-Content -LiteralPath $snapshotPath -Raw | ConvertFrom-Json
     foreach ($record in $snapshot.files) {
-        $relativePath = 'components/' + $record.repository + '/' + $record.relativePath.Replace('\', '/')
+        $relativePath = Get-CurrentLayoutPath ('components/' + $record.repository + '/' + $record.relativePath.Replace('\', '/'))
         if (-not (Test-LocalArtifact $relativePath)) { $baseline[$relativePath] = $record.sha256 }
     }
     $githubSnapshots = Get-Content -LiteralPath $githubSnapshotPath -Raw | ConvertFrom-Json
     foreach ($repository in $githubSnapshots) {
         foreach ($record in $repository.files) {
-            $relativePath = Get-RelativeSourcePath $record.path
+            $relativePath = Get-CurrentLayoutPath (Get-RelativeSourcePath $record.path)
             if (-not (Test-LocalArtifact $relativePath)) { $baseline[$relativePath] = $record.sha256 }
         }
     }
 } elseif (Test-Path -LiteralPath $deltaPath) {
     $previousDelta = Get-Content -LiteralPath $deltaPath -Raw | ConvertFrom-Json
     foreach ($record in $previousDelta.files) {
-        if ($record.beforeSha256 -and -not (Test-LocalArtifact $record.path)) { $baseline[$record.path] = $record.beforeSha256 }
+        $relativePath = Get-CurrentLayoutPath $record.path
+        if ($record.beforeSha256 -and -not (Test-LocalArtifact $relativePath)) { $baseline[$relativePath] = $record.beforeSha256 }
     }
     $snapshotOrigin = 'retained-relative-baseline-from-source-delta'
 } else { throw 'No recorded baseline available; refusing to invent a source comparison.' }
 
 $current = @{}
-foreach ($file in Get-ChildItem -LiteralPath (Join-Path $RepositoryRoot 'components') -Recurse -File) {
-    $relativePath = Get-RelativeSourcePath $file.FullName
-    if (-not (Test-LocalArtifact $relativePath)) { $current[$relativePath] = Get-FileDigest $file.FullName }
+$sourceRoots = if ($layoutMoves.Count) { @('source', 'templates', 'provenance/upstream') } else { @('components') }
+foreach ($sourceRoot in $sourceRoots) {
+    $directory = Join-Path $RepositoryRoot $sourceRoot
+    if (-not (Test-Path -LiteralPath $directory)) { continue }
+    foreach ($file in Get-ChildItem -LiteralPath $directory -Recurse -File) {
+        $relativePath = Get-RelativeSourcePath $file.FullName
+        if (-not (Test-LocalArtifact $relativePath)) { $current[$relativePath] = Get-FileDigest $file.FullName }
+    }
 }
 $paths = @(@($baseline.Keys) + @($current.Keys) | Sort-Object -Unique)
 $records = @(
@@ -74,7 +91,7 @@ foreach ($change in @('added','changed','missing','unchanged')) {
 $report = [ordered]@{
     schemaVersion = 1
     recordedAtUtc = [DateTime]::UtcNow.ToString('o')
-    scope = 'components source files, excluding personal IDE state and package archives'
+    scope = 'Application/framework/plugin source, templates and upstream provenance, excluding personal IDE state and package archives'
     baselineOrigin = $snapshotOrigin
     caveat = 'Disk snapshot only; unsaved IDE edits and causal attribution are not established by hashes.'
     summary = $summary
@@ -92,7 +109,7 @@ if (-not $CheckOnly) {
     $lines.Add(('Added: {0}; changed: {1}; missing: {2}; unchanged: {3}.' -f $summary.added,$summary.changed,$summary.missing,$summary.unchanged))
     $lines.Add('Full before/current SHA256 records: [source-delta.json](source-delta.json).')
     $lines.Add('')
-    $lines.Add('| Change | Component-Relative Path |')
+    $lines.Add('| Change | Repository-Relative Path |')
     $lines.Add('| --- | --- |')
     foreach ($record in $records | Where-Object {$_.change -ne 'unchanged'}) {
         $lines.Add(('| {0} | {1} |' -f $record.change,$record.path.Replace('|','&#124;')))
@@ -101,7 +118,7 @@ if (-not $CheckOnly) {
 }
 
 $findings = New-Object 'Collections.Generic.List[string]'
-foreach ($relativeDocument in @('README.md','CHANGES.md','THIRD-PARTY-NOTICES.md','SOURCE-DEPENDENCIES.md','docs\PUBLICATION.md')) {
+foreach ($relativeDocument in @('README.md','CHANGES.md','THIRD-PARTY-NOTICES.md','SOURCE-DEPENDENCIES.md','docs\PUBLICATION.md','docs\SOURCE-LAYOUT.md','docs\MEASUREMENT-PLUGIN-REPAIR.md')) {
     $documentPath = Join-Path $RepositoryRoot $relativeDocument
     $text = Get-Content -LiteralPath $documentPath -Raw
     foreach ($match in [regex]::Matches($text, '\]\(([^)]+)\)')) {
@@ -137,4 +154,4 @@ if (@($records | Where-Object {$_.path -match 'Create Stop Event After Fault\.vi
 Write-Output ('Source inventory: ' + ($summary | ConvertTo-Json -Compress))
 Write-Output 'PASS: source hashes and documentation relative links checked. This is not native runtime validation.'
 foreach ($finding in $findings) { Write-Output ('PUBLICATION BLOCKER: ' + $finding) }
-if ($findings.Count) { Write-Output ('PUBLICATION HELD: {0} recorded findings; no source upload performed.' -f $findings.Count) }
+if ($findings.Count) { throw ('PUBLICATION HELD: {0} recorded findings; no source upload performed.' -f $findings.Count) }

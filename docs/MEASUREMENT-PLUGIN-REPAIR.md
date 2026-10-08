@@ -10,7 +10,7 @@ Original archive and pre-adaptation copies remain local.
 ## Changes
 
 - Added the Standard Measurement library/class and six current methods under
-  components/Measurements, with a Measurement Plugins project folder.
+  source/plugins/measurements, with a Measurement Plugins project folder.
 - Corrected imported class/library membership paths and saved the resolved parent.
   No installed framework or shared library was replaced.
 - Recreated Acquire with NI's native override provider to match the current base
