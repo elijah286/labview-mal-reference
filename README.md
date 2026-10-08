@@ -1,25 +1,92 @@
 # LabVIEW MAL Reference
 
+## Quick Start: Setup, Open, And Run
+
+**Top-level VI:** [source/application/Server/Controller/main.vi](source/application/Server/Controller/main.vi)
+
+**Project:** [Measurement Utility Reference.lvproj](Measurement%20Utility%20Reference.lvproj)
+
+**Expected application window:** Measurement Task Manager (the Server UI).
+
+### 1. Set Up The Environment
+
+Use **LabVIEW 2026 64-bit on Windows**, with its built-in Actor Framework,
+**NI-DAQmx**, **NI System Configuration**, and **OpenG ZIP 5.0.9** with an x64
+native library. Do not install an older Actor Framework over LabVIEW's copy.
+Nigel, MCP, and Copilot tooling are not runtime dependencies of this
+application; Nigel is needed only when using the optional MCP development tools.
+
+Clone to a short path with Git long-path support, then enter the checkout:
+
+```powershell
+git clone --config core.longpaths=true https://github.com/elijah286/labview-mal-reference.git C:/src/mal-reference
+Set-Location C:/src/mal-reference
+```
+
+Some NI dependency sources are deliberately **not included in Git**. Obtain
+authorized copies of CVT, Linked Network Actor, and the other required NI helpers,
+then populate the local dependency tree before opening the project:
+
+```powershell
+./tooling/Prepare-ExternalDependencies.ps1 -SourceRoot 'D:/Authorized-LabVIEW-Dependencies'
+```
+
+Replace that example source directory with your authorized dependency tree.
+[Dependencies And Setup](SOURCE-DEPENDENCIES.md) specifies its required layout,
+package versions, and licensing limits. The preparation script runs no installers
+and does not overwrite different existing files.
+
+### 2. Open The Project And Configure Paths
+
+In LabVIEW, choose **File > Open** and open
+[Measurement Utility Reference.lvproj](Measurement%20Utility%20Reference.lvproj)
+from the checkout root. Use this project, not a historical component project.
+Resolve missing dependencies to their intended local or installed files. Avoid
+same-name files from old checkouts or recovery archives: they can introduce
+cross-links even when the launcher has a valid Run arrow.
+
+Review [source/application/Measurements.ini](source/application/Measurements.ini)
+through the application's configuration interfaces. Set the measurement plugin
+folder to your checkout's `source/plugins/measurements`, the hardware plugin
+folder to `source/plugins/hardware`, and configure appropriate device/channel
+mappings and writable logging storage. The supplied settings still contain local
+Windows and historical Mac paths; they are **not portable defaults**. Do not edit
+flattened logger-class values by guessing their encoding.
+
+### 3. Open And Run The Top-Level VI
+
+In Project Explorer, expand **My Computer > Application > Server Controller.lvlib
+> Server Controller.lvclass**, then open **main.vi**. Alternatively, with the
+project active, open the exact top-level VI linked above from the checkout.
+
+Open its **front panel** and click LabVIEW's **Run arrow** once. Automatic
+run-on-open is disabled. The launcher locates the configuration under
+`source/application/Measurements.ini` and starts the controller/UI actors;
+**Measurement Task Manager should appear**. You do not need to press **Start
+Server** for the local UI; that control is for network service operation.
+
+Choose **Standard Measurement** in the **Step** dropdown. If it is absent, use
+the UI's measurement-loading command and select `source/plugins/measurements`.
+Starting a measurement is a separate action: select compatible devices and
+configure the step before pressing the application's **Run** button. Standard
+Measurement requires its three declared hardware roles; an empty device list or
+an arbitrary simulated DMM is not a complete measurement setup. See
+[Measurement Plugin Repair](docs/MEASUREMENT-PLUGIN-REPAIR.md).
+
+Stop active measurements through the application before closing its UI normally.
+Do not use LabVIEW's Abort button as a substitute for cleanup. If the UI does not
+appear, **do not repeatedly run main.vi**: inspect the actor cores' Error Lists
+and dependency paths first. A valid launcher Run arrow alone does not establish
+that dynamically launched actors are ready.
+
+**Verification scope:** Local operation was user-confirmed. Clean-machine setup,
+connected hardware, logging readback, and complete stop/restart behavior remain
+unverified; this is a development reference, not a turnkey executable release.
+
 <!-- labview-ci:dashboard -->
 ## LabVIEW CI
 
 [![LabVIEW CI dashboard](https://img.shields.io/badge/LabVIEW%20CI-dashboard-2ea44f)](https://elijah286.github.io/labview-mal-reference/)
-
-LabVIEW CI runs on every pull request. See the [**CI dashboard**](https://elijah286.github.io/labview-mal-reference/) for build status, VI Analyzer results, VI diffs, and mass-compile reports.
-
-An updated, native LabVIEW reference example for building extensible test and
-measurement applications with hardware abstraction, measurement abstraction,
-configuration objects, and asynchronous actors.
-
-**Under active development.** Local operation was confirmed by the user on
-October 7, 2026, after correcting local initialization and again after the
-responsibility-based source reorganization. See [Source Layout](docs/SOURCE-LAYOUT.md)
-and [Structure Change Report](docs/STRUCTURE-CHANGES.md).
-This is a development reference, not a production-qualified test system or a
-certified shutdown/safety implementation. This is an author-authorized
-development snapshot for [elijah286/labview-mal-reference](https://github.com/elijah286/labview-mal-reference).
-Recovered NI dependency source is obtained separately, not republished. Clean-checkout
-and lifecycle verification remain in progress; see [Publication Status](docs/PUBLICATION.md).
 
 ## What This Example Is
 
