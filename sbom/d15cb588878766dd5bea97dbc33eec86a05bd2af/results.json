@@ -1,0 +1,42 @@
+{
+ "meta": {
+  "sha": "d15cb588878766dd5bea97dbc33eec86a05bd2af",
+  "short": "d15cb58",
+  "platform": "windows",
+  "repo": "elijah286/labview-mal-reference",
+  "pages_url": "https://elijah286.github.io/labview-mal-reference",
+  "dash_url": "https://elijah286.github.io/labview-mal-reference/",
+  "labview_version": "2026",
+  "commit": {
+   "message": "Reorganize MAL source by architecture and document working snapshot",
+   "author": "Elijah Kerry",
+   "date": "2026-10-07T20:11:14-05:00"
+  },
+  "generated_utc": "2026-10-08 01:40 UTC",
+  "spdx_version": "CycloneDX 1.5",
+  "created": ""
+ },
+ "summary": {
+  "total_packages": 1
+ },
+ "platforms": [
+  {
+   "id": "windows",
+   "url": null
+  },
+  {
+   "id": "linux",
+   "url": null
+  }
+ ],
+ "packages": [
+  {
+   "name": "ni-labview-2026-vilib",
+   "version": "26.3.0.49792-0+f640",
+   "vendor": "National Instruments"
+  }
+ ],
+ "tooling": {
+  "missing": []
+ }
+}
