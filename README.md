@@ -88,6 +88,9 @@ unverified; this is a development reference, not a turnkey executable release.
 
 [![LabVIEW CI dashboard](https://img.shields.io/badge/LabVIEW%20CI-dashboard-2ea44f)](https://elijah286.github.io/labview-mal-reference/)
 
+See the [**CI/CD dashboard**](https://elijah286.github.io/labview-mal-reference/)
+for build status, VI Analyzer results, VI diffs, and mass-compile reports.
+
 ## What This Example Is
 
 This work updates Elijah Kerry's Measurement Utility / Measurement Abstraction
