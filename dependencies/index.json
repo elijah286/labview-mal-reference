@@ -1,8 +1,17 @@
 {
   "schema": 1,
   "repo": "elijah286/labview-mal-reference",
-  "sha": "d15cb588878766dd5bea97dbc33eec86a05bd2af",
+  "sha": "482405571401acd84c47844848e2628e141e091c",
   "revisions": [
+    {
+      "sha": "482405571401acd84c47844848e2628e141e091c",
+      "short": "4824055",
+      "message": "Update README quick start and remove redundant introductory copy",
+      "author": "Elijah Kerry",
+      "date": "2026-10-08T01:31:20Z",
+      "project": false,
+      "dep_only": false
+    },
     {
       "sha": "d15cb588878766dd5bea97dbc33eec86a05bd2af",
       "short": "d15cb58",
