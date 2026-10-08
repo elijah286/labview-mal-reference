@@ -1,0 +1,2794 @@
+Project has no build specifications: Measurement Utility Reference.lvproj
+Project has no build specifications: source\api\controller\Measurement Controller API.lvproj
+=== ExecuteBuildSpec 'Client EXE' [EXE] target 'My Computer' in source\application\Networked Measurement System.lvproj ===
+LabVIEWCLI started logging in file:  C:\Users\ContainerAdministrator\AppData\Local\Temp\lvtemporary_117366.log
+Using LabVIEW: "C:\Program Files\National Instruments\LabVIEW 2026\LabVIEW.exe"
+LabVIEW launched successfully.
+Connection established with LabVIEW at port number 3363.
+
+LabVIEWCLI.exe : Operation output: 
+At C:\workspace\.github\labview\build-binaries.ps1:252 char:12
++     $out = & $CliExe @cliArgs 2>&1 | Out-String
++            ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Operation output: :String) [], Re 
+   moteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Error Code : 1
+Error Message : Cannot complete build because following VI loaded broken:
+
+C:\workspace\source\application\Client\Client Controller\main.vi
+
+Open the VI in LabVIEW and fix the listed errors. If the VI loads as expected 
+but errors are still detected during the build, contact National Instruments 
+technical support for assistance.
+
+Broken VIs:
+- Client Controller.lvlib:Client Config.lvclass:Read Configuration 
+Parameters.vi:
+	SubVI 'Read Key (Variant)__ogtk.vi': SubVI is missing
+
+	SubVI 'Read Key (Variant)__ogtk.vi': SubVI is missing
+
+	Call Parent Class Method 'Msmt Configuration.lvlib:Controller 
+Configuration.lvclass:Read Configuration Parameters.vi': One or more of the 
+set of VIs that this dynamic dispatch subVI or property item may call are 
+broken.
+
+- Client Controller.lvlib:Client Config.lvclass:Store Configuration 
+Parameters.vi:
+	SubVI 'Write Key (Variant)__ogtk.vi': SubVI is missing
+
+	SubVI 'Write Key (Variant)__ogtk.vi': SubVI is missing
+
+	Call Parent Class Method 'Msmt Configuration.lvlib:Controller 
+Configuration.lvclass:Store Configuration Parameters.vi': One or more of the 
+set of VIs that this dynamic dispatch subVI or property item may call are 
+broken.
+
+- Client Controller.lvlib:Client Controller.lvclass:Client LNA Started.vi:
+	SubVI 'Client Controller.lvlib:Client Controller.lvclass:Wait for ACK from 
+Client Proxy LNA.vi': SubVI is not executable
+
+	SubVI 'Client Controller.lvlib:Client Controller.lvclass:Send GUID to Server 
+Listener.vi': SubVI is not executable
+
+	SubVI 'Send Disconnect.vi': SubVI is missing
+
+- Client Controller.lvlib:Client Controller.lvclass:Find Devices of Specified 
+Type.vi:
+	SubVI 'Send Transmit Network Message.vi': SubVI is missing
+
+- Client Controller.lvlib:Client Controller.lvclass:Initialize Client.vi:
+	SubVI 'Guid Generator.vi': SubVI is missing
+
+- Client Controller.lvlib:Client Controller.lvclass:Launch Client LNA.vi:
+	SubVI 'Write Context.vi': SubVI is missing
+
+	LabVIEW Object 'Client Controller.lvlib:Client LNA.lvclass': Refers to a 
+missing LabVIEW class
+
+	SubVI 'Write Buffer Size.vi': SubVI is missing
+
+	SubVI 'Write timeout.vi': SubVI is missing
+
+	SubVI 'Write Name.vi': SubVI is missing
+
+	Wire: Class conflict
+
+- Client Controller.lvlib:Client Controller.lvclass:Receive Results Object.vi:
+	SubVI 'Send Transmit Network Message.vi': SubVI is missing
+
+- Client Controller.lvlib:Client Controller.lvclass:Send GUID to Server 
+Listener.vi:
+	SubVI 'TCP Write String.vi': SubVI is missing
+
+- Client Controller.lvlib:Client Controller.lvclass:Wait for ACK from Client 
+Proxy LNA.vi:
+	SubVI 'TCP Read String.vi': SubVI is missing
+
+- Client LNA.lvlib:Client LNA.lvclass:Connect.vi:
+	LabVIEW Object 'Network Actor in': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Network Actor out': Refers to a missing LabVIEW class
+
+	SubVI 'Actor Framework.lvlib:Actor.lvclass:Read Caller Enqueuer.vi': This VI 
+cannot access the referenced item in protected scope.
+
+	Call Parent Class Method 'Connect.vi': SubVI is missing
+
+	Front Panel Terminal 'Network Actor out': Run-time type not propagated from 
+dynamic input to dynamic output
+
+	Wire: Class conflict
+
+- Client LNA.lvlib:Client LNA.lvclass:Disconnect.vi:
+	LabVIEW Object 'Network Actor in': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Network Actor out': Refers to a missing LabVIEW class
+
+	SubVI 'Actor Framework.lvlib:Actor.lvclass:Read Self Enqueuer.vi': This VI 
+cannot access the referenced item in protected scope.
+
+	SubVI 'Actor Framework.lvlib:Actor.lvclass:Read Caller Enqueuer.vi': This VI 
+cannot access the referenced item in protected scope.
+
+	LabVIEW Class Method SubVI 'Read Name.vi': The wired class does not support a 
+method of this VI's name.
+
+	LabVIEW Class Method SubVI 'Read Name.vi': SubVI is missing
+
+	Call Parent Class Method 'Disconnect.vi': SubVI is missing
+
+	Front Panel Terminal 'Network Actor out': Run-time type not propagated from 
+dynamic input to dynamic output
+
+	Wire: Class conflict
+
+	Wire: Class conflict
+
+- Client LNA.lvlib:Client LNA.lvclass:Handle Error.vi:
+	LabVIEW Object 'Client LNA out': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Client LNA in': Refers to a missing LabVIEW class
+
+	SubVI 'Actor Framework.lvlib:Actor.lvclass:Read Caller Enqueuer.vi': This VI 
+cannot access the referenced item in protected scope.
+
+	LabVIEW Class Method SubVI 'Client LNA.lvlib:Client 
+LNA.lvclass:Disconnect.vi': One or more of the set of VIs that this dynamic 
+dispatch subVI or property item may call are broken.
+
+	Wire: Class conflict
+
+	Poly VI 'Filter Error Codes__ogtk.vi': SubVI is missing
+
+	Poly VI 'Filter Error Codes__ogtk.vi': SubVI is missing
+
+	Call Parent Class Method 'Handle Error.vi': SubVI is missing
+
+	Front Panel Terminal 'Client LNA out': Run-time type not propagated from 
+dynamic input to dynamic output
+
+	Wire: Class conflict
+
+	Wire: Class conflict
+
+- Client LNA.lvlib:Client LNA.lvclass:Stop Core.vi:
+	LabVIEW Object 'Network Actor in': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Network Actor out': Refers to a missing LabVIEW class
+
+	SubVI 'Actor Framework.lvlib:Actor.lvclass:Read Caller Enqueuer.vi': This VI 
+cannot access the referenced item in protected scope.
+
+	Call Parent Class Method 'Stop Core.vi': SubVI is missing
+
+	Front Panel Terminal 'Network Actor out': Run-time type not propagated from 
+dynamic input to dynamic output
+
+	Wire: Class conflict
+
+	Wire: Class conflict
+
+- Configuration.lvlib:Configuration.lvclass:Construct Configuration Object.vi:
+	SubVI 'Create Dir if Non-Existant__ogtk.vi': SubVI is missing
+
+	Poly VI 'Convert File Extension__ogtk.vi': SubVI is missing
+
+	Poly VI 'Convert File Extension__ogtk.vi': SubVI is missing
+
+	Poly VI 'Valid Path__ogtk.vi': SubVI is missing
+
+	Poly VI 'Valid Path__ogtk.vi': SubVI is missing
+
+	Poly VI 'File Exists__ogtk.vi': SubVI is missing
+
+	Poly VI 'File Exists__ogtk.vi': SubVI is missing
+
+- Configuration.lvlib:Configuration.lvclass:Display UI.vi:
+	SubVI 'Current VIs Parents Ref__ogtk.vi': SubVI is missing
+
+- Configuration.lvlib:Configuration.lvclass:Initialize New Category Display.vi:
+	SubVI 'Current VIs Parents Ref__ogtk.vi': SubVI is missing
+
+- Controller Actor.lvlib:Controller.lvclass:Construct Controller.vi:
+	Could not determine data types of all wires in this VI.
+
+	Poly VI 'Valid Path__ogtk.vi': SubVI is missing
+
+	Poly VI 'Valid Path__ogtk.vi': SubVI is missing
+
+	Poly VI 'File Exists__ogtk.vi': SubVI is missing
+
+	Poly VI 'File Exists__ogtk.vi': SubVI is missing
+
+	SubVI 'Configuration.lvlib:Configuration.lvclass:Construct Configuration 
+Object.vi': SubVI is not executable
+
+- Controller Actor.lvlib:Controller.lvclass:Find EXE Root.vi:
+	Poly VI 'Strip Path Extension__ogtk.vi': SubVI is missing
+
+	Poly VI 'Strip Path Extension__ogtk.vi': SubVI is missing
+
+- Controller Actor.lvlib:Controller.lvclass:Handle Last Ack Core.vi:
+	SubVI 'Configuration.lvlib:Configuration.lvclass:Save Configuration.vi': 
+SubVI is not executable
+
+	SubVI 'Search or Split String__ogtk.vi': SubVI is missing
+
+	SubVI 'Configuration.lvlib:Configuration.lvclass:Save Configuration.vi': 
+SubVI is not executable
+
+	SubVI 'Configuration.lvlib:Configuration.lvclass:Save Configuration.vi': 
+SubVI is not executable
+
+	SubVI 'Measurement Actor.lvlib:Measurement.lvclass:Read Measurement Name.vi': 
+SubVI is not executable
+
+	LabVIEW Class Method SubVI 'Controller 
+Actor.lvlib:Controller.lvclass:Measurement Done.vi': One or more of the set of 
+VIs that this dynamic dispatch subVI or property item may call are broken.
+
+- Controller Actor.lvlib:Controller.lvclass:Parse Paths and Directories for 
+Classes.vi:
+	Poly VI 'File Exists__ogtk.vi': SubVI is missing
+
+	Poly VI 'File Exists__ogtk.vi': SubVI is missing
+
+	Poly VI 'Strip Path Extension__ogtk.vi': SubVI is missing
+
+	Poly VI 'Strip Path Extension__ogtk.vi': SubVI is missing
+
+	Poly VI 'File Exists__ogtk.vi': SubVI is missing
+
+	Poly VI 'File Exists__ogtk.vi': SubVI is missing
+
+- Controller Actor.lvlib:Controller.lvclass:Scan for Devices on System.vi:
+	Equal?: Contains unwired or bad terminal
+
+	Equal?: Contains unwired or bad terminal
+
+	Property Node: Invalid property
+
+	Property Node: Invalid refnum class
+
+	SubVI 'Initialize Session.vi': SubVI is missing
+
+	SubVI 'Create Filter.vi': SubVI is missing
+
+	Property Node: Contains unwired or bad terminal
+
+	Property Node: Invalid property
+
+	Property Node: Invalid refnum class
+
+	You have connected two terminals of different types.
+
+	Type Definition 'Filter Mode (all values match)': Type definition not found 
+or contains errors
+
+	SubVI 'Find Hardware.vi': SubVI is missing
+
+	You have connected two terminals of different types.
+
+	You have connected two terminals of different types.
+
+	You have connected two terminals of different types.
+
+	You have connected two terminals of different types.
+
+	Shift Register: Shift register: Feedback Node: data type is undefined
+
+	Shift Register: Shift register: Feedback Node: data type is undefined
+
+- Controller Actor.lvlib:Controller.lvclass:Update lookup table of devices on 
+system.vi:
+	Concatenate Strings: Contains unwired or bad terminal
+
+	Property Node: Invalid property
+
+	Property Node: Invalid refnum class
+
+	You have connected two terminals of different types.
+
+- Controller Actor.lvlib:Launch Measurements Message.lvclass:Send Launch 
+Measurements Message.vi:
+	SubVI 'Guid Generator.vi': SubVI is missing
+
+- Generic UI Actor.lvlib:UI.lvclass:Initialize UI.vi:
+	SubVI 'Current VIs Parents Ref__ogtk.vi': SubVI is missing
+
+- Hardware.lvlib:Hardware.lvclass:Read HW Device Name.vi:
+	Poly VI 'Strip Path Extension__ogtk.vi': SubVI is missing
+
+	Poly VI 'Strip Path Extension__ogtk.vi': SubVI is missing
+
+- Hardware.lvlib:HW Configuration.lvclass:Read Configuration Parameters.vi:
+	SubVI 'Read Key (Variant)__ogtk.vi': SubVI is missing
+
+- Hardware.lvlib:HW Configuration.lvclass:Store Configuration Parameters.vi:
+	SubVI 'Write Key (Variant)__ogtk.vi': SubVI is missing
+
+- Logger.lvlib:Logger.lvclass:Generate New File Name.vi:
+	Poly VI 'Convert File Extension__ogtk.vi': SubVI is missing
+
+	Poly VI 'Convert File Extension__ogtk.vi': SubVI is missing
+
+- Measurement Actor.lvlib:Measurement.lvclass:Initialize CVT.vi:
+	Type Definition 'CVT Tags to Create': Type definition not found or contains 
+errors
+
+	Type Definition 'Tag': Type definition not found or contains errors
+
+	Type Definition 'Data Type': Type definition not found or contains errors
+
+	Type Definition 'Data Type': Type definition not found or contains errors
+
+	Type Definition 'Tag Grouping': Type definition not found or contains errors
+
+	Type Definition 'Tag': Type definition not found or contains errors
+
+	Type Definition 'Data Type': Type definition not found or contains errors
+
+	Type Definition 'Data Type': Type definition not found or contains errors
+
+	Type Definition 'Tag Grouping': Type definition not found or contains errors
+
+	SubVI 'Create Tags.vi': SubVI is missing
+
+	Type Definition 'Data Type': Type definition not found or contains errors
+
+	Type Definition 'Tag': Type definition not found or contains errors
+
+	Type Definition 'Data Type': Type definition not found or contains errors
+
+	Type Definition 'Data Type': Type definition not found or contains errors
+
+- Measurement Actor.lvlib:Measurement.lvclass:Initialize Measurement Actor 
+Core.vi:
+	SubVI 'Measurement Actor.lvlib:Measurement.lvclass:Read Measurement Name.vi': 
+SubVI is not executable
+
+	SubVI 'Current VIs Parents Ref__ogtk.vi': SubVI is missing
+
+- Measurement Actor.lvlib:Measurement.lvclass:Read Measurement Name.vi:
+	Poly VI 'Strip Path Extension__ogtk.vi': SubVI is missing
+
+	Poly VI 'Strip Path Extension__ogtk.vi': SubVI is missing
+
+- Measurement Actor.lvlib:Measurement.lvclass:Update CVT.vi:
+	Poly VI 'Write.vi': SubVI is missing
+
+	Poly VI 'Write.vi': SubVI is missing
+
+- Measurement Actor.lvlib:Step Configuration.lvclass:Read Configuration 
+Parameters.vi:
+	SubVI 'Read Key (Variant)__ogtk.vi': SubVI is missing
+
+	SubVI 'Read Key (Variant)__ogtk.vi': SubVI is missing
+
+	SubVI 'Read Key (Variant)__ogtk.vi': SubVI is missing
+
+- Measurement Actor.lvlib:Step Configuration.lvclass:Store Configuration 
+Parameters.vi:
+	SubVI 'Write Key (Variant)__ogtk.vi': SubVI is missing
+
+	SubVI 'Write Key (Variant)__ogtk.vi': SubVI is missing
+
+	SubVI 'Write Key (Variant)__ogtk.vi': SubVI is missing
+
+- Msmt Configuration.lvlib:Controller Configuration.lvclass:Read Configuration 
+Parameters.vi:
+	SubVI 'Read Key (Variant)__ogtk.vi': SubVI is missing
+
+	SubVI 'Read Key (Variant)__ogtk.vi': SubVI is missing
+
+	SubVI 'Read Key (Variant)__ogtk.vi': SubVI is missing
+
+	SubVI 'Read Key (Variant)__ogtk.vi': SubVI is missing
+
+- Msmt Configuration.lvlib:Controller Configuration.lvclass:Store 
+Configuration Parameters.vi:
+	SubVI 'Write Key (Variant)__ogtk.vi': SubVI is missing
+
+	SubVI 'Write Key (Variant)__ogtk.vi': SubVI is missing
+
+	SubVI 'Write Key (Variant)__ogtk.vi': SubVI is missing
+
+	SubVI 'Write Key (Variant)__ogtk.vi': SubVI is missing
+
+- Result Actor.lvlib:Results.lvclass:Initialize Report Actor Core.vi:
+	SubVI 'Current VIs Parents Ref__ogtk.vi': SubVI is missing
+
+
+
+
+
+
+
+
+
+
+
+Click the link below to visit the Application Builder support page. Use the 
+following information as a reference:
+
+
+
+Error 1003 occurred at AB_Get_Detailed_BrokenVI_Message.vi -> 
+AB_Targetfile.lvclass:Open_Top_Level_VIs.vi
+
+
+Possible reason(s):
+
+
+LabVIEW: (Hex 0x3EB) The VI is not executable. This error may occur because 
+the VI is either broken or contains a subVI that LabVIEW cannot locate. Select 
+File>>Open to open the VI and verify that you can run it.
+An error occurred while running the ExecuteBuildSpec operation.
+
+ExecuteBuildSpec operation failed.
+
+
+=== ExecuteBuildSpec 'Controller EXE' [EXE] target 'My Computer' in source\application\Networked Measurement System.lvproj ===
+LabVIEWCLI started logging in file:  C:\Users\ContainerAdministrator\AppData\Local\Temp\lvtemporary_131293.log
+Using LabVIEW: "C:\Program Files\National Instruments\LabVIEW 2026\LabVIEW.exe"
+Connection established with LabVIEW at port number 3363.
+
+LabVIEWCLI.exe : Operation output: 
+At C:\workspace\.github\labview\build-binaries.ps1:252 char:12
++     $out = & $CliExe @cliArgs 2>&1 | Out-String
++            ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Operation output: :String) [], Re 
+   moteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Error Code : 1
+Error Message : Cannot complete build because following VI loaded broken:
+
+C:\workspace\source\application\Server\Controller\main.vi
+
+Open the VI in LabVIEW and fix the listed errors. If the VI loads as expected 
+but errors are still detected during the build, contact National Instruments 
+technical support for assistance.
+
+Broken VIs:
+- Client Proxy LNA.lvlib:Client Proxy LNA.lvclass:Connect.vi:
+	LabVIEW Object 'Network Actor in': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Network Actor out': Refers to a missing LabVIEW class
+
+	SubVI 'Controller Actor.lvlib:Log Status.lvclass:Send Log Status.vi': SubVI 
+is not executable
+
+	SubVI 'Client Proxy LNA.lvlib:Client Proxy LNA.lvclass:Transmit ACK.vi': 
+SubVI is not executable
+
+	SubVI 'Controller Actor.lvlib:Log Status.lvclass:Send Log Status.vi': SubVI 
+is not executable
+
+	SubVI 'Actor Framework.lvlib:Actor.lvclass:Read Self Enqueuer.vi': This VI 
+cannot access the referenced item in protected scope.
+
+	SubVI 'Send Transmit Network Message.vi': SubVI is missing
+
+	LabVIEW Object 'Controller Actor.lvlib:Scan Hardware Message.lvclass': Refers 
+to a broken LabVIEW class
+
+	SubVI 'Controller Actor.lvlib:Log Status.lvclass:Send Log Status.vi': SubVI 
+is not executable
+
+	SubVI 'Actor Framework.lvlib:Actor.lvclass:Read Caller Enqueuer.vi': This VI 
+cannot access the referenced item in protected scope.
+
+	Call Parent Class Method 'Connect.vi': SubVI is missing
+
+	Front Panel Terminal 'Network Actor out': Run-time type not propagated from 
+dynamic input to dynamic output
+
+	Wire: Class conflict
+
+	Wire: Class conflict
+
+	Wire: Class conflict
+
+- Client Proxy LNA.lvlib:Client Proxy LNA.lvclass:Construct LNA.vi:
+	LabVIEW Object 'Client Proxy LNA out': Refers to a missing LabVIEW class
+
+	SubVI 'Write Buffer Size.vi': SubVI is missing
+
+	SubVI 'Write timeout.vi': SubVI is missing
+
+	SubVI 'Write Name.vi': SubVI is missing
+
+	LabVIEW Object 'Server Controller.lvlib:Client Proxy LNA.lvclass': Refers to 
+a missing LabVIEW class
+
+- Client Proxy LNA.lvlib:Client Proxy LNA.lvclass:Disconnect.vi:
+	LabVIEW Object 'Network Actor in': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Network Actor out': Refers to a missing LabVIEW class
+
+	SubVI 'Actor Framework.lvlib:Actor.lvclass:Read Self Enqueuer.vi': This VI 
+cannot access the referenced item in protected scope.
+
+	SubVI 'Actor Framework.lvlib:Stop Msg.lvclass:Send Normal Stop.vi': SubVI is 
+not executable
+
+	SubVI 'Controller Actor.lvlib:Log Status.lvclass:Send Log Status.vi': SubVI 
+is not executable
+
+	SubVI 'Actor Framework.lvlib:Actor.lvclass:Read Caller Enqueuer.vi': This VI 
+cannot access the referenced item in protected scope.
+
+	LabVIEW Class Method SubVI 'Read Name.vi': The wired class does not support a 
+method of this VI's name.
+
+	LabVIEW Class Method SubVI 'Read Name.vi': SubVI is missing
+
+	Call Parent Class Method 'Disconnect.vi': SubVI is missing
+
+	Front Panel Terminal 'Network Actor out': Run-time type not propagated from 
+dynamic input to dynamic output
+
+	Wire: Class conflict
+
+	Wire: Class conflict
+
+- Client Proxy LNA.lvlib:Client Proxy LNA.lvclass:Handle Error.vi:
+	LabVIEW Object 'Client Proxy LNA out': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Client Proxy LNA in': Refers to a missing LabVIEW class
+
+	SubVI 'Actor Framework.lvlib:Actor.lvclass:Read Caller Enqueuer.vi': This VI 
+cannot access the referenced item in protected scope.
+
+	SubVI 'Controller Actor.lvlib:Log Status.lvclass:Send Log Status.vi': SubVI 
+is not executable
+
+	LabVIEW Class Method SubVI 'Client Proxy LNA.lvlib:Client Proxy 
+LNA.lvclass:Disconnect.vi': One or more of the set of VIs that this dynamic 
+dispatch subVI or property item may call are broken.
+
+	Wire: Class conflict
+
+	Poly VI 'Filter Error Codes__ogtk.vi': SubVI is missing
+
+	Poly VI 'Filter Error Codes__ogtk.vi': SubVI is missing
+
+	Call Parent Class Method 'Handle Error.vi': SubVI is missing
+
+	Front Panel Terminal 'Client Proxy LNA out': Run-time type not propagated 
+from dynamic input to dynamic output
+
+	Wire: Class conflict
+
+	Wire: Class conflict
+
+- Client Proxy LNA.lvlib:Client Proxy LNA.lvclass:Read remote address.vi:
+	LabVIEW Object 'Client Proxy LNA out': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Client Proxy LNA in': Refers to a missing LabVIEW class
+
+	Unbundle By Name: Contains unwired or bad terminal
+
+	Wire: Neither bundle nor unbundle of this LabVIEW class is allowed on this VI.
+
+	You have connected two terminals of different types.
+
+- Client Proxy LNA.lvlib:Client Proxy LNA.lvclass:Read TCPIP connection ID.vi:
+	LabVIEW Object 'Client Proxy LNA out': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Client Proxy LNA in': Refers to a missing LabVIEW class
+
+	Unbundle By Name: Contains unwired or bad terminal
+
+	Wire: Neither bundle nor unbundle of this LabVIEW class is allowed on this VI.
+
+	You have connected two terminals of different types.
+
+- Client Proxy LNA.lvlib:Client Proxy LNA.lvclass:Read User Visible Name.vi:
+	LabVIEW Object 'Client Proxy LNA out': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Client Proxy LNA in': Refers to a missing LabVIEW class
+
+	Unbundle By Name: Contains unwired or bad terminal
+
+	Wire: Neither bundle nor unbundle of this LabVIEW class is allowed on this VI.
+
+	You have connected two terminals of different types.
+
+- Client Proxy LNA.lvlib:Client Proxy LNA.lvclass:Stop Core.vi:
+	LabVIEW Object 'Network Actor in': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Network Actor out': Refers to a missing LabVIEW class
+
+	SubVI 'Server Controller.lvlib:Client Disconnected Msg.lvclass:Send Client 
+Disconnected.vi': SubVI is not executable
+
+	SubVI 'Controller Actor.lvlib:Log Status.lvclass:Send Log Status.vi': SubVI 
+is not executable
+
+	SubVI 'Actor Framework.lvlib:Actor.lvclass:Read Caller Enqueuer.vi': This VI 
+cannot access the referenced item in protected scope.
+
+	LabVIEW Class Method SubVI 'Read Name.vi': The wired class does not support a 
+method of this VI's name.
+
+	LabVIEW Class Method SubVI 'Read Name.vi': SubVI is missing
+
+	Call Parent Class Method 'Stop Core.vi': SubVI is missing
+
+	Front Panel Terminal 'Network Actor out': Run-time type not propagated from 
+dynamic input to dynamic output
+
+	Wire: Class conflict
+
+	Wire: Class conflict
+
+- Client Proxy LNA.lvlib:Client Proxy LNA.lvclass:Transmit ACK.vi:
+	LabVIEW Object 'Client Proxy LNA out': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Client Proxy LNA in': Refers to a missing LabVIEW class
+
+	SubVI 'Read Context.vi': SubVI is missing
+
+	SubVI 'TCP Write String.vi': SubVI is missing
+
+	SubVI 'Client Proxy LNA.lvlib:Client Proxy LNA.lvclass:Read TCPIP connection 
+ID.vi': SubVI is not executable
+
+	Wire: Class conflict
+
+- Client Proxy LNA.lvlib:Client Proxy LNA.lvclass:Write remote address.vi:
+	LabVIEW Object 'Client Proxy LNA out': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Client Proxy LNA in': Refers to a missing LabVIEW class
+
+	Bundle By Name: Cluster is invalid or empty
+
+	Bundle By Name: Contains unwired or bad terminal
+
+	You have connected two terminals of different types.
+
+	Wire: Neither bundle nor unbundle of this LabVIEW class is allowed on this VI.
+
+- Client Proxy LNA.lvlib:Client Proxy LNA.lvclass:Write TCPIP connection ID.vi:
+	LabVIEW Object 'Client Proxy LNA out': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Client Proxy LNA in': Refers to a missing LabVIEW class
+
+	Bundle By Name: Cluster is invalid or empty
+
+	Bundle By Name: Contains unwired or bad terminal
+
+	You have connected two terminals of different types.
+
+	Wire: Neither bundle nor unbundle of this LabVIEW class is allowed on this VI.
+
+- Client Proxy LNA.lvlib:Client Proxy LNA.lvclass:Write User Visible Name.vi:
+	LabVIEW Object 'Client Proxy LNA out': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Client Proxy LNA in': Refers to a missing LabVIEW class
+
+	Bundle By Name: Cluster is invalid or empty
+
+	Bundle By Name: Contains unwired or bad terminal
+
+	You have connected two terminals of different types.
+
+	Wire: Neither bundle nor unbundle of this LabVIEW class is allowed on this VI.
+
+- Configuration.lvlib:Configuration.lvclass:Construct Configuration Object.vi:
+	SubVI 'Create Dir if Non-Existant__ogtk.vi': SubVI is missing
+
+	Poly VI 'Convert File Extension__ogtk.vi': SubVI is missing
+
+	Poly VI 'Convert File Extension__ogtk.vi': SubVI is missing
+
+	Poly VI 'Valid Path__ogtk.vi': SubVI is missing
+
+	Poly VI 'Valid Path__ogtk.vi': SubVI is missing
+
+	Poly VI 'File Exists__ogtk.vi': SubVI is missing
+
+	Poly VI 'File Exists__ogtk.vi': SubVI is missing
+
+- Configuration.lvlib:Configuration.lvclass:Display UI.vi:
+	PropItem: One or more of the set of VIs that this dynamic dispatch subVI or 
+property item may call are broken.
+
+	PropItem: One or more of the set of VIs that this dynamic dispatch subVI or 
+property item may call are broken.
+
+	SubVI 'Current VIs Parents Ref__ogtk.vi': SubVI is missing
+
+- Configuration.lvlib:Configuration.lvclass:Initialize New Category Display.vi:
+	SubVI 'Current VIs Parents Ref__ogtk.vi': SubVI is missing
+
+- Controller Actor.lvlib:Controller.lvclass:Construct Controller.vi:
+	LabVIEW Object 'Configuration.lvlib:Configuration.lvclass': Refers to a 
+broken LabVIEW class
+
+	LabVIEW Object 'UI.lvclass': Refers to a broken LabVIEW class
+
+	Poly VI 'Valid Path__ogtk.vi': SubVI is missing
+
+	Poly VI 'Valid Path__ogtk.vi': SubVI is missing
+
+	Poly VI 'File Exists__ogtk.vi': SubVI is missing
+
+	Poly VI 'File Exists__ogtk.vi': SubVI is missing
+
+	SubVI 'Configuration.lvlib:Configuration.lvclass:Construct Configuration 
+Object.vi': SubVI is not executable
+
+	PropItem: One or more of the set of VIs that this dynamic dispatch subVI or 
+property item may call are broken.
+
+	SubVI 'Controller Actor.lvlib:Controller.lvclass:Write Configuration.vi': 
+SubVI is not executable
+
+	SubVI 'Controller Actor.lvlib:Controller.lvclass:Write User Interface 
+Object.vi': SubVI is not executable
+
+- Controller Actor.lvlib:Controller.lvclass:Find EXE Root.vi:
+	Poly VI 'Strip Path Extension__ogtk.vi': SubVI is missing
+
+	Poly VI 'Strip Path Extension__ogtk.vi': SubVI is missing
+
+- Controller Actor.lvlib:Controller.lvclass:Handle Last Ack Core.vi:
+	LabVIEW Object 'Last Ack': Refers to a broken LabVIEW class
+
+	LabVIEW Object 'Hardware.lvlib:HW Configuration.lvclass': Refers to a broken 
+LabVIEW class
+
+	SubVI 'Configuration.lvlib:Configuration.lvclass:Save Configuration.vi': 
+SubVI is not executable
+
+	SubVI 'Controller Actor.lvlib:Apply Hardware Configurations Msg.lvclass:Send 
+Apply Hardware Configurations.vi': SubVI is not executable
+
+	SubVI 'Actor Framework.lvlib:Actor.lvclass:Read Self Enqueuer.vi': SubVI is 
+not executable
+
+	SubVI 'Search or Split String__ogtk.vi': SubVI is missing
+
+	SubVI 'Hardware.lvlib:HW Configuration.lvclass:Read Step requesting 
+configuration.vi': SubVI is not executable
+
+	LabVIEW Object 'Measurement Actor.lvlib:Step Configuration.lvclass': Refers 
+to a broken LabVIEW class
+
+	SubVI 'Configuration.lvlib:Configuration.lvclass:Save Configuration.vi': 
+SubVI is not executable
+
+	SubVI 'Actor Framework.lvlib:Actor.lvclass:Read Self Enqueuer.vi': SubVI is 
+not executable
+
+	SubVI 'Controller Actor.lvlib:Apply Step Configuration Msg.lvclass:Send Apply 
+Step Configuration.vi': SubVI is not executable
+
+	SubVI 'Measurement Actor.lvlib:Step Configuration.lvclass:Read Step Name.vi': 
+SubVI is not executable
+
+	LabVIEW Object 'Configuration.lvlib:Configuration.lvclass': Refers to a 
+broken LabVIEW class
+
+	LabVIEW Class Method SubVI 'Controller Actor.lvlib:Controller.lvclass:Log 
+Status Update.vi': One or more of the set of VIs that this dynamic dispatch 
+subVI or property item may call are broken.
+
+	SubVI 'Configuration.lvlib:Configuration.lvclass:Save Configuration.vi': 
+SubVI is not executable
+
+	SubVI 'Controller Actor.lvlib:Controller.lvclass:Read Configuration.vi': 
+SubVI is not executable
+
+	SubVI 'Controller Actor.lvlib:Controller.lvclass:Read UI Queue.vi': SubVI is 
+not executable
+
+	SubVI 'Generic UI Actor.lvlib:Enable UI Msg.lvclass:Send Enable UI.vi': SubVI 
+is not executable
+
+	LabVIEW Class Method SubVI 'Controller Actor.lvlib:Controller.lvclass:Set 
+Controller Configuration.vi': One or more of the set of VIs that this dynamic 
+dispatch subVI or property item may call are broken.
+
+	SubVI 'Controller Actor.lvlib:Controller.lvclass:Write Configuration.vi': 
+SubVI is not executable
+
+	LabVIEW Object 'Measurement Actor.lvlib:Measurement.lvclass': Refers to a 
+broken LabVIEW class
+
+	SubVI 'Measurement Actor.lvlib:Measurement.lvclass:Read GUID.vi': SubVI is 
+not executable
+
+	SubVI 'Measurement Actor.lvlib:Measurement.lvclass:Read Measurement Name.vi': 
+SubVI is not executable
+
+	SubVI 'Measurement Actor.lvlib:Measurement.lvclass:Read Array of 
+Hardware.vi': SubVI is not executable
+
+	LabVIEW Class Method SubVI 'Controller 
+Actor.lvlib:Controller.lvclass:Measurement Done.vi': One or more of the set of 
+VIs that this dynamic dispatch subVI or property item may call are broken.
+
+	LabVIEW Class Method SubVI 'Controller Actor.lvlib:Controller.lvclass:Log 
+Status Update.vi': One or more of the set of VIs that this dynamic dispatch 
+subVI or property item may call are broken.
+
+	SubVI 'Actor Framework.lvlib:Last Ack.lvclass:Read Actor.vi': SubVI is not 
+executable
+
+	Call Parent Class Method 'Actor Framework.lvlib:Actor.lvclass:Handle Last Ack 
+Core.vi': One or more of the set of VIs that this dynamic dispatch subVI or 
+property item may call are broken.
+
+- Controller Actor.lvlib:Controller.lvclass:Parse Paths and Directories for 
+Classes.vi:
+	Poly VI 'File Exists__ogtk.vi': SubVI is missing
+
+	Poly VI 'File Exists__ogtk.vi': SubVI is missing
+
+	Poly VI 'Strip Path Extension__ogtk.vi': SubVI is missing
+
+	Poly VI 'Strip Path Extension__ogtk.vi': SubVI is missing
+
+	Poly VI 'File Exists__ogtk.vi': SubVI is missing
+
+	Poly VI 'File Exists__ogtk.vi': SubVI is missing
+
+- Controller Actor.lvlib:Controller.lvclass:Scan for Devices on System.vi:
+	Equal?: Contains unwired or bad terminal
+
+	Equal?: Contains unwired or bad terminal
+
+	Property Node: Invalid property
+
+	Property Node: Invalid refnum class
+
+	SubVI 'Initialize Session.vi': SubVI is missing
+
+	SubVI 'Create Filter.vi': SubVI is missing
+
+	Property Node: Contains unwired or bad terminal
+
+	Property Node: Invalid property
+
+	Property Node: Invalid refnum class
+
+	You have connected two terminals of different types.
+
+	Type Definition 'Filter Mode (all values match)': Type definition not found 
+or contains errors
+
+	SubVI 'Find Hardware.vi': SubVI is missing
+
+	You have connected two terminals of different types.
+
+	You have connected two terminals of different types.
+
+	You have connected two terminals of different types.
+
+	You have connected two terminals of different types.
+
+	Shift Register: Shift register: Feedback Node: data type is undefined
+
+	Shift Register: Shift register: Feedback Node: data type is undefined
+
+- Controller Actor.lvlib:Controller.lvclass:Update lookup table of devices on 
+system.vi:
+	LabVIEW Class Method SubVI 'Controller Actor.lvlib:Controller.lvclass:Log 
+Status Update.vi': One or more of the set of VIs that this dynamic dispatch 
+subVI or property item may call are broken.
+
+	Concatenate Strings: Contains unwired or bad terminal
+
+	Property Node: Invalid property
+
+	Property Node: Invalid refnum class
+
+	You have connected two terminals of different types.
+
+- Controller Actor.lvlib:Launch Measurements Message.lvclass:Send Launch 
+Measurements Message.vi:
+	LabVIEW Object 'Self Enqueuer In': Refers to a broken LabVIEW class
+
+	LabVIEW Object 'Self Enqueuer Out': Refers to a broken LabVIEW class
+
+	SubVI 'Guid Generator.vi': SubVI is missing
+
+	SubVI 'Actor Framework.lvlib:Message Enqueuer.lvclass:Enqueue.vi': SubVI is 
+not executable
+
+- Generic UI Actor.lvlib:UI.lvclass:Initialize UI.vi:
+	PropItem: One or more of the set of VIs that this dynamic dispatch subVI or 
+property item may call are broken.
+
+	SubVI 'Generic UI Actor.lvlib:UI.lvclass:Read stop event.vi': SubVI is not 
+executable
+
+	LabVIEW Class Method SubVI 'Generic UI Actor.lvlib:UI.lvclass:Start UI.vi': 
+One or more of the set of VIs that this dynamic dispatch subVI or property 
+item may call are broken.
+
+	LabVIEW Class Method SubVI 'Generic UI Actor.lvlib:UI.lvclass:Enable UI.vi': 
+One or more of the set of VIs that this dynamic dispatch subVI or property 
+item may call are broken.
+
+	PropItem: One or more of the set of VIs that this dynamic dispatch subVI or 
+property item may call are broken.
+
+	SubVI 'Generic UI Actor.lvlib:UI.lvclass:Write stop event.vi': SubVI is not 
+executable
+
+	SubVI 'Current VIs Parents Ref__ogtk.vi': SubVI is missing
+
+- Hardware.lvlib:Hardware.lvclass:Read HW Device Name.vi:
+	Poly VI 'Strip Path Extension__ogtk.vi': SubVI is missing
+
+	Poly VI 'Strip Path Extension__ogtk.vi': SubVI is missing
+
+- Hardware.lvlib:HW Configuration.lvclass:Read Configuration Parameters.vi:
+	SubVI 'Configuration.lvlib:Configuration.lvclass:Read Group Name.vi': SubVI 
+is not executable
+
+	SubVI 'Read Key (Variant)__ogtk.vi': SubVI is missing
+
+	Call Parent Class Method 'Configuration.lvlib:Configuration.lvclass:Read 
+Configuration Parameters.vi': One or more of the set of VIs that this dynamic 
+dispatch subVI or property item may call are broken.
+
+- Hardware.lvlib:HW Configuration.lvclass:Store Configuration Parameters.vi:
+	SubVI 'Configuration.lvlib:Configuration.lvclass:Read Group Name.vi': SubVI 
+is not executable
+
+	SubVI 'Write Key (Variant)__ogtk.vi': SubVI is missing
+
+	Call Parent Class Method 'Configuration.lvlib:Configuration.lvclass:Store 
+Configuration Parameters.vi': One or more of the set of VIs that this dynamic 
+dispatch subVI or property item may call are broken.
+
+- Logger.lvlib:Logger.lvclass:Generate New File Name.vi:
+	PropItem: One or more of the set of VIs that this dynamic dispatch subVI or 
+property item may call are broken.
+
+	Poly VI 'Convert File Extension__ogtk.vi': SubVI is missing
+
+	Poly VI 'Convert File Extension__ogtk.vi': SubVI is missing
+
+- Measurement Actor.lvlib:Measurement.lvclass:Initialize CVT.vi:
+	SubVI 'Hardware.lvlib:Hardware.lvclass:Read HW IO Map.vi': SubVI is not 
+executable
+
+	Type Definition 'CVT Tags to Create': Type definition not found or contains 
+errors
+
+	Type Definition 'Tag': Type definition not found or contains errors
+
+	Type Definition 'Data Type': Type definition not found or contains errors
+
+	Type Definition 'Data Type': Type definition not found or contains errors
+
+	Type Definition 'Tag Grouping': Type definition not found or contains errors
+
+	Type Definition 'Tag': Type definition not found or contains errors
+
+	Type Definition 'Data Type': Type definition not found or contains errors
+
+	Type Definition 'Data Type': Type definition not found or contains errors
+
+	Type Definition 'Tag Grouping': Type definition not found or contains errors
+
+	SubVI 'Create Tags.vi': SubVI is missing
+
+	Type Definition 'Data Type': Type definition not found or contains errors
+
+	Type Definition 'Tag': Type definition not found or contains errors
+
+	Type Definition 'Data Type': Type definition not found or contains errors
+
+	Type Definition 'Data Type': Type definition not found or contains errors
+
+	SubVI 'Measurement Actor.lvlib:Measurement.lvclass:Read Array of 
+Hardware.vi': SubVI is not executable
+
+- Measurement Actor.lvlib:Measurement.lvclass:Initialize Measurement Actor 
+Core.vi:
+	PropItem: One or more of the set of VIs that this dynamic dispatch subVI or 
+property item may call are broken.
+
+	SubVI 'Measurement Actor.lvlib:Measurement.lvclass:Read user event out.vi': 
+SubVI is not executable
+
+	SubVI 'Measurement Actor.lvlib:Measurement.lvclass:Read notifier.vi': SubVI 
+is not executable
+
+	SubVI 'Measurement Actor.lvlib:Measurement.lvclass:Write Title.vi': SubVI is 
+not executable
+
+	SubVI 'Measurement Actor.lvlib:Measurement.lvclass:Write Wvfrm Graph 
+Reference.vi': SubVI is not executable
+
+	SubVI 'Measurement Actor.lvlib:Measurement.lvclass:Write user event out.vi': 
+SubVI is not executable
+
+	SubVI 'Measurement Actor.lvlib:Measurement.lvclass:Read Measurement Name.vi': 
+SubVI is not executable
+
+	SubVI 'Actor Framework.lvlib:Actor.lvclass:Read Self Enqueuer.vi': SubVI is 
+not executable
+
+	SubVI 'Measurement Actor.lvlib:Measurement.lvclass:Write notifier.vi': SubVI 
+is not executable
+
+	SubVI 'Measurement Actor.lvlib:Configure Msg.lvclass:Send Configure.vi': 
+SubVI is not executable
+
+	SubVI 'Measurement Actor.lvlib:Measurement.lvclass:Read Show UI While 
+Running.vi': SubVI is not executable
+
+	SubVI 'Measurement Actor.lvlib:Measurement.lvclass:Write Front Panel of 
+Measurement.vi': SubVI is not executable
+
+	SubVI 'Current VIs Parents Ref__ogtk.vi': SubVI is missing
+
+	SubVI 'Measurement Actor.lvlib:Measurement.lvclass:Read Front Panel of 
+Measurement.vi': SubVI is not executable
+
+- Measurement Actor.lvlib:Measurement.lvclass:Read Measurement Name.vi:
+	Poly VI 'Strip Path Extension__ogtk.vi': SubVI is missing
+
+	Poly VI 'Strip Path Extension__ogtk.vi': SubVI is missing
+
+- Measurement Actor.lvlib:Measurement.lvclass:Update CVT.vi:
+	Poly VI 'Write.vi': SubVI is missing
+
+	Poly VI 'Write.vi': SubVI is missing
+
+	SubVI 'Hardware.lvlib:Hardware.lvclass:Read HW IO Map.vi': SubVI is not 
+executable
+
+	SubVI 'Measurement Actor.lvlib:Measurement.lvclass:Read Array of 
+Hardware.vi': SubVI is not executable
+
+	SubVI 'Measurement Actor.lvlib:Measurement.lvclass:Read latest data.vi': 
+SubVI is not executable
+
+- Measurement Actor.lvlib:Step Configuration.lvclass:Read Configuration 
+Parameters.vi:
+	SubVI 'Read Key (Variant)__ogtk.vi': SubVI is missing
+
+	SubVI 'Configuration.lvlib:Configuration.lvclass:Read Group Name.vi': SubVI 
+is not executable
+
+	SubVI 'Read Key (Variant)__ogtk.vi': SubVI is missing
+
+	SubVI 'Read Key (Variant)__ogtk.vi': SubVI is missing
+
+	Call Parent Class Method 'Configuration.lvlib:Configuration.lvclass:Read 
+Configuration Parameters.vi': One or more of the set of VIs that this dynamic 
+dispatch subVI or property item may call are broken.
+
+- Measurement Actor.lvlib:Step Configuration.lvclass:Store Configuration 
+Parameters.vi:
+	SubVI 'Write Key (Variant)__ogtk.vi': SubVI is missing
+
+	SubVI 'Configuration.lvlib:Configuration.lvclass:Read Group Name.vi': SubVI 
+is not executable
+
+	SubVI 'Write Key (Variant)__ogtk.vi': SubVI is missing
+
+	SubVI 'Write Key (Variant)__ogtk.vi': SubVI is missing
+
+	Call Parent Class Method 'Configuration.lvlib:Configuration.lvclass:Store 
+Configuration Parameters.vi': One or more of the set of VIs that this dynamic 
+dispatch subVI or property item may call are broken.
+
+- Msmt Configuration.lvlib:Controller Configuration.lvclass:Read Configuration 
+Parameters.vi:
+	SubVI 'Read Key (Variant)__ogtk.vi': SubVI is missing
+
+	SubVI 'Read Key (Variant)__ogtk.vi': SubVI is missing
+
+	SubVI 'Read Key (Variant)__ogtk.vi': SubVI is missing
+
+	SubVI 'Read Key (Variant)__ogtk.vi': SubVI is missing
+
+	Call Parent Class Method 'Configuration.lvlib:Configuration.lvclass:Read 
+Configuration Parameters.vi': One or more of the set of VIs that this dynamic 
+dispatch subVI or property item may call are broken.
+
+- Msmt Configuration.lvlib:Controller Configuration.lvclass:Store 
+Configuration Parameters.vi:
+	SubVI 'Write Key (Variant)__ogtk.vi': SubVI is missing
+
+	SubVI 'Write Key (Variant)__ogtk.vi': SubVI is missing
+
+	SubVI 'Write Key (Variant)__ogtk.vi': SubVI is missing
+
+	SubVI 'Write Key (Variant)__ogtk.vi': SubVI is missing
+
+	Call Parent Class Method 'Configuration.lvlib:Configuration.lvclass:Store 
+Configuration Parameters.vi': One or more of the set of VIs that this dynamic 
+dispatch subVI or property item may call are broken.
+
+- Result Actor.lvlib:Results.lvclass:Initialize Report Actor Core.vi:
+	SubVI 'Result Actor.lvlib:Results.lvclass:Read Stop Event.vi': SubVI is not 
+executable
+
+	SubVI 'Result Actor.lvlib:Results.lvclass:Write UI VI Ref.vi': SubVI is not 
+executable
+
+	SubVI 'Current VIs Parents Ref__ogtk.vi': SubVI is missing
+
+	SubVI 'Result Actor.lvlib:Results.lvclass:Create Stop Event.vi': SubVI is not 
+executable
+
+	SubVI 'Result Actor.lvlib:Results.lvclass:Write UI References.vi': SubVI is 
+not executable
+
+	SubVI 'Result Actor.lvlib:Results.lvclass:Read UI VI Ref.vi': SubVI is not 
+executable
+
+- Server Controller.lvlib:Launch New Client Proxy Msg.lvclass:Do.vi:
+	LabVIEW Object 'Actor in': Refers to a broken LabVIEW class
+
+	LabVIEW Object 'Actor out': Refers to a broken LabVIEW class
+
+	Unbundle: Contains unwired or bad terminal
+
+	SubVI 'Server Controller.lvlib:Server Controller.lvclass:Launch and Store 
+Client Proxy in Controller.vi': SubVI is not executable
+
+	LabVIEW Object 'Actor in': Refers to a broken LabVIEW class
+
+- Server Controller.lvlib:Launch New Client Proxy Msg.lvclass:Launch New 
+Client Proxy Msg.ctl:
+- Server Controller.lvlib:Launch New Client Proxy Msg.lvclass:Send Launch New 
+Client Proxy.vi:
+	LabVIEW Object 'Message Enqueuer': Refers to a broken LabVIEW class
+
+	LabVIEW Object 'Message Enqueuer out': Refers to a broken LabVIEW class
+
+	LabVIEW Object 'Client Proxy LNA': Refers to a missing LabVIEW class
+
+	SubVI 'Actor Framework.lvlib:Message Enqueuer.lvclass:Enqueue.vi': SubVI is 
+not executable
+
+	Bundle: Contains unwired or bad terminal
+
+- Server Controller.lvlib:Server Config.lvclass:Read Configuration 
+Parameters.vi:
+	SubVI 'Read Key (Variant)__ogtk.vi': SubVI is missing
+
+	SubVI 'Read Key (Variant)__ogtk.vi': SubVI is missing
+
+	Call Parent Class Method 'Msmt Configuration.lvlib:Controller 
+Configuration.lvclass:Read Configuration Parameters.vi': One or more of the 
+set of VIs that this dynamic dispatch subVI or property item may call are 
+broken.
+
+- Server Controller.lvlib:Server Config.lvclass:Store Configuration 
+Parameters.vi:
+	SubVI 'Write Key (Variant)__ogtk.vi': SubVI is missing
+
+	SubVI 'Write Key (Variant)__ogtk.vi': SubVI is missing
+
+	Call Parent Class Method 'Msmt Configuration.lvlib:Controller 
+Configuration.lvclass:Store Configuration Parameters.vi': One or more of the 
+set of VIs that this dynamic dispatch subVI or property item may call are 
+broken.
+
+- Server Controller.lvlib:Server Controller.lvclass:Close all Client 
+Connections.vi:
+	SubVI 'Send Disconnect.vi': SubVI is missing
+
+	SubVI 'Actor Framework.lvlib:Stop Msg.lvclass:Send Normal Stop.vi': SubVI is 
+not executable
+
+	LabVIEW Object 'Actor Framework:Message Enqueuer': Refers to a broken LabVIEW 
+class
+
+	SubVI 'Server Controller.lvlib:Server Controller.lvclass:Read client proxy 
+lookup table (GUID-_ msg queue object).vi': SubVI is not executable
+
+- Server Controller.lvlib:Server Controller.lvclass:Handle Error.vi:
+	SubVI 'Actor Framework.lvlib:Actor.lvclass:Read Self Enqueuer.vi': SubVI is 
+not executable
+
+	LabVIEW Class Method SubVI 'Controller Actor.lvlib:Controller.lvclass:Log 
+Status Update.vi': One or more of the set of VIs that this dynamic dispatch 
+subVI or property item may call are broken.
+
+	LabVIEW Class Method SubVI 'Controller Actor.lvlib:Controller.lvclass:Log 
+Status Update.vi': One or more of the set of VIs that this dynamic dispatch 
+subVI or property item may call are broken.
+
+	Poly VI 'Filter Error Codes__ogtk.vi': SubVI is missing
+
+	Poly VI 'Filter Error Codes__ogtk.vi': SubVI is missing
+
+	Call Parent Class Method 'Controller Actor.lvlib:Controller.lvclass:Handle 
+Error.vi': One or more of the set of VIs that this dynamic dispatch subVI or 
+property item may call are broken.
+
+- Server Controller.lvlib:Server Controller.lvclass:Initialize Client Proxy 
+LNA.vi:
+	LabVIEW Object 'Caller-To-Actor Enqueuer': Refers to a broken LabVIEW class
+
+	LabVIEW Object 'Network Actor in': Refers to a missing LabVIEW class
+
+	LabVIEW Class Method SubVI 'Controller Actor.lvlib:Controller.lvclass:Log 
+Status Update.vi': One or more of the set of VIs that this dynamic dispatch 
+subVI or property item may call are broken.
+
+	SubVI 'Server Controller.lvlib:Server Controller.lvclass:Store LNA Queue.vi': 
+SubVI is not executable
+
+	SubVI 'Actor Framework.lvlib:Actor.lvclass:Launch Actor.vi': SubVI is not 
+executable
+
+	Wire: Class conflict
+
+	SubVI 'Server Controller.lvlib:Server Controller.lvclass:Lookup Client Queue 
+from GUID.vi': SubVI is not executable
+
+	SubVI 'Actor Framework.lvlib:Actor.lvclass:Read Self Enqueuer.vi': SubVI is 
+not executable
+
+	LabVIEW Class Method SubVI 'Read Name.vi': The wired class does not support a 
+method of this VI's name.
+
+	LabVIEW Class Method SubVI 'Read Name.vi': SubVI is missing
+
+	Wire: Class conflict
+
+- Server Controller.lvlib:Server Controller.lvclass:Launch and Store Client 
+Proxy in Controller.vi:
+	LabVIEW Object 'Network Actor in': Refers to a missing LabVIEW class
+
+	SubVI 'Server Controller.lvlib:Server Controller.lvclass:Read Context 
+Name.vi': SubVI is not executable
+
+	SubVI 'Write Context.vi': SubVI is missing
+
+	SubVI 'Client Proxy LNA.lvlib:Client Proxy LNA.lvclass:Read remote 
+address.vi': SubVI is not executable
+
+	SubVI 'Send Connect.vi': SubVI is missing
+
+	LabVIEW Class Method SubVI 'Read Name.vi': The wired class does not support a 
+method of this VI's name.
+
+	LabVIEW Class Method SubVI 'Read Name.vi': SubVI is missing
+
+	SubVI 'Server Controller.lvlib:Server Controller.lvclass:Initialize Client 
+Proxy LNA.vi': SubVI is not executable
+
+	Wire: Class conflict
+
+- Server Controller.lvlib:Server Controller.lvclass:Receive Results Object.vi:
+	LabVIEW Object 'Results.lvclass': Refers to a broken LabVIEW class
+
+	SubVI 'Send Results to UI.vi': SubVI is missing
+
+	SubVI 'Controller Actor.lvlib:Controller.lvclass:Read UI Queue.vi': SubVI is 
+not executable
+
+	Call Parent Class Method 'Controller Actor.lvlib:Controller.lvclass:Receive 
+Results Object.vi': One or more of the set of VIs that this dynamic dispatch 
+subVI or property item may call are broken.
+
+- Server Controller.lvlib:Server Controller.lvclass:Request Compatible 
+Hardware from Client.vi:
+	SubVI 'Server Controller.lvlib:Server Controller.lvclass:Lookup Client Queue 
+from GUID.vi': SubVI is not executable
+
+	SubVI 'Controller Actor.lvlib:Find Devices of Specified Type 
+Msg.lvclass:Write measurement name requesting hardware of a specific type.vi': 
+SubVI is not executable
+
+	SubVI 'Controller Actor.lvlib:Find Devices of Specified Type 
+Msg.lvclass:Write Hardware Type.vi': SubVI is not executable
+
+	LabVIEW Object 'Controller Actor.lvlib:Find Devices of Specified Type 
+Msg.lvclass': Refers to a broken LabVIEW class
+
+	SubVI 'Send Transmit Network Message.vi': SubVI is missing
+
+	LabVIEW Class Method SubVI 'Measurement Actor.lvlib:Measurement.lvclass:Read 
+Compatible Hardware Types.vi': One or more of the set of VIs that this dynamic 
+dispatch subVI or property item may call are broken.
+
+	SubVI 'Controller Actor.lvlib:Controller.lvclass:Lookup Measurement by 
+Name.vi': SubVI is not executable
+
+- Server Controller.lvlib:Server Controller.lvclass:Run Measurement Remotely 
+on Client.vi:
+	SubVI 'Controller Actor.lvlib:Launch Measurements Message.lvclass:Write 
+GUID.vi': SubVI is not executable
+
+	SubVI 'Guid Generator.vi': SubVI is missing
+
+	SubVI 'Controller Actor.lvlib:Launch Measurements Message.lvclass:Write 
+Flattened Measurement Class Data.vi': SubVI is not executable
+
+	SubVI 'Server Controller.lvlib:Server Controller.lvclass:Flatten Zip File to 
+String.vi': SubVI is not executable
+
+	LabVIEW Class Method SubVI 'Controller Actor.lvlib:Controller.lvclass:Log 
+Status Update.vi': One or more of the set of VIs that this dynamic dispatch 
+subVI or property item may call are broken.
+
+	LabVIEW Class Method SubVI 'Controller Actor.lvlib:Controller.lvclass:Log 
+Status Update.vi': One or more of the set of VIs that this dynamic dispatch 
+subVI or property item may call are broken.
+
+	LabVIEW Class Method SubVI 'Controller Actor.lvlib:Controller.lvclass:Log 
+Status Update.vi': One or more of the set of VIs that this dynamic dispatch 
+subVI or property item may call are broken.
+
+	SubVI 'Server Controller.lvlib:Server Controller.lvclass:Zip up measurement 
+definition.vi': SubVI is not executable
+
+	LabVIEW Object 'Launch Measurements Message': Refers to a broken LabVIEW class
+
+	SubVI 'Controller Actor.lvlib:Launch Measurements Message.lvclass:Write Show 
+FP.vi': SubVI is not executable
+
+	SubVI 'Controller Actor.lvlib:Launch Measurements Message.lvclass:Write 
+Measurement to Launch.vi': SubVI is not executable
+
+	SubVI 'Controller Actor.lvlib:Launch Measurements Message.lvclass:Write 
+Device Name.vi': SubVI is not executable
+
+	SubVI 'Controller Actor.lvlib:Controller.lvclass:Lookup Measurement by 
+Name.vi': SubVI is not executable
+
+	SubVI 'Send Transmit Network Message.vi': SubVI is missing
+
+	SubVI 'Server Controller.lvlib:Server Controller.lvclass:Lookup Client Queue 
+from GUID.vi': SubVI is not executable
+
+- Server Controller.lvlib:Server Controller.lvclass:Stop Listener.vi:
+	SubVI 'Send Disconnect.vi': SubVI is missing
+
+	LabVIEW Object 'Actor Framework:Message Enqueuer': Refers to a broken LabVIEW 
+class
+
+	SubVI 'Server Controller.lvlib:Server Controller.lvclass:Read client proxy 
+lookup table (GUID-_ msg queue object).vi': SubVI is not executable
+
+	SubVI 'Actor Framework.lvlib:Stop Msg.lvclass:Send Normal Stop.vi': SubVI is 
+not executable
+
+	SubVI 'Server Controller.lvlib:Server Controller.lvclass:Read Server LNA.vi': 
+SubVI is not executable
+
+- Server Controller.lvlib:Server Controller.lvclass:Store LNA Queue.vi:
+	LabVIEW Object 'Message Enqueuer in': Refers to a broken LabVIEW class
+
+	LabVIEW Object 'Network Actor in': Refers to a missing LabVIEW class
+
+	SubVI 'Server Controller.lvlib:Server Controller.lvclass:Update List of 
+Connections.vi': SubVI is not executable
+
+	SubVI 'Client Proxy LNA.lvlib:Client Proxy LNA.lvclass:Read remote 
+address.vi': SubVI is not executable
+
+	LabVIEW Class Method SubVI 'Read Name.vi': The wired class does not support a 
+method of this VI's name.
+
+	LabVIEW Class Method SubVI 'Read Name.vi': SubVI is missing
+
+	Wire: Class conflict
+
+- Server Controller.lvlib:Server Controller.lvclass:Zip up measurement 
+definition.vi:
+	SubVI 'ZLIB Compress Directory (Path)__ogtk.vi': SubVI is missing
+
+- ServerListener.lvlib:ServerListener.lvclass:Add Connection.vi:
+	SubVI 'Client Proxy LNA.lvlib:Client Proxy LNA.lvclass:Write remote 
+address.vi': SubVI is not executable
+
+	SubVI 'Actor Framework.lvlib:Actor.lvclass:Read Caller Enqueuer.vi': SubVI is 
+not executable
+
+	SubVI 'Client Proxy LNA.lvlib:Client Proxy LNA.lvclass:Write TCPIP connection 
+ID.vi': SubVI is not executable
+
+	SubVI 'Client Proxy LNA.lvlib:Client Proxy LNA.lvclass:Construct LNA.vi': 
+SubVI is not executable
+
+	SubVI 'Controller Actor.lvlib:Log Status.lvclass:Send Log Status.vi': SubVI 
+is not executable
+
+	SubVI 'Actor Framework.lvlib:Actor.lvclass:Read Caller Enqueuer.vi': SubVI is 
+not executable
+
+	SubVI 'Server Controller.lvlib:Launch New Client Proxy Msg.lvclass:Send 
+Launch New Client Proxy.vi': SubVI is not executable
+
+	SubVI 'TCP Read String.vi': SubVI is missing
+
+
+
+
+
+
+
+
+
+
+
+Click the link below to visit the Application Builder support page. Use the 
+following information as a reference:
+
+
+
+Error 1003 occurred at AB_Get_Detailed_BrokenVI_Message.vi -> 
+AB_Targetfile.lvclass:Open_Top_Level_VIs.vi
+
+
+Possible reason(s):
+
+
+LabVIEW: (Hex 0x3EB) The VI is not executable. This error may occur because 
+the VI is either broken or contains a subVI that LabVIEW cannot locate. Select 
+File>>Open to open the VI and verify that you can run it.
+An error occurred while running the ExecuteBuildSpec operation.
+
+ExecuteBuildSpec operation failed.
+
+
+=== ExecuteBuildSpec 'Client EXE FOR TESTING ONLY' [EXE] target 'My Computer' in source\application\Networked Measurement System.lvproj ===
+LabVIEWCLI started logging in file:  C:\Users\ContainerAdministrator\AppData\Local\Temp\lvtemporary_289409.log
+Using LabVIEW: "C:\Program Files\National Instruments\LabVIEW 2026\LabVIEW.exe"
+Connection established with LabVIEW at port number 3363.
+
+LabVIEWCLI.exe : Operation output: 
+At C:\workspace\.github\labview\build-binaries.ps1:252 char:12
++     $out = & $CliExe @cliArgs 2>&1 | Out-String
++            ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Operation output: :String) [], Re 
+   moteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Error Code : 1
+Error Message : Cannot complete build because following VI loaded broken:
+
+C:\workspace\source\application\Client\Client Controller\main TEST PURPOSES 
+ONLY.vi
+
+Open the VI in LabVIEW and fix the listed errors. If the VI loads as expected 
+but errors are still detected during the build, contact National Instruments 
+technical support for assistance.
+
+Broken VIs:
+- Client Controller.lvlib:Client Config.lvclass:Read Configuration 
+Parameters.vi:
+	SubVI 'Read Key (Variant)__ogtk.vi': SubVI is missing
+
+	SubVI 'Read Key (Variant)__ogtk.vi': SubVI is missing
+
+	Call Parent Class Method 'Msmt Configuration.lvlib:Controller 
+Configuration.lvclass:Read Configuration Parameters.vi': One or more of the 
+set of VIs that this dynamic dispatch subVI or property item may call are 
+broken.
+
+- Client Controller.lvlib:Client Config.lvclass:Store Configuration 
+Parameters.vi:
+	SubVI 'Write Key (Variant)__ogtk.vi': SubVI is missing
+
+	SubVI 'Write Key (Variant)__ogtk.vi': SubVI is missing
+
+	Call Parent Class Method 'Msmt Configuration.lvlib:Controller 
+Configuration.lvclass:Store Configuration Parameters.vi': One or more of the 
+set of VIs that this dynamic dispatch subVI or property item may call are 
+broken.
+
+- Client Controller.lvlib:Client Controller.lvclass:Client LNA Started.vi:
+	SubVI 'Client Controller.lvlib:Client Controller.lvclass:Wait for ACK from 
+Client Proxy LNA.vi': SubVI is not executable
+
+	SubVI 'Client Controller.lvlib:Client Controller.lvclass:Send GUID to Server 
+Listener.vi': SubVI is not executable
+
+	SubVI 'Send Disconnect.vi': SubVI is missing
+
+- Client Controller.lvlib:Client Controller.lvclass:Find Devices of Specified 
+Type.vi:
+	SubVI 'Send Transmit Network Message.vi': SubVI is missing
+
+- Client Controller.lvlib:Client Controller.lvclass:Initialize Client.vi:
+	SubVI 'Guid Generator.vi': SubVI is missing
+
+- Client Controller.lvlib:Client Controller.lvclass:Launch Client LNA.vi:
+	SubVI 'Write Context.vi': SubVI is missing
+
+	LabVIEW Object 'Client Controller.lvlib:Client LNA.lvclass': Refers to a 
+missing LabVIEW class
+
+	SubVI 'Write Buffer Size.vi': SubVI is missing
+
+	SubVI 'Write timeout.vi': SubVI is missing
+
+	SubVI 'Write Name.vi': SubVI is missing
+
+	Wire: Class conflict
+
+- Client Controller.lvlib:Client Controller.lvclass:Receive Results Object.vi:
+	SubVI 'Send Transmit Network Message.vi': SubVI is missing
+
+- Client Controller.lvlib:Client Controller.lvclass:Send GUID to Server 
+Listener.vi:
+	SubVI 'TCP Write String.vi': SubVI is missing
+
+- Client Controller.lvlib:Client Controller.lvclass:Wait for ACK from Client 
+Proxy LNA.vi:
+	SubVI 'TCP Read String.vi': SubVI is missing
+
+- Client LNA.lvlib:Client LNA.lvclass:Connect.vi:
+	LabVIEW Object 'Network Actor in': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Network Actor out': Refers to a missing LabVIEW class
+
+	SubVI 'Actor Framework.lvlib:Actor.lvclass:Read Caller Enqueuer.vi': This VI 
+cannot access the referenced item in protected scope.
+
+	Call Parent Class Method 'Connect.vi': SubVI is missing
+
+	Front Panel Terminal 'Network Actor out': Run-time type not propagated from 
+dynamic input to dynamic output
+
+	Wire: Class conflict
+
+- Client LNA.lvlib:Client LNA.lvclass:Disconnect.vi:
+	LabVIEW Object 'Network Actor in': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Network Actor out': Refers to a missing LabVIEW class
+
+	SubVI 'Actor Framework.lvlib:Actor.lvclass:Read Self Enqueuer.vi': This VI 
+cannot access the referenced item in protected scope.
+
+	SubVI 'Actor Framework.lvlib:Actor.lvclass:Read Caller Enqueuer.vi': This VI 
+cannot access the referenced item in protected scope.
+
+	LabVIEW Class Method SubVI 'Read Name.vi': The wired class does not support a 
+method of this VI's name.
+
+	LabVIEW Class Method SubVI 'Read Name.vi': SubVI is missing
+
+	Call Parent Class Method 'Disconnect.vi': SubVI is missing
+
+	Front Panel Terminal 'Network Actor out': Run-time type not propagated from 
+dynamic input to dynamic output
+
+	Wire: Class conflict
+
+	Wire: Class conflict
+
+- Client LNA.lvlib:Client LNA.lvclass:Handle Error.vi:
+	LabVIEW Object 'Client LNA out': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Client LNA in': Refers to a missing LabVIEW class
+
+	SubVI 'Actor Framework.lvlib:Actor.lvclass:Read Caller Enqueuer.vi': This VI 
+cannot access the referenced item in protected scope.
+
+	LabVIEW Class Method SubVI 'Client LNA.lvlib:Client 
+LNA.lvclass:Disconnect.vi': One or more of the set of VIs that this dynamic 
+dispatch subVI or property item may call are broken.
+
+	Wire: Class conflict
+
+	Poly VI 'Filter Error Codes__ogtk.vi': SubVI is missing
+
+	Poly VI 'Filter Error Codes__ogtk.vi': SubVI is missing
+
+	Call Parent Class Method 'Handle Error.vi': SubVI is missing
+
+	Front Panel Terminal 'Client LNA out': Run-time type not propagated from 
+dynamic input to dynamic output
+
+	Wire: Class conflict
+
+	Wire: Class conflict
+
+- Client LNA.lvlib:Client LNA.lvclass:Stop Core.vi:
+	LabVIEW Object 'Network Actor in': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Network Actor out': Refers to a missing LabVIEW class
+
+	SubVI 'Actor Framework.lvlib:Actor.lvclass:Read Caller Enqueuer.vi': This VI 
+cannot access the referenced item in protected scope.
+
+	Call Parent Class Method 'Stop Core.vi': SubVI is missing
+
+	Front Panel Terminal 'Network Actor out': Run-time type not propagated from 
+dynamic input to dynamic output
+
+	Wire: Class conflict
+
+	Wire: Class conflict
+
+- Configuration.lvlib:Configuration.lvclass:Construct Configuration Object.vi:
+	SubVI 'Create Dir if Non-Existant__ogtk.vi': SubVI is missing
+
+	Poly VI 'Convert File Extension__ogtk.vi': SubVI is missing
+
+	Poly VI 'Convert File Extension__ogtk.vi': SubVI is missing
+
+	Poly VI 'Valid Path__ogtk.vi': SubVI is missing
+
+	Poly VI 'Valid Path__ogtk.vi': SubVI is missing
+
+	Poly VI 'File Exists__ogtk.vi': SubVI is missing
+
+	Poly VI 'File Exists__ogtk.vi': SubVI is missing
+
+- Configuration.lvlib:Configuration.lvclass:Display UI.vi:
+	SubVI 'Current VIs Parents Ref__ogtk.vi': SubVI is missing
+
+- Configuration.lvlib:Configuration.lvclass:Initialize New Category Display.vi:
+	SubVI 'Current VIs Parents Ref__ogtk.vi': SubVI is missing
+
+- Controller Actor.lvlib:Controller.lvclass:Construct Controller.vi:
+	Poly VI 'Valid Path__ogtk.vi': SubVI is missing
+
+	Poly VI 'Valid Path__ogtk.vi': SubVI is missing
+
+	Poly VI 'File Exists__ogtk.vi': SubVI is missing
+
+	Poly VI 'File Exists__ogtk.vi': SubVI is missing
+
+	SubVI 'Configuration.lvlib:Configuration.lvclass:Construct Configuration 
+Object.vi': SubVI is not executable
+
+- Controller Actor.lvlib:Controller.lvclass:Find EXE Root.vi:
+	Poly VI 'Strip Path Extension__ogtk.vi': SubVI is missing
+
+	Poly VI 'Strip Path Extension__ogtk.vi': SubVI is missing
+
+- Controller Actor.lvlib:Controller.lvclass:Handle Last Ack Core.vi:
+	SubVI 'Configuration.lvlib:Configuration.lvclass:Save Configuration.vi': 
+SubVI is not executable
+
+	SubVI 'Search or Split String__ogtk.vi': SubVI is missing
+
+	SubVI 'Configuration.lvlib:Configuration.lvclass:Save Configuration.vi': 
+SubVI is not executable
+
+	SubVI 'Configuration.lvlib:Configuration.lvclass:Save Configuration.vi': 
+SubVI is not executable
+
+	SubVI 'Measurement Actor.lvlib:Measurement.lvclass:Read Measurement Name.vi': 
+SubVI is not executable
+
+	LabVIEW Class Method SubVI 'Controller 
+Actor.lvlib:Controller.lvclass:Measurement Done.vi': One or more of the set of 
+VIs that this dynamic dispatch subVI or property item may call are broken.
+
+- Controller Actor.lvlib:Controller.lvclass:Parse Paths and Directories for 
+Classes.vi:
+	Poly VI 'File Exists__ogtk.vi': SubVI is missing
+
+	Poly VI 'File Exists__ogtk.vi': SubVI is missing
+
+	Poly VI 'Strip Path Extension__ogtk.vi': SubVI is missing
+
+	Poly VI 'Strip Path Extension__ogtk.vi': SubVI is missing
+
+	Poly VI 'File Exists__ogtk.vi': SubVI is missing
+
+	Poly VI 'File Exists__ogtk.vi': SubVI is missing
+
+- Controller Actor.lvlib:Controller.lvclass:Scan for Devices on System.vi:
+	Equal?: Contains unwired or bad terminal
+
+	Equal?: Contains unwired or bad terminal
+
+	Property Node: Invalid property
+
+	Property Node: Invalid refnum class
+
+	SubVI 'Initialize Session.vi': SubVI is missing
+
+	SubVI 'Create Filter.vi': SubVI is missing
+
+	Property Node: Contains unwired or bad terminal
+
+	Property Node: Invalid property
+
+	Property Node: Invalid refnum class
+
+	You have connected two terminals of different types.
+
+	Type Definition 'Filter Mode (all values match)': Type definition not found 
+or contains errors
+
+	SubVI 'Find Hardware.vi': SubVI is missing
+
+	You have connected two terminals of different types.
+
+	You have connected two terminals of different types.
+
+	You have connected two terminals of different types.
+
+	You have connected two terminals of different types.
+
+	Shift Register: Shift register: Feedback Node: data type is undefined
+
+	Shift Register: Shift register: Feedback Node: data type is undefined
+
+- Controller Actor.lvlib:Controller.lvclass:Update lookup table of devices on 
+system.vi:
+	Concatenate Strings: Contains unwired or bad terminal
+
+	Property Node: Invalid property
+
+	Property Node: Invalid refnum class
+
+	You have connected two terminals of different types.
+
+- Controller Actor.lvlib:Launch Measurements Message.lvclass:Send Launch 
+Measurements Message.vi:
+	SubVI 'Guid Generator.vi': SubVI is missing
+
+- Generic UI Actor.lvlib:UI.lvclass:Initialize UI.vi:
+	SubVI 'Current VIs Parents Ref__ogtk.vi': SubVI is missing
+
+- Hardware.lvlib:Hardware.lvclass:Read HW Device Name.vi:
+	Poly VI 'Strip Path Extension__ogtk.vi': SubVI is missing
+
+	Poly VI 'Strip Path Extension__ogtk.vi': SubVI is missing
+
+- Hardware.lvlib:HW Configuration.lvclass:Read Configuration Parameters.vi:
+	SubVI 'Read Key (Variant)__ogtk.vi': SubVI is missing
+
+- Hardware.lvlib:HW Configuration.lvclass:Store Configuration Parameters.vi:
+	SubVI 'Write Key (Variant)__ogtk.vi': SubVI is missing
+
+- Logger.lvlib:Logger.lvclass:Generate New File Name.vi:
+	Poly VI 'Convert File Extension__ogtk.vi': SubVI is missing
+
+	Poly VI 'Convert File Extension__ogtk.vi': SubVI is missing
+
+- Measurement Actor.lvlib:Measurement.lvclass:Initialize CVT.vi:
+	Type Definition 'CVT Tags to Create': Type definition not found or contains 
+errors
+
+	Type Definition 'Tag': Type definition not found or contains errors
+
+	Type Definition 'Data Type': Type definition not found or contains errors
+
+	Type Definition 'Data Type': Type definition not found or contains errors
+
+	Type Definition 'Tag Grouping': Type definition not found or contains errors
+
+	Type Definition 'Tag': Type definition not found or contains errors
+
+	Type Definition 'Data Type': Type definition not found or contains errors
+
+	Type Definition 'Data Type': Type definition not found or contains errors
+
+	Type Definition 'Tag Grouping': Type definition not found or contains errors
+
+	SubVI 'Create Tags.vi': SubVI is missing
+
+	Type Definition 'Data Type': Type definition not found or contains errors
+
+	Type Definition 'Tag': Type definition not found or contains errors
+
+	Type Definition 'Data Type': Type definition not found or contains errors
+
+	Type Definition 'Data Type': Type definition not found or contains errors
+
+- Measurement Actor.lvlib:Measurement.lvclass:Initialize Measurement Actor 
+Core.vi:
+	SubVI 'Measurement Actor.lvlib:Measurement.lvclass:Read Measurement Name.vi': 
+SubVI is not executable
+
+	SubVI 'Current VIs Parents Ref__ogtk.vi': SubVI is missing
+
+- Measurement Actor.lvlib:Measurement.lvclass:Read Measurement Name.vi:
+	Poly VI 'Strip Path Extension__ogtk.vi': SubVI is missing
+
+	Poly VI 'Strip Path Extension__ogtk.vi': SubVI is missing
+
+- Measurement Actor.lvlib:Measurement.lvclass:Update CVT.vi:
+	Poly VI 'Write.vi': SubVI is missing
+
+	Poly VI 'Write.vi': SubVI is missing
+
+- Measurement Actor.lvlib:Step Configuration.lvclass:Read Configuration 
+Parameters.vi:
+	SubVI 'Read Key (Variant)__ogtk.vi': SubVI is missing
+
+	SubVI 'Read Key (Variant)__ogtk.vi': SubVI is missing
+
+	SubVI 'Read Key (Variant)__ogtk.vi': SubVI is missing
+
+- Measurement Actor.lvlib:Step Configuration.lvclass:Store Configuration 
+Parameters.vi:
+	SubVI 'Write Key (Variant)__ogtk.vi': SubVI is missing
+
+	SubVI 'Write Key (Variant)__ogtk.vi': SubVI is missing
+
+	SubVI 'Write Key (Variant)__ogtk.vi': SubVI is missing
+
+- Msmt Configuration.lvlib:Controller Configuration.lvclass:Read Configuration 
+Parameters.vi:
+	SubVI 'Read Key (Variant)__ogtk.vi': SubVI is missing
+
+	SubVI 'Read Key (Variant)__ogtk.vi': SubVI is missing
+
+	SubVI 'Read Key (Variant)__ogtk.vi': SubVI is missing
+
+	SubVI 'Read Key (Variant)__ogtk.vi': SubVI is missing
+
+- Msmt Configuration.lvlib:Controller Configuration.lvclass:Store 
+Configuration Parameters.vi:
+	SubVI 'Write Key (Variant)__ogtk.vi': SubVI is missing
+
+	SubVI 'Write Key (Variant)__ogtk.vi': SubVI is missing
+
+	SubVI 'Write Key (Variant)__ogtk.vi': SubVI is missing
+
+	SubVI 'Write Key (Variant)__ogtk.vi': SubVI is missing
+
+- Result Actor.lvlib:Results.lvclass:Initialize Report Actor Core.vi:
+	SubVI 'Current VIs Parents Ref__ogtk.vi': SubVI is missing
+
+
+
+
+
+
+
+
+
+
+
+Click the link below to visit the Application Builder support page. Use the 
+following information as a reference:
+
+
+
+Error 1003 occurred at AB_Get_Detailed_BrokenVI_Message.vi -> 
+AB_Targetfile.lvclass:Open_Top_Level_VIs.vi
+
+
+Possible reason(s):
+
+
+LabVIEW: (Hex 0x3EB) The VI is not executable. This error may occur because 
+the VI is either broken or contains a subVI that LabVIEW cannot locate. Select 
+File>>Open to open the VI and verify that you can run it.
+An error occurred while running the ExecuteBuildSpec operation.
+
+ExecuteBuildSpec operation failed.
+
+
+=== ExecuteBuildSpec 'Server Installer' [Installer] target 'My Computer' in source\application\Networked Measurement System.lvproj ===
+LabVIEWCLI started logging in file:  C:\Users\ContainerAdministrator\AppData\Local\Temp\lvtemporary_588595.log
+Using LabVIEW: "C:\Program Files\National Instruments\LabVIEW 2026\LabVIEW.exe"
+Connection established with LabVIEW at port number 3363.
+
+LabVIEWCLI.exe : Operation output: 
+At C:\workspace\.github\labview\build-binaries.ps1:252 char:12
++     $out = & $CliExe @cliArgs 2>&1 | Out-String
++            ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Operation output: :String) [], Re 
+   moteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Error Code : 1
+Error Message : An error has occurred. Expand the Details section for more 
+information.
+
+
+
+
+
+Click the link below to visit the Application Builder support page. Use the 
+following information as a reference:
+
+
+
+
+
+Create Folder in Create Directory Recursive.vi->IB_MSI.lvclass:Engine_Initializ
+eDistribution.vi->IB_MSI.lvclass:Build.vi->CDK_Engine_Main.vi->CDK_Build_Invoke
+.vi->CDK_Build_Invoke.vi.ProxyCaller<APPEND>
+\\psf\Home\Documents
+
+
+
+
+An error occurred while running the ExecuteBuildSpec operation.
+
+ExecuteBuildSpec operation failed.
+
+
+=== ExecuteBuildSpec 'Client Installer' [Installer] target 'My Computer' in source\application\Networked Measurement System.lvproj ===
+LabVIEWCLI started logging in file:  C:\Users\ContainerAdministrator\AppData\Local\Temp\lvtemporary_73237.log
+Using LabVIEW: "C:\Program Files\National Instruments\LabVIEW 2026\LabVIEW.exe"
+Connection established with LabVIEW at port number 3363.
+
+LabVIEWCLI.exe : Operation output: 
+At C:\workspace\.github\labview\build-binaries.ps1:252 char:12
++     $out = & $CliExe @cliArgs 2>&1 | Out-String
++            ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Operation output: :String) [], Re 
+   moteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Error Code : 1
+Error Message : An error has occurred. Expand the Details section for more 
+information.
+
+
+
+
+
+Click the link below to visit the Application Builder support page. Use the 
+following information as a reference:
+
+
+
+
+
+Create Folder in Create Directory Recursive.vi->IB_MSI.lvclass:Engine_Initializ
+eDistribution.vi->IB_MSI.lvclass:Build.vi->CDK_Engine_Main.vi->CDK_Build_Invoke
+.vi->CDK_Build_Invoke.vi.ProxyCaller<APPEND>
+\\psf\Home\Documents
+
+
+
+
+An error occurred while running the ExecuteBuildSpec operation.
+
+ExecuteBuildSpec operation failed.
+
+
+=== ExecuteBuildSpec 'Server EXE' [EXE] target 'My Computer' in source\application\Server\Build Tools\Networked Measurement System.lvproj ===
+LabVIEWCLI started logging in file:  C:\Users\ContainerAdministrator\AppData\Local\Temp\lvtemporary_252239.log
+Using LabVIEW: "C:\Program Files\National Instruments\LabVIEW 2026\LabVIEW.exe"
+Connection established with LabVIEW at port number 3363.
+
+LabVIEWCLI.exe : Operation output: 
+At C:\workspace\.github\labview\build-binaries.ps1:252 char:12
++     $out = & $CliExe @cliArgs 2>&1 | Out-String
++            ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Operation output: :String) [], Re 
+   moteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Error Code : 1
+Error Message : The build is missing one or more source files or items the 
+source files reference on disk.
+
+To locate the files before you build, right-click the project root in the 
+Project Explorer window and select Find Missing Items from the shortcut menu 
+to display the Find Missing Items dialog box.
+
+
+
+
+
+
+
+
+
+
+Click the link below to visit the Application Builder support page. Use the 
+following information as a reference:
+
+
+
+Error 1 occurred at AB_Engine_Build.vi -> AB_Build_Invoke.vi
+
+
+Possible reason(s):
+
+
+LabVIEW: (Hex 0x1) An input parameter is invalid. For example if the input is 
+a path, the path might contain a character not allowed by the OS such as ? or 
+@.
+An error occurred while running the ExecuteBuildSpec operation.
+
+ExecuteBuildSpec operation failed.
+
+
+=== ExecuteBuildSpec 'Client EXE' [EXE] target 'My Computer' in source\application\Server\Build Tools\Networked Measurement System.lvproj ===
+LabVIEWCLI started logging in file:  C:\Users\ContainerAdministrator\AppData\Local\Temp\lvtemporary_649525.log
+Using LabVIEW: "C:\Program Files\National Instruments\LabVIEW 2026\LabVIEW.exe"
+Connection established with LabVIEW at port number 3363.
+
+LabVIEWCLI.exe : Operation output: 
+At C:\workspace\.github\labview\build-binaries.ps1:252 char:12
++     $out = & $CliExe @cliArgs 2>&1 | Out-String
++            ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Operation output: :String) [], Re 
+   moteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Error Code : 1
+Error Message : The build is missing one or more source files or items the 
+source files reference on disk.
+
+To locate the files before you build, right-click the project root in the 
+Project Explorer window and select Find Missing Items from the shortcut menu 
+to display the Find Missing Items dialog box.
+
+
+
+
+
+
+
+
+
+
+Click the link below to visit the Application Builder support page. Use the 
+following information as a reference:
+
+
+
+Error 1 occurred at AB_Engine_Build.vi -> AB_Build_Invoke.vi
+
+
+Possible reason(s):
+
+
+LabVIEW: (Hex 0x1) An input parameter is invalid. For example if the input is 
+a path, the path might contain a character not allowed by the OS such as ? or 
+@.
+An error occurred while running the ExecuteBuildSpec operation.
+
+ExecuteBuildSpec operation failed.
+
+
+=== ExecuteBuildSpec 'Measurement Controller Installer' [Installer] target 'My Computer' in source\application\Server\Build Tools\Networked Measurement System.lvproj ===
+LabVIEWCLI started logging in file:  C:\Users\ContainerAdministrator\AppData\Local\Temp\lvtemporary_660847.log
+Using LabVIEW: "C:\Program Files\National Instruments\LabVIEW 2026\LabVIEW.exe"
+Connection established with LabVIEW at port number 3363.
+
+LabVIEWCLI.exe : Operation output: 
+At C:\workspace\.github\labview\build-binaries.ps1:252 char:12
++     $out = & $CliExe @cliArgs 2>&1 | Out-String
++            ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Operation output: :String) [], Re 
+   moteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Error Code : 1
+Error Message : An error has occurred. Expand the Details section for more 
+information.
+
+
+
+
+
+Click the link below to visit the Application Builder support page. Use the 
+following information as a reference:
+
+
+
+
+
+Create Folder in Create Directory Recursive.vi->IB_MSI.lvclass:Engine_Initializ
+eDistribution.vi->IB_MSI.lvclass:Build.vi->CDK_Engine_Main.vi->CDK_Build_Invoke
+.vi->CDK_Build_Invoke.vi.ProxyCaller<APPEND>
+Z:\Documents
+
+
+
+
+An error occurred while running the ExecuteBuildSpec operation.
+
+ExecuteBuildSpec operation failed.
+
+
+=== ExecuteBuildSpec 'Config Library Source Dist' [{E661DAE2-7517-431F-AC41-30807A3BDA38}] target 'My Computer' in source\configuration\Configuration Dialog Actor.lvproj ===
+LabVIEWCLI started logging in file:  C:\Users\ContainerAdministrator\AppData\Local\Temp\lvtemporary_613586.log
+Using LabVIEW: "C:\Program Files\National Instruments\LabVIEW 2026\LabVIEW.exe"
+Connection established with LabVIEW at port number 3363.
+
+LabVIEWCLI.exe : Operation output: 
+At C:\workspace\.github\labview\build-binaries.ps1:252 char:12
++     $out = & $CliExe @cliArgs 2>&1 | Out-String
++            ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Operation output: :String) [], Re 
+   moteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Error Code : 1
+Error Message : LabVIEW cannot find a file that is a dependency of a Startup, 
+Exported, or Always Included VI.
+
+File Not Found: 
+C:\workspace\recovery\packages\oglib_appcontrol-4.1.0.7-34BB338B21\File Group 
+0\user.lib\_OpenG.lib\appcontrol\appcontrol.llb\Current VIs Parents 
+Ref__ogtk.vi
+
+The missing file might be referenced by one of the libraries included in the 
+build or by the file - Configuration.lvlib. To fix this issue:
+
+- Open all Startup, Exported, or Always Included VIs, recompile them 
+(CTRL+SHIFT Click the Run arrow) and save them to update their dependencies.
+- Open all libraries included in the build and verify the existence and 
+locations of referenced files. Also, try building with the additional 
+exclusion option, "Remove unused members of project libraries", checked.
+
+
+
+
+
+
+
+
+
+Click the link below to visit the Application Builder support page. Use the 
+following information as a reference:
+
+
+
+Error 7 occurred at AB_Engine_HandleLinkErrors.vi -> 
+AB_Engine_Update_Source_from_Linker.vi
+
+
+Possible reason(s):
+
+
+LabVIEW: (Hex 0x7) File not found. The file might be in a different location 
+or deleted. Use the command prompt or the file explorer to verify that the 
+path is correct.
+An error occurred while running the ExecuteBuildSpec operation.
+
+ExecuteBuildSpec operation failed.
+
+
+=== ExecuteBuildSpec 'Extensible Config Dialog' [Source Distribution] target 'My Computer' in source\configuration\Configuration Dialog Actor.lvproj ===
+LabVIEWCLI started logging in file:  C:\Users\ContainerAdministrator\AppData\Local\Temp\lvtemporary_15579.log
+Using LabVIEW: "C:\Program Files\National Instruments\LabVIEW 2026\LabVIEW.exe"
+Connection established with LabVIEW at port number 3363.
+
+LabVIEWCLI.exe : Operation output: 
+At C:\workspace\.github\labview\build-binaries.ps1:252 char:12
++     $out = & $CliExe @cliArgs 2>&1 | Out-String
++            ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Operation output: :String) [], Re 
+   moteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Error Code : 1
+Error Message : LabVIEW cannot find a file that is a dependency of a Startup, 
+Exported, or Always Included VI.
+
+File Not Found: 
+C:\workspace\recovery\packages\oglib_appcontrol-4.1.0.7-34BB338B21\File Group 
+0\user.lib\_OpenG.lib\appcontrol\appcontrol.llb\Current VIs Parents 
+Ref__ogtk.vi
+
+The missing file might be referenced by one of the libraries included in the 
+build or by the file - Configuration.lvlib. To fix this issue:
+
+- Open all Startup, Exported, or Always Included VIs, recompile them 
+(CTRL+SHIFT Click the Run arrow) and save them to update their dependencies.
+- Open all libraries included in the build and verify the existence and 
+locations of referenced files. Also, try building with the additional 
+exclusion option, "Remove unused members of project libraries", checked.
+
+
+
+
+
+
+
+
+
+Click the link below to visit the Application Builder support page. Use the 
+following information as a reference:
+
+
+
+Error 7 occurred at AB_Engine_HandleLinkErrors.vi -> 
+AB_Engine_Update_Source_from_Linker.vi
+
+
+Possible reason(s):
+
+
+LabVIEW: (Hex 0x7) File not found. The file might be in a different location 
+or deleted. Use the command prompt or the file explorer to verify that the 
+path is correct.
+An error occurred while running the ExecuteBuildSpec operation.
+
+ExecuteBuildSpec operation failed.
+
+
+=== ExecuteBuildSpec 'Config Dialog' [EXE] target 'My Computer' in source\configuration\Basic Configuration Dialog\Config Dialog Example.lvproj ===
+LabVIEWCLI started logging in file:  C:\Users\ContainerAdministrator\AppData\Local\Temp\lvtemporary_595349.log
+Using LabVIEW: "C:\Program Files\National Instruments\LabVIEW 2026\LabVIEW.exe"
+Connection established with LabVIEW at port number 3363.
+
+LabVIEWCLI.exe : Operation output: 
+At C:\workspace\.github\labview\build-binaries.ps1:252 char:12
++     $out = & $CliExe @cliArgs 2>&1 | Out-String
++            ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Operation output: :String) [], Re 
+   moteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Error Code : 1
+Error Message : Cannot complete build because following VI loaded broken:
+
+C:\workspace\source\configuration\Basic Configuration Dialog\Dialog 
+Methods\Launch Example Dialog.vi
+
+Open the VI in LabVIEW and fix the listed errors. If the VI loads as expected 
+but errors are still detected during the build, contact National Instruments 
+technical support for assistance.
+
+Broken VIs:
+- Configuration.lvlib:Configuration.lvclass:Construct Configuration Object.vi:
+	SubVI 'Create Dir if Non-Existant__ogtk.vi': SubVI is missing
+
+	Poly VI 'Convert File Extension__ogtk.vi': SubVI is missing
+
+	Poly VI 'Convert File Extension__ogtk.vi': SubVI is missing
+
+	Poly VI 'Valid Path__ogtk.vi': SubVI is missing
+
+	Poly VI 'Valid Path__ogtk.vi': SubVI is missing
+
+	Poly VI 'File Exists__ogtk.vi': SubVI is missing
+
+	Poly VI 'File Exists__ogtk.vi': SubVI is missing
+
+- Configuration.lvlib:Configuration.lvclass:Display UI.vi:
+	SubVI 'Current VIs Parents Ref__ogtk.vi': SubVI is missing
+
+- Configuration.lvlib:Configuration.lvclass:Initialize New Category Display.vi:
+	SubVI 'Current VIs Parents Ref__ogtk.vi': SubVI is missing
+
+- Example Configuration Dialog.lvlib:Example Configuration Dialog.lvclass:Read 
+Configuration Parameters.vi:
+	SubVI 'Read Key (Variant)__ogtk.vi': SubVI is missing
+
+- Example Configuration Dialog.lvlib:Example Configuration 
+Dialog.lvclass:Store Configuration Parameters.vi:
+	SubVI 'Write Key (Variant)__ogtk.vi': SubVI is missing
+
+
+
+
+
+
+
+
+
+
+
+Click the link below to visit the Application Builder support page. Use the 
+following information as a reference:
+
+
+
+Error 1003 occurred at AB_Get_Detailed_BrokenVI_Message.vi -> 
+AB_Targetfile.lvclass:Open_Top_Level_VIs.vi
+
+
+Possible reason(s):
+
+
+LabVIEW: (Hex 0x3EB) The VI is not executable. This error may occur because 
+the VI is either broken or contains a subVI that LabVIEW cannot locate. Select 
+File>>Open to open the VI and verify that you can run it.
+An error occurred while running the ExecuteBuildSpec operation.
+
+ExecuteBuildSpec operation failed.
+
+
+Project has no build specifications: source\framework\Msmt Common Components Project.lvproj
+Project has no build specifications: source\integrations\teststand\TestStand Custom Step Types for MAL Framework.lvproj
+=== ExecuteBuildSpec 'Agilent 34401a Device' [Source Distribution] target 'My Computer' in source\plugins\hardware\Sample Hardware.lvproj ===
+LabVIEWCLI started logging in file:  C:\Users\ContainerAdministrator\AppData\Local\Temp\lvtemporary_460242.log
+Using LabVIEW: "C:\Program Files\National Instruments\LabVIEW 2026\LabVIEW.exe"
+Connection established with LabVIEW at port number 3363.
+
+LabVIEWCLI.exe : Operation output: 
+At C:\workspace\.github\labview\build-binaries.ps1:252 char:12
++     $out = & $CliExe @cliArgs 2>&1 | Out-String
++            ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Operation output: :String) [], Re 
+   moteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Error Code : 1
+Error Message : The build is missing one or more source files or items the 
+source files reference on disk.
+
+To locate the files before you build, right-click the project root in the 
+Project Explorer window and select Find Missing Items from the shortcut menu 
+to display the Find Missing Items dialog box.
+
+
+
+
+
+
+
+
+
+
+Click the link below to visit the Application Builder support page. Use the 
+following information as a reference:
+
+
+
+Error 1 occurred at AB_Engine_Build.vi -> AB_Build_Invoke.vi
+
+
+Possible reason(s):
+
+
+LabVIEW: (Hex 0x1) An input parameter is invalid. For example if the input is 
+a path, the path might contain a character not allowed by the OS such as ? or 
+@.
+An error occurred while running the ExecuteBuildSpec operation.
+
+ExecuteBuildSpec operation failed.
+
+
+=== ExecuteBuildSpec 'PXI 4070 Device' [Source Distribution] target 'My Computer' in source\plugins\hardware\Sample Hardware.lvproj ===
+LabVIEWCLI started logging in file:  C:\Users\ContainerAdministrator\AppData\Local\Temp\lvtemporary_711685.log
+Using LabVIEW: "C:\Program Files\National Instruments\LabVIEW 2026\LabVIEW.exe"
+Connection established with LabVIEW at port number 3363.
+
+LabVIEWCLI.exe : Operation output: 
+At C:\workspace\.github\labview\build-binaries.ps1:252 char:12
++     $out = & $CliExe @cliArgs 2>&1 | Out-String
++            ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Operation output: :String) [], Re 
+   moteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Error Code : 1
+Error Message : The build is missing one or more source files or items the 
+source files reference on disk.
+
+To locate the files before you build, right-click the project root in the 
+Project Explorer window and select Find Missing Items from the shortcut menu 
+to display the Find Missing Items dialog box.
+
+
+
+
+
+
+
+
+
+
+Click the link below to visit the Application Builder support page. Use the 
+following information as a reference:
+
+
+
+Error 1 occurred at AB_Engine_Build.vi -> AB_Build_Invoke.vi
+
+
+Possible reason(s):
+
+
+LabVIEW: (Hex 0x1) An input parameter is invalid. For example if the input is 
+a path, the path might contain a character not allowed by the OS such as ? or 
+@.
+An error occurred while running the ExecuteBuildSpec operation.
+
+ExecuteBuildSpec operation failed.
+
+
+=== ExecuteBuildSpec 'PXI 4110 Device' [Source Distribution] target 'My Computer' in source\plugins\hardware\Sample Hardware.lvproj ===
+LabVIEWCLI started logging in file:  C:\Users\ContainerAdministrator\AppData\Local\Temp\lvtemporary_847383.log
+Using LabVIEW: "C:\Program Files\National Instruments\LabVIEW 2026\LabVIEW.exe"
+Connection established with LabVIEW at port number 3363.
+
+LabVIEWCLI.exe : Operation output: 
+At C:\workspace\.github\labview\build-binaries.ps1:252 char:12
++     $out = & $CliExe @cliArgs 2>&1 | Out-String
++            ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Operation output: :String) [], Re 
+   moteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Error Code : 1
+Error Message : The build is missing one or more source files or items the 
+source files reference on disk.
+
+To locate the files before you build, right-click the project root in the 
+Project Explorer window and select Find Missing Items from the shortcut menu 
+to display the Find Missing Items dialog box.
+
+
+
+
+
+
+
+
+
+
+Click the link below to visit the Application Builder support page. Use the 
+following information as a reference:
+
+
+
+Error 1 occurred at AB_Engine_Build.vi -> AB_Build_Invoke.vi
+
+
+Possible reason(s):
+
+
+LabVIEW: (Hex 0x1) An input parameter is invalid. For example if the input is 
+a path, the path might contain a character not allowed by the OS such as ? or 
+@.
+An error occurred while running the ExecuteBuildSpec operation.
+
+ExecuteBuildSpec operation failed.
+
+
+=== ExecuteBuildSpec 'PXIe 5185 Device' [Source Distribution] target 'My Computer' in source\plugins\hardware\Sample Hardware.lvproj ===
+LabVIEWCLI started logging in file:  C:\Users\ContainerAdministrator\AppData\Local\Temp\lvtemporary_54144.log
+Using LabVIEW: "C:\Program Files\National Instruments\LabVIEW 2026\LabVIEW.exe"
+Connection established with LabVIEW at port number 3363.
+
+LabVIEWCLI.exe : Operation output: 
+At C:\workspace\.github\labview\build-binaries.ps1:252 char:12
++     $out = & $CliExe @cliArgs 2>&1 | Out-String
++            ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Operation output: :String) [], Re 
+   moteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Error Code : 1
+Error Message : The build is missing one or more source files or items the 
+source files reference on disk.
+
+To locate the files before you build, right-click the project root in the 
+Project Explorer window and select Find Missing Items from the shortcut menu 
+to display the Find Missing Items dialog box.
+
+
+
+
+
+
+
+
+
+
+Click the link below to visit the Application Builder support page. Use the 
+following information as a reference:
+
+
+
+Error 1 occurred at AB_Engine_Build.vi -> AB_Build_Invoke.vi
+
+
+Possible reason(s):
+
+
+LabVIEW: (Hex 0x1) An input parameter is invalid. For example if the input is 
+a path, the path might contain a character not allowed by the OS such as ? or 
+@.
+An error occurred while running the ExecuteBuildSpec operation.
+
+ExecuteBuildSpec operation failed.
+
+
+=== ExecuteBuildSpec 'Simulated DMM Device' [Source Distribution] target 'My Computer' in source\plugins\hardware\Sample Hardware.lvproj ===
+LabVIEWCLI started logging in file:  C:\Users\ContainerAdministrator\AppData\Local\Temp\lvtemporary_107085.log
+Using LabVIEW: "C:\Program Files\National Instruments\LabVIEW 2026\LabVIEW.exe"
+Connection established with LabVIEW at port number 3363.
+
+LabVIEWCLI.exe : Operation output: 
+At C:\workspace\.github\labview\build-binaries.ps1:252 char:12
++     $out = & $CliExe @cliArgs 2>&1 | Out-String
++            ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Operation output: :String) [], Re 
+   moteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Error Code : 1
+Error Message : The build is missing one or more source files or items the 
+source files reference on disk.
+
+To locate the files before you build, right-click the project root in the 
+Project Explorer window and select Find Missing Items from the shortcut menu 
+to display the Find Missing Items dialog box.
+
+
+
+
+
+
+
+
+
+
+Click the link below to visit the Application Builder support page. Use the 
+following information as a reference:
+
+
+
+Error 1 occurred at AB_Engine_Build.vi -> AB_Build_Invoke.vi
+
+
+Possible reason(s):
+
+
+LabVIEW: (Hex 0x1) An input parameter is invalid. For example if the input is 
+a path, the path might contain a character not allowed by the OS such as ? or 
+@.
+An error occurred while running the ExecuteBuildSpec operation.
+
+ExecuteBuildSpec operation failed.
+
+
+=== ExecuteBuildSpec 'Simulated FGEN Device' [Source Distribution] target 'My Computer' in source\plugins\hardware\Sample Hardware.lvproj ===
+LabVIEWCLI started logging in file:  C:\Users\ContainerAdministrator\AppData\Local\Temp\lvtemporary_127252.log
+Using LabVIEW: "C:\Program Files\National Instruments\LabVIEW 2026\LabVIEW.exe"
+Connection established with LabVIEW at port number 3363.
+
+LabVIEWCLI.exe : Operation output: 
+At C:\workspace\.github\labview\build-binaries.ps1:252 char:12
++     $out = & $CliExe @cliArgs 2>&1 | Out-String
++            ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Operation output: :String) [], Re 
+   moteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Error Code : 1
+Error Message : The build is missing one or more source files or items the 
+source files reference on disk.
+
+To locate the files before you build, right-click the project root in the 
+Project Explorer window and select Find Missing Items from the shortcut menu 
+to display the Find Missing Items dialog box.
+
+
+
+
+
+
+
+
+
+
+Click the link below to visit the Application Builder support page. Use the 
+following information as a reference:
+
+
+
+Error 1 occurred at AB_Engine_Build.vi -> AB_Build_Invoke.vi
+
+
+Possible reason(s):
+
+
+LabVIEW: (Hex 0x1) An input parameter is invalid. For example if the input is 
+a path, the path might contain a character not allowed by the OS such as ? or 
+@.
+An error occurred while running the ExecuteBuildSpec operation.
+
+ExecuteBuildSpec operation failed.
+
+
+=== ExecuteBuildSpec 'Simulated Scope Device' [Source Distribution] target 'My Computer' in source\plugins\hardware\Sample Hardware.lvproj ===
+LabVIEWCLI started logging in file:  C:\Users\ContainerAdministrator\AppData\Local\Temp\lvtemporary_208015.log
+Using LabVIEW: "C:\Program Files\National Instruments\LabVIEW 2026\LabVIEW.exe"
+Connection established with LabVIEW at port number 3363.
+
+LabVIEWCLI.exe : Operation output: 
+At C:\workspace\.github\labview\build-binaries.ps1:252 char:12
++     $out = & $CliExe @cliArgs 2>&1 | Out-String
++            ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Operation output: :String) [], Re 
+   moteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Error Code : 1
+Error Message : The build is missing one or more source files or items the 
+source files reference on disk.
+
+To locate the files before you build, right-click the project root in the 
+Project Explorer window and select Find Missing Items from the shortcut menu 
+to display the Find Missing Items dialog box.
+
+
+
+
+
+
+
+
+
+
+Click the link below to visit the Application Builder support page. Use the 
+following information as a reference:
+
+
+
+Error 1 occurred at AB_Engine_Build.vi -> AB_Build_Invoke.vi
+
+
+Possible reason(s):
+
+
+LabVIEW: (Hex 0x1) An input parameter is invalid. For example if the input is 
+a path, the path might contain a character not allowed by the OS such as ? or 
+@.
+An error occurred while running the ExecuteBuildSpec operation.
+
+ExecuteBuildSpec operation failed.
+
+
+=== ExecuteBuildSpec 'Sample Hardware Installer' [Installer] target 'My Computer' in source\plugins\hardware\Sample Hardware.lvproj ===
+LabVIEWCLI started logging in file:  C:\Users\ContainerAdministrator\AppData\Local\Temp\lvtemporary_727458.log
+Using LabVIEW: "C:\Program Files\National Instruments\LabVIEW 2026\LabVIEW.exe"
+Connection established with LabVIEW at port number 3363.
+
+LabVIEWCLI.exe : Operation output: 
+At C:\workspace\.github\labview\build-binaries.ps1:252 char:12
++     $out = & $CliExe @cliArgs 2>&1 | Out-String
++            ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Operation output: :String) [], Re 
+   moteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Error Code : 1
+Error Message : Error generating preview for Simulated DMM Device.
+
+
+
+
+
+
+
+
+
+Click the link below to visit the Application Builder support page. Use the 
+following information as a reference:
+
+
+
+Error -1 occurred at CDK_Utility_GenerateErrorCluster.vi -> 
+IB_Source_Container.lvclass:Report_Preview_Error.vi
+
+
+This error code is undefined. Undefined errors might occur for a number of 
+reasons. For example, no one has provided a description for the code, or you 
+might have wired a number that is not an error code to the error code input. 
+
+Additionally, undefined error codes might occur because the error relates to a 
+third-party object, such as the operating system or ActiveX. For these 
+third-party errors, you might be able to obtain a description of the error by 
+searching the Web for the error code (-1) or for its hexadecimal 
+representation (0xFFFFFFFF).
+
+
+
+
+An error occurred while running the ExecuteBuildSpec operation.
+
+ExecuteBuildSpec operation failed.
+
+
+=== ExecuteBuildSpec 'New Measurement' [Source Distribution] target 'My Computer' in templates\measurement\Source\Measurement\Measurement Prototype.lvproj ===
+LabVIEWCLI started logging in file:  C:\Users\ContainerAdministrator\AppData\Local\Temp\lvtemporary_247435.log
+Using LabVIEW: "C:\Program Files\National Instruments\LabVIEW 2026\LabVIEW.exe"
+Connection established with LabVIEW at port number 3363.
+
+LabVIEWCLI.exe : Operation output: 
+At C:\workspace\.github\labview\build-binaries.ps1:252 char:12
++     $out = & $CliExe @cliArgs 2>&1 | Out-String
++            ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Operation output: :String) [], Re 
+   moteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Error Code : 1
+Error Message : The build is missing one or more source files or items the 
+source files reference on disk.
+
+To locate the files before you build, right-click the project root in the 
+Project Explorer window and select Find Missing Items from the shortcut menu 
+to display the Find Missing Items dialog box.
+
+
+
+
+
+
+
+
+
+
+Click the link below to visit the Application Builder support page. Use the 
+following information as a reference:
+
+
+
+Error 1 occurred at AB_Engine_Build.vi -> AB_Build_Invoke.vi
+
+
+Possible reason(s):
+
+
+LabVIEW: (Hex 0x1) An input parameter is invalid. For example if the input is 
+a path, the path might contain a character not allowed by the OS such as ? or 
+@.
+An error occurred while running the ExecuteBuildSpec operation.
+
+ExecuteBuildSpec operation failed.
+
+
+=== ExecuteBuildSpec 'Install Measurement' [Installer] target 'My Computer' in templates\measurement\Source\Measurement\Measurement Prototype.lvproj ===
+LabVIEWCLI started logging in file:  C:\Users\ContainerAdministrator\AppData\Local\Temp\lvtemporary_445949.log
+Using LabVIEW: "C:\Program Files\National Instruments\LabVIEW 2026\LabVIEW.exe"
+Connection established with LabVIEW at port number 3363.
+
+LabVIEWCLI.exe : Operation output: 
+At C:\workspace\.github\labview\build-binaries.ps1:252 char:12
++     $out = & $CliExe @cliArgs 2>&1 | Out-String
++            ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Operation output: :String) [], Re 
+   moteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Error Code : 1
+Error Message : Error generating preview for New Measurement.
+
+
+
+
+
+
+
+
+
+Click the link below to visit the Application Builder support page. Use the 
+following information as a reference:
+
+
+
+Error -1 occurred at CDK_Utility_GenerateErrorCluster.vi -> 
+IB_Source_Container.lvclass:Report_Preview_Error.vi
+
+
+This error code is undefined. Undefined errors might occur for a number of 
+reasons. For example, no one has provided a description for the code, or you 
+might have wired a number that is not an error code to the error code input. 
+
+Additionally, undefined error codes might occur because the error relates to a 
+third-party object, such as the operating system or ActiveX. For these 
+third-party errors, you might be able to obtain a description of the error by 
+searching the Web for the error code (-1) or for its hexadecimal 
+representation (0xFFFFFFFF).
+
+
+
+
+An error occurred while running the ExecuteBuildSpec operation.
+
+ExecuteBuildSpec operation failed.
+
+
+Project has no build specifications: templates\measurement\Source\Measurement\scripting\MsmtMetaDataObj.lvproj
