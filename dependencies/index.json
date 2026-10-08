@@ -1,8 +1,17 @@
 {
   "schema": 1,
   "repo": "elijah286/labview-mal-reference",
-  "sha": "482405571401acd84c47844848e2628e141e091c",
+  "sha": "6b7511b3555be2e024a94ea549faf5a4c9d2e9f1",
   "revisions": [
+    {
+      "sha": "6b7511b3555be2e024a94ea549faf5a4c9d2e9f1",
+      "short": "6b7511b",
+      "message": "Restore explicit CI/CD dashboard link in README",
+      "author": "Elijah Kerry",
+      "date": "2026-10-08T02:34:41Z",
+      "project": false,
+      "dep_only": false
+    },
     {
       "sha": "482405571401acd84c47844848e2628e141e091c",
       "short": "4824055",
