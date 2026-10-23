@@ -1,10 +1,10 @@
 [
   {
-    "sha": "d15cb588878766dd5bea97dbc33eec86a05bd2af",
-    "short": "d15cb58",
-    "message": "Reorganize MAL source by architecture and document working snapshot",
+    "sha": "6d69ccd2857a5e9b5e076f9009ae7e43681c97ff",
+    "short": "6d69ccd",
+    "message": "Add native Caraya core regression tests and Toolkit integration",
     "author": "Elijah Kerry",
-    "date": "2026-10-07T20:11:14-05:00",
-    "vi_count": 1449
+    "date": "2026-10-22T21:52:54-05:00",
+    "vi_count": 1456
   }
 ]
