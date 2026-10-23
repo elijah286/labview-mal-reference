@@ -15,6 +15,13 @@ config:
   labviewVersion: "2026"
   containerRelease: "2026q3"
   os: [windows, linux]
+  unitTests:
+    tools:
+      caraya:
+        enabled: true
+        locations:
+          - "tests"
+        command: powershell -NoProfile -NonInteractive -ExecutionPolicy Bypass -File "{dir}\Invoke-CoreTests.ps1" -ResultsPath "{out}" -LabVIEWPath "{lv}" -Headless
 activities:
   - dashboard
   - masscompile

@@ -91,6 +91,20 @@ unverified; this is a development reference, not a turnkey executable release.
 See the [**CI/CD dashboard**](https://elijah286.github.io/labview-mal-reference/)
 for build status, VI Analyzer results, VI diffs, and mass-compile reports.
 
+### Automated Regression Testing
+
+The [core Caraya suite](tests/README.md) implements five hardware-free native
+tests covering buffered reads, empty-buffer errors, incoming-error preservation,
+plugin requirements, and iteration/reset behavior. All **24 assertions pass
+locally**, including execution through the existing LabVIEW CI/CD Toolkit runner.
+Run `.\tests\Invoke-CoreTests.ps1` from PowerShell.
+
+The Toolkit Windows-container workflow is configured to run this suite and
+reject failed execution, zero tests, or incomplete assertion inventories.
+**Container/headless and clean-checkout execution remain unverified.**
+The [Automated Testing Plan](docs/AUTOMATED-TESTING-PLAN.md) tracks the remaining
+dynamic-loading, reservation, actor/network fault-injection and logging coverage.
+
 ## What This Example Is
 
 This work updates Elijah Kerry's Measurement Utility / Measurement Abstraction

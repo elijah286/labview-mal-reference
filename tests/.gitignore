@@ -1,0 +1,5 @@
+core-results.xml
+.core-tests.lock
+*.aliases
+*.lvlps
+.*.UserState/

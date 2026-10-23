@@ -10,10 +10,7 @@ run-name: Unit Tests Windows container - ${{ github.event_name == 'workflow_disp
 # report). Manual runs come through workflow_dispatch (the dashboard's Run-now).
 
 on:
-  # Auto-runs only on real LabVIEW source changes — never on the tooling files an
-  # install/deploy adds (e.g. .github/labview-ci.yml), so deploying the pipeline or
-  # changing the config never kicks off a unit-test run. Use the dashboard's "Run
-  # all history" prompt or workflow_dispatch to run on demand.
+  # Re-run for native source, test fixtures, and the test harness/configuration.
   pull_request:
     paths:
       - '**.vi'
@@ -21,7 +18,10 @@ on:
       - '**.lvproj'
       - '**.lvlib'
       - '**.lvtest'
-      - '!.github/**'
+      - 'tests/**'
+      - '.github/labview/run-unit-tests.ps1'
+      - '.github/labview-ci.yml'
+      - '.github/workflows/unit-tests-windows-container.yml'
   push:
     branches: [main]
     paths:
@@ -30,7 +30,10 @@ on:
       - '**.lvproj'
       - '**.lvlib'
       - '**.lvtest'
-      - '!.github/**'
+      - 'tests/**'
+      - '.github/labview/run-unit-tests.ps1'
+      - '.github/labview-ci.yml'
+      - '.github/workflows/unit-tests-windows-container.yml'
   workflow_dispatch:
     inputs:
       commit_sha:
@@ -65,6 +68,7 @@ concurrency:
 jobs:
   unit-tests:
     runs-on: windows-2022   # windows-latest = Server 2025, broken Docker daemon
+    timeout-minutes: 45
 
     steps:
       - name: Determine target SHA
@@ -113,6 +117,10 @@ jobs:
         run: |
           git fetch --no-tags origin "${{ github.event.repository.default_branch }}"
           git checkout FETCH_HEAD -- .github/labview .github/workflows .github/actions/publish-gh-pages
+
+      - name: Check test harness
+        shell: powershell
+        run: .\tests\Test-Harness.ps1
 
       # Per-action container selection: config.container.actions.unit-tests wins,
       # then config.container.use. With neither set, default to the shared custom
@@ -208,6 +216,7 @@ jobs:
           exit 0
 
       - name: Run unit tests inside container
+        timeout-minutes: 10
         if: steps.pull.outcome == 'success'
         shell: powershell
         id: run
@@ -286,7 +295,7 @@ jobs:
             passed=$(jq -r '.summary.passed // 0' "$OUT/results.json")
             failed=$(jq -r '((.summary.failed // 0) + (.summary.errored // 0))' "$OUT/results.json")
             if [ "${tests:-0}" -eq 0 ]; then
-              STATE="success"; DESC="No unit tests found"
+              STATE="failure"; DESC="No unit tests found"
             elif [ "${failed:-0}" -eq 0 ]; then
               STATE="success"; DESC="${passed} passed"
             else
@@ -301,11 +310,15 @@ jobs:
           if [ "${{ steps.pull.outcome }}" != "success" ]; then
             DESC="Worker image unavailable - build it via Configure Workers"
           fi
+          if [ "${{ steps.run.outcome }}" != "success" ]; then
+            STATE="failure"; DESC="Unit test runner failed or did not run"
+          fi
           curl -s -X POST \
             -H "Authorization: token $GH_TOKEN" \
             -H "Accept: application/vnd.github+json" \
             "https://api.github.com/repos/${{ github.repository }}/statuses/${{ steps.sha.outputs.sha }}" \
             -d "{\"state\":\"$STATE\",\"target_url\":\"$REPORT_URL\",\"description\":\"$DESC\",\"context\":\"CI / Unit Tests\"}"
+          if [ "$STATE" != "success" ]; then exit 1; fi
 
       - name: Post worker version status
         if: always() && steps.pull.outcome == 'success' && steps.worker.outputs.version != ''

@@ -236,8 +236,15 @@ function Read-UnitTestTools([string]$path) {
     $cur = $null
     foreach ($raw in (Get-Content -LiteralPath $path)) {
         $line = ($raw -replace '\t', '    ')
-        if ($line -match '^\s*unitTests:\s*$') { $inUT = $true; $inTools = $false; $inLoc = $false; $cur = $null; continue }
+        if ($line -match '^(\s*)unitTests:\s*$') { $utIndent = $Matches[1].Length; $inUT = $true; $inTools = $false; $inLoc = $false; $cur = $null; continue }
         if (-not $inUT) { continue }
+        if ($line.Trim() -and -not $line.TrimStart().StartsWith('#') -and
+            ($line.Length - $line.TrimStart().Length) -le $utIndent) {
+            if ($cur -and $cur.enabled) { $tools += $cur }
+            $cur = $null; $inUT = $false; $inTools = $false; $inLoc = $false
+            continue
+        }
+        if ($line.Length -ge $utIndent) { $line = $line.Substring($utIndent) }
         if ($line -match '^\s{2}tools:\s*$')   { $inTools = $true; continue }
 
         # A tool entry is a map key under tools:, e.g. "    caraya:" (4-space indent).
@@ -250,8 +257,15 @@ function Read-UnitTestTools([string]$path) {
         }
         if ($null -ne $cur) {
             if ($line -match '^\s{6}enabled:\s*(true|false)\s*$') { $cur.enabled = ($Matches[1] -eq 'true'); $inLoc = $false; continue }
-            $cm = [regex]::Match($line, '^\s{6}command:\s*"?(.+?)"?\s*$')
-            if ($cm.Success) { $cur.command = $cm.Groups[1].Value; $inLoc = $false; continue }
+            $cm = [regex]::Match($line, '^\s{6}command:\s*(.+?)\s*$')
+            if ($cm.Success) {
+                $command = $cm.Groups[1].Value
+                if (($command.StartsWith('"') -and $command.EndsWith('"')) -or
+                    ($command.StartsWith("'") -and $command.EndsWith("'"))) {
+                    $command = $command.Substring(1, $command.Length - 2)
+                }
+                $cur.command = $command; $inLoc = $false; continue
+            }
             if ($line -match '^\s{6}locations:\s*\[\s*\]\s*$') { $cur.locations = @(); $inLoc = $false; continue }
             if ($line -match '^\s{6}locations:\s*$') { $inLoc = $true; continue }
             if ($inLoc) {
@@ -340,16 +354,19 @@ function Invoke-Tool($tool, [int]$index) {
         $out = Join-Path $ResultsDir ("{0}-{1}.xml" -f $id, ($index * 100 + $i))
         $cmd = $tmpl.Replace('{ver}', $LabVIEWVersion).Replace('{dir}', $dir).Replace('{out}', $out).Replace('{lv}', $LabVIEWPath)
         Write-Host "  [$id] $cmd"
+        if (Test-Path -LiteralPath $out) { Remove-Item -LiteralPath $out }
         $prevEAP = $ErrorActionPreference; $ErrorActionPreference = 'Continue'
         try {
             & cmd.exe /c $cmd 2>&1 | Out-Host
             Write-Host ("  [$id] exit={0}" -f $LASTEXITCODE)
+            if ($LASTEXITCODE -ne 0) { throw "Runner for '$id' failed with exit code $LASTEXITCODE." }
         } catch {
-            Write-Warning "  [$id] runner error: $($_.Exception.Message)"
+            throw
+        } finally {
+            $ErrorActionPreference = $prevEAP
         }
-        $ErrorActionPreference = $prevEAP
         if (Test-Path -LiteralPath $out) { Write-Host "  [$id] wrote $out" }
-        else { Write-Warning "  [$id] produced no JUnit at $out (check the command/plugin for this tool)." }
+        else { throw "Runner for '$id' produced no JUnit at $out." }
         $i++
     }
 }

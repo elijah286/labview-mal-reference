@@ -1,0 +1,18 @@
+{
+  "Test Incoming Measurement Error": ["BUF-003.status", "BUF-003.code", "BUF-003.source"],
+  "Test Plugin Requirements": ["PLG-ROLE-001.roles", "PLG-ROLE-001.no-error"],
+  "Test Measurement Iterations": [
+    "ITER-001.not-done-before-limit", "ITER-001.increments-once",
+    "ITER-002.done-at-limit", "ITER-002.exact-boundary-count",
+    "ITER-003.reset-preserves-desired", "ITER-003.identity-survives", "ITER-003.no-error"
+  ],
+  "Test Buffer Preview": [
+    "HAL-BUF-001.exact-data", "HAL-BUF-001.preview-does-not-consume",
+    "HAL-BUF-001.second-preview-same-data", "HAL-BUF-001.first-read-no-error",
+    "HAL-BUF-001.second-read-no-error", "HAL-BUF-001.queue-status-no-error", "HAL-BUF-001.cleanup"
+  ],
+  "Test Empty Hardware Buffer": [
+    "BUF-002.status", "BUF-002.code", "BUF-002.queue-stays-empty",
+    "BUF-002.queue-status-no-error", "BUF-002.cleanup"
+  ]
+}
