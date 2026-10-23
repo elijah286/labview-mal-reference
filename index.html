@@ -241,7 +241,7 @@
     // the install/Configure iframe and its in-flight work. When a refresh comes due
     // with a dialog open, keep re-checking and reload only once it is closed.
     (function () {
-      var REFRESH_MS = 60 * 1000;
+      var REFRESH_MS = 900 * 1000;
       if (!(REFRESH_MS > 0)) return;
       function tick() {
         if (lvciModalOpen()) { setTimeout(tick, 5000); return; }
@@ -2092,7 +2092,7 @@
   </script>
   <main class="lvci-main">
   <h1>CI Dashboard — labview-mal-reference</h1>
-  <div class="sub">Last updated: 2026-10-23 08:25 UTC &nbsp;|&nbsp; Live — refreshing every 60 s while CI runs</div>
+  <div class="sub">Last updated: 2026-10-23 09:20 UTC &nbsp;|&nbsp; Auto-refreshes every 15 min</div>
   <div class="nav">
     <a href="https://github.com/elijah286/labview-mal-reference">GitHub</a>
     <a href="https://github.com/elijah286/labview-mal-reference/actions">Actions</a>
@@ -2154,7 +2154,7 @@
       <td style="text-align:center" class="cidash-cap-cell" data-cap="snapshots" data-sha="6d69ccd2857a5e9b5e076f9009ae7e43681c97ff" data-parent="6b7511b3555be2e024a94ea549faf5a4c9d2e9f1" data-short="6d69ccd" data-ts="2026-10-23T03:09:56Z" data-done="true"><span class="cidash-chip cc-info" title="Snapshots rendered for all 1456 VIs in this revision"><a href="https://elijah286.github.io/labview-mal-reference/vi-snapshots/index.html?sha=6d69ccd2857a5e9b5e076f9009ae7e43681c97ff" style="color:inherit">1456</a></span></td>
       <td style="text-align:center" class="cidash-cap-cell" data-cap="unit-tests" data-sha="6d69ccd2857a5e9b5e076f9009ae7e43681c97ff" data-parent="6b7511b3555be2e024a94ea549faf5a4c9d2e9f1" data-short="6d69ccd" data-ts="2026-10-23T03:09:39Z"><span class="cidash-chip cc-pass" title="No unit tests found; 0% failed."><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L1.22 9.28a.75.75 0 1 1 1.06-1.06L6 11.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"/></svg><a href="https://elijah286.github.io/labview-mal-reference/report/index.html?type=unit-tests-report&sha=6d69ccd2857a5e9b5e076f9009ae7e43681c97ff&short=6d69ccd&src=..%2Funit-tests%2F6d69ccd2857a5e9b5e076f9009ae7e43681c97ff%2Findex.html&title=Unit%20Tests%20%C2%B7%206d69ccd" style="color:inherit">0% failed</a></span></td>
       <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
-      <td style="text-align:center" class="cidash-active-cell" data-cap="builds" data-sha="6d69ccd2857a5e9b5e076f9009ae7e43681c97ff" data-parent="6b7511b3555be2e024a94ea549faf5a4c9d2e9f1" data-short="6d69ccd" data-active="true"><span class="run-badge" title="Running — click to view progress"><a href="https://github.com/elijah286/labview-mal-reference/actions/runs/39891986001" style="color:#fff;text-decoration:none;display:inline-flex;align-items:center;gap:5px"><span class="run-spin"></span>build</a></span></td>
+      <td style="text-align:center" class="cidash-cap-cell" data-cap="builds" data-sha="6d69ccd2857a5e9b5e076f9009ae7e43681c97ff" data-parent="6b7511b3555be2e024a94ea549faf5a4c9d2e9f1" data-short="6d69ccd" data-ts="2026-10-23T03:16:16Z"><span class="cidash-chip cc-split" title="0 built, 21 failed of 21 build specification(s)"><a href="https://elijah286.github.io/labview-mal-reference/report/index.html?type=builds-report&sha=6d69ccd2857a5e9b5e076f9009ae7e43681c97ff&short=6d69ccd&src=..%2Fbuilds%2F6d69ccd2857a5e9b5e076f9009ae7e43681c97ff%2Findex.html&title=Builds%20%C2%B7%206d69ccd" style="color:inherit"><span class="cidash-vseg cc-pass" data-tip="Succeeded">0</span><span class="cidash-vseg-sep">/</span><span class="cidash-vseg cc-fail" data-tip="Failed">21</span></a></span></td>
       <td style="text-align:center" class="cidash-cap-cell" data-cap="sbom-generation" data-sha="6d69ccd2857a5e9b5e076f9009ae7e43681c97ff" data-parent="6b7511b3555be2e024a94ea549faf5a4c9d2e9f1" data-short="6d69ccd" data-ts="2026-10-23T03:07:42Z"><span class="cidash-chip cc-pass"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L1.22 9.28a.75.75 0 1 1 1.06-1.06L6 11.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"/></svg><a href="https://elijah286.github.io/labview-mal-reference/report/index.html?type=sbom-report&sha=6d69ccd2857a5e9b5e076f9009ae7e43681c97ff&short=6d69ccd&src=..%2Fsbom%2F6d69ccd2857a5e9b5e076f9009ae7e43681c97ff%2Findex.html&title=SBOM%20%C2%B7%206d69ccd" style="color:inherit">SBOM</a></span></td>
     </tr>
 
