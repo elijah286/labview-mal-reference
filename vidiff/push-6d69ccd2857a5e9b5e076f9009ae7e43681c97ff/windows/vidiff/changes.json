@@ -1,0 +1,40 @@
+{
+  "platform": "windows",
+  "files": [
+    {
+      "file": "tests/Run Tests.vi",
+      "type": "added",
+      "report": "tests-Run_Tests.vi/index.html"
+    },
+    {
+      "file": "tests/fixtures/Measurement Test Harness/Read Compatible Hardware Types.vi",
+      "type": "added",
+      "report": "tests-fixtures-Measurement_Test_Harness-Read_Compatible_Hardware_Types.vi/index.html"
+    },
+    {
+      "file": "tests/unit/Test Buffer Preview.vi",
+      "type": "added",
+      "report": "tests-unit-Test_Buffer_Preview.vi/index.html"
+    },
+    {
+      "file": "tests/unit/Test Empty Hardware Buffer.vi",
+      "type": "added",
+      "report": "tests-unit-Test_Empty_Hardware_Buffer.vi/index.html"
+    },
+    {
+      "file": "tests/unit/Test Incoming Measurement Error.vi",
+      "type": "added",
+      "report": "tests-unit-Test_Incoming_Measurement_Error.vi/index.html"
+    },
+    {
+      "file": "tests/unit/Test Measurement Iterations.vi",
+      "type": "added",
+      "report": "tests-unit-Test_Measurement_Iterations.vi/index.html"
+    },
+    {
+      "file": "tests/unit/Test Plugin Requirements.vi",
+      "type": "added",
+      "report": "tests-unit-Test_Plugin_Requirements.vi/index.html"
+    }
+  ]
+}
