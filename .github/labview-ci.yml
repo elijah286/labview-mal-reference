@@ -15,6 +15,12 @@ config:
   labviewVersion: "2026"
   containerRelease: "2026q3"
   os: [windows, linux]
+  # Only the root Windows EXE is a candidate; never recursively build legacy examples.
+  # Automatic binary-build workflows remain disabled pending clean-worker qualification.
+  builds:
+    runAll: false
+    specs:
+      - "Measurement Utility Reference.lvproj::Measurement Utility EXE::windows"
   unitTests:
     tools:
       caraya:
@@ -31,5 +37,4 @@ activities:
   - custom-image
   - snapshots-2
   - unit-tests
-  - builds
   - sbom-generation

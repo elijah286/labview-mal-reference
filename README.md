@@ -114,6 +114,66 @@ not a new implementation of those ideas and not an exact copy of the NIWeek 2018
 5.3 package distribution.
 
 The central idea is to separate **what a measurement does**, **which instrument
+The root project now has one Windows build target, **Measurement Utility EXE**.
+Automatic Windows and Linux binary-build workflows remain disabled: their original
+recursive discovery picked up 21 inherited packaging specifications, not a
+qualified application release. The CI configuration allowlists only the new root
+EXE for Windows; enabling that capability still requires clean-worker dependency
+qualification. Regression tests and analysis remain enabled. See
+[CI Build Scope](docs/SOURCE-LAYOUT.md#ci-build-scope) for the historical diagnosis.
+
+### Build The Windows Application
+
+**Current validation:** The native LabVIEW 2026 Q3 x64 build and distribution
+preparation succeed. The real **Measurement Task Manager** opens and loads Standard
+Measurement plus the three simulated hardware plugins. Measurement selection,
+normal shutdown, restart, and launching a complete relocated distribution from
+`C:\Windows` were verified locally with runtime **26.3.1f1**. The hardware-free
+regression report passes **8 suites / 44 assertions**, and packaging fixtures pass
+**42 assertions**. This is a working local development EXE, not clean-machine,
+installer, or physical-acquisition qualification.
+
+Two startup problems were corrected: the shared NI crash-reporting client caused
+runtime initialization error 1114, handled by the application-only workaround below;
+the UI launcher used an Actor Framework development-only panel-opening flag that
+errors in the runtime engine. The UI now uses its existing explicit panel-opening
+method instead. No shared NI components were repaired or changed.
+
+Use **LabVIEW 2026 Q3 64-bit**, with the dependencies above available locally.
+In [the root project](Measurement%20Utility%20Reference.lvproj), right-click
+**My Computer > Build Specifications > Measurement Utility EXE > Build**.
+Then prepare the generated distribution:
+
+```powershell
+.\tooling\Prepare-MeasurementUtilityBuild.ps1 -DisableNIErrorReporting
+& '.\builds\Measurement Utility\Measurement Utility.exe'
+```
+
+`-DisableNIErrorReporting` is the workaround verified on this development machine.
+It applies NI's documented [`NIER=False` setting](https://knowledge.ni.com/KnowledgeArticleDetails?id=kA00Z000000PA7wSAG)
+only to the built application's INI, disabling its optional NI crash reporting,
+not application logging or shared NI settings. Omit the switch on machines where
+crash reporting initializes correctly; default preparation leaves runtime settings
+unchanged.
+
+The preparation step is required after each build. It replaces the copied
+development configuration with portable, relative paths to exactly three built
+simulated hardware classes and Standard Measurement. It rejects missing or
+ambiguous plugin files, and does not edit the source application's configuration.
+Configure device roles, measurement settings and writable logging storage before
+starting acquisition; it does not automatically run a measurement.
+Allow initial device/plugin discovery to finish: the local scan took roughly
+30 seconds, and the status display confirms each loaded plugin.
+
+Distribute the **entire** `builds/Measurement Utility` directory, including `data`
+and both INI files, not just the EXE. The target retains front panels and block
+diagrams because stripping an installed OpenG VI's diagram caused Application
+Builder error 1502 in 2026 Q3. This is a development build, not a qualified
+installer or optimized release. Other computers need the compatible **2026 Q3 x64
+LabVIEW Run-Time Engine** and the required NI driver/runtime components; a build
+on this development machine does not establish clean-machine compatibility or
+redistribution rights for third-party dependencies.
+
 performs it**, and **how the application coordinates and displays it**. A hardware
 plugin wraps a device driver behind a common class interface. A measurement plugin
 expresses a measurement workflow. A controller coordinates actors, configuration,

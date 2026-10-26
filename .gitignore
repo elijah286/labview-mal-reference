@@ -23,5 +23,6 @@ vendor/labview/examples/
 tooling/*.ps1
 !tooling/Audit-Publication.ps1
 !tooling/Prepare-ExternalDependencies.ps1
+!tooling/Prepare-MeasurementUtilityBuild.ps1
 **/*.exe
 **/*.zip

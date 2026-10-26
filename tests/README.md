@@ -73,6 +73,20 @@ override calling [Invoke-CoreTests.ps1](Invoke-CoreTests.ps1).
 The override uses LabVIEWCLI rather than unverified g-cli extension flags.
 The native entry point has the connector required by the installed `RunVI`
 operation: string-array input and integer/string outputs. Caraya errors map to
+## Distribution Preparation Fixtures
+
+Run the hardware-free PowerShell packaging checks separately:
+
+```powershell
+.\tests\Test-MeasurementUtilityBuild.ps1
+```
+
+These fixtures check all four relative plugin paths, missing/duplicate build
+inputs, application-only NI crash-reporting settings, idempotence, preservation
+of unrelated INI settings, and rejection of ambiguous settings. They use temporary
+placeholder files and never execute an EXE or start LabVIEW. Passing them is not
+a substitute for launching the real application and verifying its UI and shutdown.
+
 the CLI return code and message.
 
 The [Windows workflow](../.github/workflows/unit-tests-windows-container.yml)
