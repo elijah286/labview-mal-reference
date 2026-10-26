@@ -1,8 +1,26 @@
 {
   "schema": 1,
   "repo": "elijah286/labview-mal-reference",
-  "sha": "797e0ce10a0a8a1d9158ed5b5e89014764c6e7a8",
+  "sha": "cc6445a49a45874917232b69d04d95345bf6e380",
   "revisions": [
+    {
+      "sha": "cc6445a49a45874917232b69d04d95345bf6e380",
+      "short": "cc6445a",
+      "message": "Merge current CI tooling while retaining the supported EXE build scope",
+      "author": "Elijah Kerry",
+      "date": "2026-10-26T09:12:17Z",
+      "project": false,
+      "dep_only": false
+    },
+    {
+      "sha": "2dd4303a0953a972e0c223e03db12d82052bab8d",
+      "short": "2dd4303",
+      "message": "Add and verify the LabVIEW 2026 Q3 application EXE",
+      "author": "Elijah Kerry",
+      "date": "2026-10-26T09:10:46Z",
+      "project": true,
+      "dep_only": false
+    },
     {
       "sha": "797e0ce10a0a8a1d9158ed5b5e89014764c6e7a8",
       "short": "797e0ce",
