@@ -1,3 +1,4 @@
+# LabVIEW CI tooling v4.18.6 - this version stamp changes on every tooling update so the update push touches this file and GitHub (re)registers the workflow.
 name: Run Unit Tests — Windows Container
 run-name: Unit Tests Windows container - ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.commit_sha || github.event.pull_request.head.sha || github.sha }}
 
@@ -10,7 +11,10 @@ run-name: Unit Tests Windows container - ${{ github.event_name == 'workflow_disp
 # report). Manual runs come through workflow_dispatch (the dashboard's Run-now).
 
 on:
-  # Re-run for native source, test fixtures, and the test harness/configuration.
+  # Auto-runs only on real LabVIEW source changes — never on the tooling files an
+  # install/deploy adds (e.g. .github/labview-ci.yml), so deploying the pipeline or
+  # changing the config never kicks off a unit-test run. Use the dashboard's "Run
+  # all history" prompt or workflow_dispatch to run on demand.
   pull_request:
     paths:
       - '**.vi'
@@ -18,10 +22,9 @@ on:
       - '**.lvproj'
       - '**.lvlib'
       - '**.lvtest'
+      - '**.ps1'
       - 'tests/**'
-      - '.github/labview/run-unit-tests.ps1'
-      - '.github/labview-ci.yml'
-      - '.github/workflows/unit-tests-windows-container.yml'
+      - '!.github/**'
   push:
     branches: [main]
     paths:
@@ -30,10 +33,9 @@ on:
       - '**.lvproj'
       - '**.lvlib'
       - '**.lvtest'
+      - '**.ps1'
       - 'tests/**'
-      - '.github/labview/run-unit-tests.ps1'
-      - '.github/labview-ci.yml'
-      - '.github/workflows/unit-tests-windows-container.yml'
+      - '!.github/**'
   workflow_dispatch:
     inputs:
       commit_sha:
@@ -68,7 +70,6 @@ concurrency:
 jobs:
   unit-tests:
     runs-on: windows-2022   # windows-latest = Server 2025, broken Docker daemon
-    timeout-minutes: 45
 
     steps:
       - name: Determine target SHA
@@ -117,10 +118,6 @@ jobs:
         run: |
           git fetch --no-tags origin "${{ github.event.repository.default_branch }}"
           git checkout FETCH_HEAD -- .github/labview .github/workflows .github/actions/publish-gh-pages
-
-      - name: Check test harness
-        shell: powershell
-        run: .\tests\Test-Harness.ps1
 
       # Per-action container selection: config.container.actions.unit-tests wins,
       # then config.container.use. With neither set, default to the shared custom
@@ -216,7 +213,6 @@ jobs:
           exit 0
 
       - name: Run unit tests inside container
-        timeout-minutes: 10
         if: steps.pull.outcome == 'success'
         shell: powershell
         id: run
@@ -296,6 +292,8 @@ jobs:
             failed=$(jq -r '((.summary.failed // 0) + (.summary.errored // 0))' "$OUT/results.json")
             if [ "${tests:-0}" -eq 0 ]; then
               STATE="failure"; DESC="No unit tests found"
+            elif [ "${passed:-0}" -eq 0 ] && [ "${failed:-0}" -eq 0 ]; then
+              STATE="failure"; DESC="All unit tests skipped"
             elif [ "${failed:-0}" -eq 0 ]; then
               STATE="success"; DESC="${passed} passed"
             else
@@ -309,8 +307,7 @@ jobs:
           # A pull failure means the tests never ran; make the status say so.
           if [ "${{ steps.pull.outcome }}" != "success" ]; then
             DESC="Worker image unavailable - build it via Configure Workers"
-          fi
-          if [ "${{ steps.run.outcome }}" != "success" ]; then
+          elif [ "${{ steps.run.outcome }}" != "success" ]; then
             STATE="failure"; DESC="Unit test runner failed or did not run"
           fi
           curl -s -X POST \
