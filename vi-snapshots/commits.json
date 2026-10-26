@@ -1,10 +1,10 @@
 [
   {
-    "sha": "6d69ccd2857a5e9b5e076f9009ae7e43681c97ff",
-    "short": "6d69ccd",
-    "message": "Add native Caraya core regression tests and Toolkit integration",
+    "sha": "cc6445a49a45874917232b69d04d95345bf6e380",
+    "short": "cc6445a",
+    "message": "Merge current CI tooling while retaining the supported EXE build scope",
     "author": "Elijah Kerry",
-    "date": "2026-10-22T21:52:54-05:00",
+    "date": "2026-10-26T04:12:17-05:00",
     "vi_count": 1456
   }
 ]
