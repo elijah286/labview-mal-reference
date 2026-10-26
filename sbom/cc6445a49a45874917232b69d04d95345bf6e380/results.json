@@ -1,0 +1,42 @@
+{
+ "meta": {
+  "sha": "cc6445a49a45874917232b69d04d95345bf6e380",
+  "short": "cc6445a",
+  "platform": "windows",
+  "repo": "elijah286/labview-mal-reference",
+  "pages_url": "https://elijah286.github.io/labview-mal-reference",
+  "dash_url": "https://elijah286.github.io/labview-mal-reference/",
+  "labview_version": "2026",
+  "commit": {
+   "message": "Merge current CI tooling while retaining the supported EXE build scope",
+   "author": "Elijah Kerry",
+   "date": "2026-10-26T04:12:17-05:00"
+  },
+  "generated_utc": "2026-10-26 09:28 UTC",
+  "spdx_version": "CycloneDX 1.5",
+  "created": ""
+ },
+ "summary": {
+  "total_packages": 1
+ },
+ "platforms": [
+  {
+   "id": "windows",
+   "url": null
+  },
+  {
+   "id": "linux",
+   "url": null
+  }
+ ],
+ "packages": [
+  {
+   "name": "ni-labview-2026-vilib",
+   "version": "26.3.0.49792-0+f640",
+   "vendor": "National Instruments"
+  }
+ ],
+ "tooling": {
+  "missing": []
+ }
+}
