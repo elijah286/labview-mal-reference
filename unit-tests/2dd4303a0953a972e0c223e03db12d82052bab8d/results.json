@@ -1,0 +1,100 @@
+{
+ "meta": {
+  "sha": "2dd4303a0953a972e0c223e03db12d82052bab8d",
+  "short": "2dd4303",
+  "platform": "windows",
+  "repo": "elijah286/labview-mal-reference",
+  "pages_url": "https://elijah286.github.io/labview-mal-reference",
+  "snap_base": "https://elijah286.github.io/labview-mal-reference/vi-snapshots/",
+  "dash_url": "https://elijah286.github.io/labview-mal-reference/",
+  "labview_version": "2026",
+  "tools": [
+   {
+    "id": "caraya",
+    "label": "Caraya"
+   }
+  ],
+  "commit": {
+   "message": "Add and verify the LabVIEW 2026 Q3 application EXE",
+   "author": "Elijah Kerry",
+   "date": "2026-10-26T04:10:46-05:00"
+  },
+  "generated_utc": "2026-10-28 06:05 UTC"
+ },
+ "summary": {
+  "tests": 1,
+  "passed": 0,
+  "failed": 0,
+  "errored": 1,
+  "skipped": 0,
+  "percent": 0,
+  "status": "failed",
+  "duration": 0.0
+ },
+ "status_order": [
+  "failed",
+  "error",
+  "skipped",
+  "passed"
+ ],
+ "status_meta": {
+  "failed": {
+   "label": "Failed",
+   "color": "#da3633",
+   "blurb": "An assertion failed."
+  },
+  "error": {
+   "label": "Errored",
+   "color": "#bb8009",
+   "blurb": "The test raised an unexpected error."
+  },
+  "skipped": {
+   "label": "Skipped",
+   "color": "#6e7681",
+   "blurb": "The test was skipped."
+  },
+  "passed": {
+   "label": "Passed",
+   "color": "#2ea043",
+   "blurb": "The test passed."
+  }
+ },
+ "platforms": [
+  {
+   "id": "windows",
+   "url": null
+  },
+  {
+   "id": "linux",
+   "url": "linux/results.json"
+  }
+ ],
+ "suites": [
+  {
+   "tool": "caraya",
+   "name": "caraya runner",
+   "tests": 1,
+   "failures": 0,
+   "errors": 1,
+   "skipped": 0,
+   "time": 0.0,
+   "cases": [
+    {
+     "name": "Runner execution (not a test assertion)",
+     "classname": "",
+     "status": "error",
+     "time": 0.0,
+     "message": "Runner exited with code 1. A LabVIEW error 1003 means the entry VI is broken; check its dependencies in this worker image.",
+     "details": "Runner exited with code 1. A LabVIEW error 1003 means the entry VI is broken; check its dependencies in this worker image.\nLabVIEWCLI started logging in file:  C:\\Users\\ContainerAdministrator\\AppData\\Local\\Temp\\lvtemporary_960986.log\nUsing LabVIEW: \"C:\\Program Files\\National Instruments\\LabVIEW 2026\\LabVIEW.exe\"\nLabVIEW launched successfully.\nConnection established with LabVIEW at port number 3363.\n\ncmd.exe : Operation output:\nAt C:\\workspace\\.github\\labview\\run-unit-tests.ps1:391 char:30\n+             $runnerOutput = (& cmd.exe /d /c $cmd 2>&1 | Out-String)\n+                              ~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (Operation output: :String) [], Re\n   moteException\n    + FullyQualifiedErrorId : NativeCommandError\n\nError Code : 1003\nError Message : Open VI Reference in RunVI.lvclass:RunOperation.vi:5910001->Cor\neOperation.lvclass:CallRunOperation.vi:4230002->ExecuteRunOperation.vi:5250001-\n>ExecuteOperation.vi:6900002->ExecuteOperation.vi.ProxyCaller<APPEND>\nVI Path: <b>C:\\workspace\\tests\\Run Tests.vi</b>\nAn error occurred while running the RunVI operation.\n\nRunVI operation failed.\n\nLabVIEW CLI failed with exit code 2. See the CLI log and raw JUnit report.\nAt C:\\workspace\\tests\\Invoke-CoreTests.ps1:42 char:28\n+ ... de -ne 0) { throw \"LabVIEW CLI failed with exit code $exitCode. See t ...\n+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : OperationStopped: (LabVIEW CLI fai...w JUnit rep\n   ort.:String) [], RuntimeException\n    + FullyQualifiedErrorId : LabVIEW CLI failed with exit code 2. See the CLI\n    log and raw JUnit report.\n\n\nLabVIEW CLI session log:\nUsing LabVIEW: \"C:\\Program Files\\National Instruments\\LabVIEW 2026\\LabVIEW.exe\"\nLabVIEW launched successfully.\nConnection established with LabVIEW at port number 3363.\nOperation output:\nError Code : 1003\nError Message : Open VI Reference in RunVI.lvclass:RunOperation.vi:5910001->CoreOperation.lvclass:CallRunOperation.vi:4230002->ExecuteRunOperation.vi:5250001->ExecuteOperation.vi:6900002->ExecuteOperation.vi.ProxyCaller<APPEND>\nVI Path: <b>C:\\workspace\\tests\\Run Tests.vi</b>\nAn error occurred while running the RunVI operation.\n\nRunVI operation failed.",
+     "test_vi_rel": "",
+     "test_vi_name": "Runner execution (not a test assertion)",
+     "target_vi_rel": "",
+     "target_vi_name": ""
+    }
+   ]
+  }
+ ],
+ "tooling": {
+  "missing": []
+ }
+}

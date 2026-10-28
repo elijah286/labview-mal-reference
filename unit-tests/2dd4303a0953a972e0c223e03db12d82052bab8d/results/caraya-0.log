@@ -1,0 +1,44 @@
+﻿LabVIEWCLI started logging in file:  C:\Users\ContainerAdministrator\AppData\Local\Temp\lvtemporary_960986.log
+Using LabVIEW: "C:\Program Files\National Instruments\LabVIEW 2026\LabVIEW.exe"
+LabVIEW launched successfully.
+Connection established with LabVIEW at port number 3363.
+
+cmd.exe : Operation output: 
+At C:\workspace\.github\labview\run-unit-tests.ps1:391 char:30
++             $runnerOutput = (& cmd.exe /d /c $cmd 2>&1 | Out-String)
++                              ~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Operation output: :String) [], Re 
+   moteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Error Code : 1003
+Error Message : Open VI Reference in RunVI.lvclass:RunOperation.vi:5910001->Cor
+eOperation.lvclass:CallRunOperation.vi:4230002->ExecuteRunOperation.vi:5250001-
+>ExecuteOperation.vi:6900002->ExecuteOperation.vi.ProxyCaller<APPEND>
+VI Path: <b>C:\workspace\tests\Run Tests.vi</b>
+An error occurred while running the RunVI operation.
+
+RunVI operation failed.
+
+LabVIEW CLI failed with exit code 2. See the CLI log and raw JUnit report.
+At C:\workspace\tests\Invoke-CoreTests.ps1:42 char:28
++ ... de -ne 0) { throw "LabVIEW CLI failed with exit code $exitCode. See t ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (LabVIEW CLI fai...w JUnit rep 
+   ort.:String) [], RuntimeException
+    + FullyQualifiedErrorId : LabVIEW CLI failed with exit code 2. See the CLI 
+    log and raw JUnit report.
+ 
+
+LabVIEW CLI session log:
+Using LabVIEW: "C:\Program Files\National Instruments\LabVIEW 2026\LabVIEW.exe"
+LabVIEW launched successfully.
+Connection established with LabVIEW at port number 3363.
+Operation output: 
+Error Code : 1003
+Error Message : Open VI Reference in RunVI.lvclass:RunOperation.vi:5910001->CoreOperation.lvclass:CallRunOperation.vi:4230002->ExecuteRunOperation.vi:5250001->ExecuteOperation.vi:6900002->ExecuteOperation.vi.ProxyCaller<APPEND>
+VI Path: <b>C:\workspace\tests\Run Tests.vi</b>
+An error occurred while running the RunVI operation.
+
+RunVI operation failed.
+
